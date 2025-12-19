@@ -1,0 +1,95 @@
+/* ==========================================================================
+   Remotive Logistics — Theme Tokens
+   Light + Dark mode using CSS custom properties
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Light Theme (Default)
+   -------------------------------------------------------------------------- */
+:root {
+  /* Typography - set by next/font, fallbacks here */
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-heading: "Sora", var(--font-sans);
+
+  /* Primary brand color */
+  --primary: #e10600;
+  --primary-contrast: #ffffff;
+
+  /* Backgrounds */
+  --bg: #ffffff;
+  --surface: #f7f7f8;
+
+  /* Text */
+  --text: #0b0d12;
+  --muted: #5b6270;
+
+  /* Borders */
+  --border: #e6e8ee;
+
+  /* Interactive */
+  --link: #e10600;
+  --focus: #e10600;
+
+  /* Shadows */
+  --shadow: rgba(0, 0, 0, 0.1);
+  --shadow-lg: rgba(0, 0, 0, 0.15);
+}
+
+/* --------------------------------------------------------------------------
+   Dark Theme
+   -------------------------------------------------------------------------- */
+[data-theme="dark"] {
+  /* Primary brand color (same across themes) */
+  --primary: #e10600;
+  --primary-contrast: #ffffff;
+
+  /* Backgrounds */
+  --bg: #0b0d12;
+  --surface: #111522;
+
+  /* Text */
+  --text: #f4f6fb;
+  --muted: #a7afbf;
+
+  /* Borders */
+  --border: #1f2637;
+
+  /* Interactive */
+  --link: #ff3b30;
+  --focus: #ff3b30;
+
+  /* Shadows */
+  --shadow: rgba(0, 0, 0, 0.3);
+  --shadow-lg: rgba(0, 0, 0, 0.5);
+}
+
+/* --------------------------------------------------------------------------
+   Base Styles Using Tokens
+   -------------------------------------------------------------------------- */
+
+/* Body defaults */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* Link defaults */
+a {
+  color: var(--link);
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+/* Focus outline for accessibility */
+:focus-visible {
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+}
+
+/* Selection highlight */
+::selection {
+  background-color: var(--primary);
+  color: var(--primary-contrast);
+}

@@ -1,0 +1,125 @@
+/* ==========================================================================
+   Remotive Logistics — Typography
+   Font families and type scale using CSS custom properties
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Base Typography
+   -------------------------------------------------------------------------- */
+
+body {
+  font-family:
+    var(--font-sans),
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  font-size: 1rem; /* 16px */
+  line-height: 1.625; /* 26px */
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --------------------------------------------------------------------------
+   Headings
+   -------------------------------------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading), var(--font-sans), system-ui, sans-serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+/* Type Scale: 48/56, 36/44, 28/36, 22/30, 18/26, 16/24 */
+
+h1 {
+  font-size: 3rem; /* 48px */
+  line-height: 1.167; /* 56px */
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  font-size: 2.25rem; /* 36px */
+  line-height: 1.222; /* 44px */
+}
+
+h3 {
+  font-size: 1.75rem; /* 28px */
+  line-height: 1.286; /* 36px */
+}
+
+h4 {
+  font-size: 1.375rem; /* 22px */
+  line-height: 1.364; /* 30px */
+}
+
+h5 {
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.444; /* 26px */
+}
+
+h6 {
+  font-size: 1rem; /* 16px */
+  line-height: 1.5; /* 24px */
+}
+
+/* --------------------------------------------------------------------------
+   Body Text Variants
+   -------------------------------------------------------------------------- */
+
+.text-lg {
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.667; /* 30px */
+}
+
+.text-base {
+  font-size: 1rem; /* 16px */
+  line-height: 1.625; /* 26px */
+}
+
+.text-sm {
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.571; /* 22px */
+}
+
+.text-xs {
+  font-size: 0.75rem; /* 12px */
+  line-height: 1.5; /* 18px */
+}
+
+/* --------------------------------------------------------------------------
+   Paragraphs
+   -------------------------------------------------------------------------- */
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   Strong / Bold
+   -------------------------------------------------------------------------- */
+
+strong,
+b {
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   Small Text
+   -------------------------------------------------------------------------- */
+
+small {
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.571; /* 22px */
+}
