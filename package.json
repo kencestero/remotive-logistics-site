@@ -9,7 +9,8 @@
     "lint": "next lint",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "ci": "npm run format:check && npm run lint && npm run build"
+    "ci": "npm run format:check && npm run lint && npm run build",
+    "prepare": "husky"
   },
   "dependencies": {
     "aos": "^2.3.4",
@@ -26,6 +27,12 @@
   "devDependencies": {
     "eslint": "^8.56.0",
     "eslint-config-next": "13.4.12",
+    "husky": "^9.0.0",
+    "lint-staged": "^15.2.0",
     "prettier": "^3.2.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,md,css}": "prettier --write",
+    "*.{js,jsx,ts,tsx}": "eslint --fix --max-warnings=0 --no-error-on-unmatched-pattern"
   }
 }
