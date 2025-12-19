@@ -25,11 +25,7 @@ const Header = ({ extraClass }) => {
                   viewBox="0 0 163 38"
                 >
                   <g id="Logo" transform="translate(-260 -51)">
-                    <g
-                      id="Logo-2"
-                      data-name="Logo"
-                      transform="translate(260 51)"
-                    >
+                    <g id="Logo-2" data-name="Logo" transform="translate(260 51)">
                       <g id="Elements">
                         <path
                           id="Path_1429"
@@ -154,12 +150,7 @@ const Header = ({ extraClass }) => {
           </div>
           <div className="col-lg-3">
             <div className="extras bag">
-              <a
-                href="#"
-                id="desktop-menu"
-                className="menu-btn"
-                onClick={(e) => onClick(e)}
-              >
+              <a href="#" id="desktop-menu" className="menu-btn" onClick={(e) => onClick(e)}>
                 <i className="fa-solid fa-bag-shopping" />
               </a>
               <Link href="checkout" className="button button-2">
@@ -190,11 +181,7 @@ const Header = ({ extraClass }) => {
                   viewBox="0 0 163 38"
                 >
                   <g id="Logo-m" transform="translate(-260 -51)">
-                    <g
-                      id="Logo-2-m"
-                      data-name="Logo"
-                      transform="translate(260 51)"
-                    >
+                    <g id="Logo-2-m" data-name="Logo" transform="translate(260 51)">
                       <g id="Elements-m">
                         <path
                           id="Path_3429"

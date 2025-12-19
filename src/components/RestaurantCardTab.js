@@ -29,9 +29,7 @@ const RestaurantCardTab = ({ items }) => {
                     role="tab"
                     aria-controls="v-pills-home"
                     aria-selected="true"
-                    className={`nav-link ${
-                      activeTab == "breakfast" ? "active" : ""
-                    }`}
+                    className={`nav-link ${activeTab == "breakfast" ? "active" : ""}`}
                     onClick={() => setActiveTab("breakfast")}
                   >
                     Breakfast
@@ -44,9 +42,7 @@ const RestaurantCardTab = ({ items }) => {
                     role="tab"
                     aria-controls="v-pills-profile"
                     aria-selected="false"
-                    className={`nav-link ${
-                      activeTab == "lunch" ? "active" : ""
-                    }`}
+                    className={`nav-link ${activeTab == "lunch" ? "active" : ""}`}
                     onClick={() => setActiveTab("lunch")}
                   >
                     Lunch
@@ -59,9 +55,7 @@ const RestaurantCardTab = ({ items }) => {
                     role="tab"
                     aria-controls="v-pills-messages"
                     aria-selected="false"
-                    className={`nav-link ${
-                      activeTab == "dinner" ? "active" : ""
-                    }`}
+                    className={`nav-link ${activeTab == "dinner" ? "active" : ""}`}
                     onClick={() => setActiveTab("dinner")}
                   >
                     Dinner
@@ -79,9 +73,7 @@ const RestaurantCardTab = ({ items }) => {
             <div className="col-lg-12">
               <div className="tab-content" id="v-pills-tabContent">
                 <div
-                  className={`tab-pane fade ${
-                    activeTab == "breakfast" ? "show active" : ""
-                  }`}
+                  className={`tab-pane fade ${activeTab == "breakfast" ? "show active" : ""}`}
                   id="v-pills-home"
                   role="tabpanel"
                   aria-labelledby="v-pills-home-tab"
@@ -90,16 +82,12 @@ const RestaurantCardTab = ({ items }) => {
                     {items.map(
                       (item, i) =>
                         i <= 5 &&
-                        item.category.includes("breakfast") && (
-                          <Item item={item} key={item.id} />
-                        )
+                        item.category.includes("breakfast") && <Item item={item} key={item.id} />
                     )}
                   </div>
                 </div>
                 <div
-                  className={`tab-pane fade ${
-                    activeTab == "lunch" ? "show active" : ""
-                  }`}
+                  className={`tab-pane fade ${activeTab == "lunch" ? "show active" : ""}`}
                   id="v-pills-profile"
                   role="tabpanel"
                   aria-labelledby="v-pills-profile-tab"
@@ -108,16 +96,12 @@ const RestaurantCardTab = ({ items }) => {
                     {items.map(
                       (item, i) =>
                         i <= 5 &&
-                        item.category.includes("lunch") && (
-                          <Item item={item} key={item.id} />
-                        )
+                        item.category.includes("lunch") && <Item item={item} key={item.id} />
                     )}
                   </div>
                 </div>
                 <div
-                  className={`tab-pane fade ${
-                    activeTab == "dinner" ? "show active" : ""
-                  }`}
+                  className={`tab-pane fade ${activeTab == "dinner" ? "show active" : ""}`}
                   id="v-pills-messages"
                   role="tabpanel"
                   aria-labelledby="v-pills-messages-tab"
@@ -126,9 +110,7 @@ const RestaurantCardTab = ({ items }) => {
                     {items.map(
                       (item, i) =>
                         i <= 5 &&
-                        item.category.includes("dinner") && (
-                          <Item item={item} key={item.id} />
-                        )
+                        item.category.includes("dinner") && <Item item={item} key={item.id} />
                     )}
                   </div>
                 </div>

@@ -21,8 +21,7 @@ const Index = () => {
               <div className="restaurant">
                 <h1>The Best restaurants in your home</h1>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
                 </p>
                 <div className="nice-select-one">
                   <select className="nice-select Advice">
@@ -75,16 +74,10 @@ const Index = () => {
       {/* works-section */}
       <section className="works-section gap no-top">
         <div className="container">
-          <div
-            className="hading"
-            data-aos="fade-up"
-            data-aos-delay={200}
-            data-aos-duration={300}
-          >
+          <div className="hading" data-aos="fade-up" data-aos-delay={200} data-aos-duration={300}>
             <h2>How it works</h2>
             <p>
-              Magna sit amet purus gravida quis blandit turpis cursus. Venenatis
-              tellus in
+              Magna sit amet purus gravida quis blandit turpis cursus. Venenatis tellus in
               <br /> metus vulputate eu scelerisque felis.
             </p>
           </div>
@@ -101,9 +94,8 @@ const Index = () => {
                   <span>01</span> Select Restaurant
                 </h4>
                 <p>
-                  Non enim praesent elementum facilisis leo vel fringilla.
-                  Lectus proin nibh nisl condimentum id. Quis varius quam
-                  quisque id diam vel.
+                  Non enim praesent elementum facilisis leo vel fringilla. Lectus proin nibh nisl
+                  condimentum id. Quis varius quam quisque id diam vel.
                 </p>
               </div>
             </div>
@@ -119,9 +111,8 @@ const Index = () => {
                   <span>02</span> Select menu
                 </h4>
                 <p>
-                  Eu mi bibendum neque egestas congue quisque. Nulla facilisi
-                  morbi tempus iaculis urna id volutpat lacus. Odio ut sem nulla
-                  pharetra diam sit amet.
+                  Eu mi bibendum neque egestas congue quisque. Nulla facilisi morbi tempus iaculis
+                  urna id volutpat lacus. Odio ut sem nulla pharetra diam sit amet.
                 </p>
               </div>
             </div>
@@ -137,9 +128,8 @@ const Index = () => {
                   <span>03</span> Wait for delivery
                 </h4>
                 <p>
-                  Nunc lobortis mattis aliquam faucibus. Nibh ipsum consequat
-                  nisl vel pretium lectus quam id leo. A scelerisque purus
-                  semper eget. Tincidunt arcu non.
+                  Nunc lobortis mattis aliquam faucibus. Nibh ipsum consequat nisl vel pretium
+                  lectus quam id leo. A scelerisque purus semper eget. Tincidunt arcu non.
                 </p>
               </div>
             </div>
@@ -147,10 +137,7 @@ const Index = () => {
         </div>
       </section>
       {/* best-restaurants */}
-      <section
-        className="best-restaurants gap"
-        style={{ background: "#fcfcfc" }}
-      >
+      <section className="best-restaurants gap" style={{ background: "#fcfcfc" }}>
         <div className="container">
           <div className="row align-items-center">
             <div
@@ -162,8 +149,8 @@ const Index = () => {
               <div className="city-restaurants">
                 <h2>12 Best Restaurants in Your City</h2>
                 <p>
-                  Magna sit amet purus gravida quis blandit turpis cursus.
-                  Venenatis tellus in metus vulputate.
+                  Magna sit amet purus gravida quis blandit turpis cursus. Venenatis tellus in metus
+                  vulputate.
                 </p>
               </div>
             </div>
@@ -194,9 +181,8 @@ const Index = () => {
                     </a>
                   </div>
                   <p>
-                    Non enim praesent elementum facilisis leo vel fringilla.
-                    Lectus proin nibh nisl condimentum id. Quis varius quam
-                    quisque id diam vel.
+                    Non enim praesent elementum facilisis leo vel fringilla. Lectus proin nibh nisl
+                    condimentum id. Quis varius quam quisque id diam vel.
                   </p>
                 </div>
               </div>
@@ -228,9 +214,8 @@ const Index = () => {
                     </a>
                   </div>
                   <p>
-                    Vulputate enim nulla aliquet porttitor lacus luctus.
-                    Suscipit adipiscing bibendum est ultricies integer. Sed
-                    adipiscing diam donec adipiscing tristique.
+                    Vulputate enim nulla aliquet porttitor lacus luctus. Suscipit adipiscing
+                    bibendum est ultricies integer. Sed adipiscing diam donec adipiscing tristique.
                   </p>
                 </div>
               </div>
@@ -262,9 +247,9 @@ const Index = () => {
                     </a>
                   </div>
                   <p>
-                    Tortor at risus viverra adipiscing at in tellus. Cras semper
-                    auctor neque vitae tempus. Dui accumsan sit amet nulla
-                    facilisi. Sed adipiscing diam donec adipiscing tristique.
+                    Tortor at risus viverra adipiscing at in tellus. Cras semper auctor neque vitae
+                    tempus. Dui accumsan sit amet nulla facilisi. Sed adipiscing diam donec
+                    adipiscing tristique.
                   </p>
                 </div>
               </div>
@@ -316,9 +301,8 @@ const Index = () => {
               <div className="food-content-section">
                 <h2>Food from your favorite restaurants to your table</h2>
                 <p>
-                  Pretium lectus quam id leo in vitae turpis massa sed. Lorem
-                  donec massa sapien faucibus et molestie. Vitae elementum
-                  curabitur vitae nunc.
+                  Pretium lectus quam id leo in vitae turpis massa sed. Lorem donec massa sapien
+                  faucibus et molestie. Vitae elementum curabitur vitae nunc.
                 </p>{" "}
                 <Link href="checkout" className="button button-2">
                   Order Now
@@ -349,11 +333,7 @@ const Index = () => {
               data-aos-duration={400}
             >
               <div className="count-time">
-                <h2
-                  className="timer count-title count-number"
-                  data-to={976}
-                  data-speed={2000}
-                >
+                <h2 className="timer count-title count-number" data-to={976} data-speed={2000}>
                   976
                 </h2>
                 <p>
@@ -370,11 +350,7 @@ const Index = () => {
               data-aos-duration={500}
             >
               <div className="count-time">
-                <h2
-                  className="timer count-title count-number"
-                  data-to={12}
-                  data-speed={2000}
-                >
+                <h2 className="timer count-title count-number" data-to={12} data-speed={2000}>
                   12
                 </h2>
                 <p>
@@ -391,11 +367,7 @@ const Index = () => {
               data-aos-duration={600}
             >
               <div className="count-time sp">
-                <h2
-                  className="timer count-title count-number"
-                  data-to={1}
-                  data-speed={2000}
-                >
+                <h2 className="timer count-title count-number" data-to={1} data-speed={2000}>
                   1
                 </h2>
                 <span>k+</span>
@@ -425,10 +397,9 @@ const Index = () => {
                   <Swiper {...sliderProps.index1Testmoninal}>
                     <SwiperSlide className="item">
                       <h4>
-                        "Dapibus ultrices in iaculis nunc sed augue lacus
-                        viverra vitae. Mauris a diam maecenas sed enim. Egestas
-                        diam in arcu cursus euismod quis. Quam quisque id diam
-                        vel".
+                        "Dapibus ultrices in iaculis nunc sed augue lacus viverra vitae. Mauris a
+                        diam maecenas sed enim. Egestas diam in arcu cursus euismod quis. Quam
+                        quisque id diam vel".
                       </h4>
                       <div className="thomas">
                         <img alt="girl" src="assets/img/photo-5.jpg" />
@@ -444,10 +415,9 @@ const Index = () => {
                     </SwiperSlide>
                     <SwiperSlide className="item">
                       <h4>
-                        "Dapibus ultrices in iaculis nunc sed augue lacus
-                        viverra vitae. Mauris a diam maecenas sed enim. Egestas
-                        diam in arcu cursus euismod quis. Quam quisque id diam
-                        vel".
+                        "Dapibus ultrices in iaculis nunc sed augue lacus viverra vitae. Mauris a
+                        diam maecenas sed enim. Egestas diam in arcu cursus euismod quis. Quam
+                        quisque id diam vel".
                       </h4>
                       <div className="thomas">
                         <img alt="girl" src="assets/img/photo-5.jpg" />
@@ -463,10 +433,9 @@ const Index = () => {
                     </SwiperSlide>
                     <SwiperSlide className="item">
                       <h4>
-                        "Dapibus ultrices in iaculis nunc sed augue lacus
-                        viverra vitae. Mauris a diam maecenas sed enim. Egestas
-                        diam in arcu cursus euismod quis. Quam quisque id diam
-                        vel".
+                        "Dapibus ultrices in iaculis nunc sed augue lacus viverra vitae. Mauris a
+                        diam maecenas sed enim. Egestas diam in arcu cursus euismod quis. Quam
+                        quisque id diam vel".
                       </h4>
                       <div className="thomas">
                         <img alt="girl" src="assets/img/photo-5.jpg" />
@@ -507,10 +476,7 @@ const Index = () => {
         </div>
       </section>
       {/* join-partnership */}
-      <section
-        className="join-partnership gap"
-        style={{ backgroundColor: "#363636" }}
-      >
+      <section className="join-partnership gap" style={{ backgroundColor: "#363636" }}>
         <div className="container">
           <h2>Want to Join Partnership?</h2>
           <div className="row">
@@ -568,10 +534,9 @@ const Index = () => {
                 </div>
                 <h3>We Have Received An Award For The Quality Of Our Work</h3>
                 <p>
-                  Donec adipiscing tristique risus nec feugiat in fermentum.
-                  Sapien eget mi proin sed libero. Et magnis dis parturient
-                  montes nascetur. Praesent semper feugiat nibh sed pulvinar
-                  proin gravida.
+                  Donec adipiscing tristique risus nec feugiat in fermentum. Sapien eget mi proin
+                  sed libero. Et magnis dis parturient montes nascetur. Praesent semper feugiat nibh
+                  sed pulvinar proin gravida.
                 </p>{" "}
                 <Link href="/single-blog">
                   Read More
@@ -618,8 +583,8 @@ const Index = () => {
                     </Link>
                   </h6>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor...
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor...
                   </p>
                   <ul className="data">
                     <li>
@@ -654,8 +619,8 @@ const Index = () => {
                     <Link href="single-blog">127+ Couriers On Our Team!</Link>
                   </h6>
                   <p>
-                    Urna condimentum mattis pellentesque id nibh tortor id
-                    aliquet. Tellus at urna condimentum mattis...
+                    Urna condimentum mattis pellentesque id nibh tortor id aliquet. Tellus at urna
+                    condimentum mattis...
                   </p>
                   <ul className="data">
                     <li>
@@ -687,13 +652,11 @@ const Index = () => {
                     <a href="#">restaurants</a> <a href="#">cooking</a>
                   </div>
                   <h6>
-                    <Link href="single-blog">
-                      Why You Should Optimize Your Menu for Delivery
-                    </Link>
+                    <Link href="single-blog">Why You Should Optimize Your Menu for Delivery</Link>
                   </h6>
                   <p>
-                    Enim lobortis scelerisque fermentum dui. Sit amet cursus sit
-                    amet dictum sit amet. Rutrum tellus...
+                    Enim lobortis scelerisque fermentum dui. Sit amet cursus sit amet dictum sit
+                    amet. Rutrum tellus...
                   </p>
                   <ul className="data">
                     <li>

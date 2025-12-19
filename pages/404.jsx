@@ -12,11 +12,7 @@ const E404 = () => {
               data-aos-delay={200}
               data-aos-duration={300}
             >
-              <input
-                type="text"
-                name="email"
-                placeholder="Enter query keywords"
-              />
+              <input type="text" name="email" placeholder="Enter query keywords" />
               <button className="button button-2">
                 <i className="fa-solid fa-magnifying-glass" />
               </button>

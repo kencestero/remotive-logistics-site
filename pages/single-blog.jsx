@@ -74,73 +74,62 @@ const SingleBlog = () => {
             <div className="offset-xl-2 col-xl-8 col-lg-12">
               <div className="title-container">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor <span>incididunt ut labore et</span> dolore
-                  magna aliqua. Iaculis nunc sed augue lacus viverra vitae
-                  congue eu consequat. Id consectetur purus ut faucibus pulvinar
-                  elementum integer. <span>Vitae congue mauris</span> rhoncus
-                  aenean vel elit scelerisque. Mollis nunc sed id semper. Ac
-                  orci phasellus egestas tellus rutrum tellus pellentesque.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor{" "}
+                  <span>incididunt ut labore et</span> dolore magna aliqua. Iaculis nunc sed augue
+                  lacus viverra vitae congue eu consequat. Id consectetur purus ut faucibus pulvinar
+                  elementum integer. <span>Vitae congue mauris</span> rhoncus aenean vel elit
+                  scelerisque. Mollis nunc sed id semper. Ac orci phasellus egestas tellus rutrum
+                  tellus pellentesque.
                   <br />
                   <br />
-                  Urna nec tincidunt praesent semper feugiat nibh sed pulvinar
-                  proin. Enim praesent elementum facilisis leo vel fringilla
-                  est. Porta nibh venenatis cras sed felis eget velit aliquet
-                  sagittis. At in tellus integer feugiat scelerisque varius.
-                  Tincidunt arcu non sodales neque sodales ut etiam sit amet.
-                  Auctor urna nunc id cursus metus.
+                  Urna nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Enim praesent
+                  elementum facilisis leo vel fringilla est. Porta nibh venenatis cras sed felis
+                  eget velit aliquet sagittis. At in tellus integer feugiat scelerisque varius.
+                  Tincidunt arcu non sodales neque sodales ut etiam sit amet. Auctor urna nunc id
+                  cursus metus.
                 </p>
                 <br />
-                <h2>
-                  H2 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </h2>
+                <h2>H2 Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
                 <p>
                   <b>Iaculis nunc sed augue lacus viverra.</b>
                   <br />
-                  Id consectetur purus ut faucibus pulvinar elementum integer.
-                  Vitae congue mauris rhoncus aenean vel elit scelerisque.
-                  Mollis nunc sed id semper. Ac orci phasellus egestas tellus
-                  rutrum tellus pellentesque. Urna nec tincidunt praesent semper
+                  Id consectetur purus ut faucibus pulvinar elementum integer. Vitae congue mauris
+                  rhoncus aenean vel elit scelerisque. Mollis nunc sed id semper. Ac orci phasellus
+                  egestas tellus rutrum tellus pellentesque. Urna nec tincidunt praesent semper
                   feugiat nibh sed.
                   <br />
                   <br />
-                  <b>
-                    Enim praesent elementum facilisis leo vel fringilla est.
-                  </b>
+                  <b>Enim praesent elementum facilisis leo vel fringilla est.</b>
                   <br />
-                  Porta nibh venenatis cras sed felis eget velit aliquet
-                  sagittis. At in tellus integer feugiat scelerisque varius.
-                  Tincidunt arcu non sodales neque sodales ut etiam sit amet.
-                  Auctor urna nunc id cursus metus. Eros donec ac odio tempor
-                  orci dapibus ultrices in. Suspendisse sed nisi lacus sed. Sed
-                  risus ultricies tristique nulla aliquet. Aenean vel elit
-                  scelerisque mauris pellentesque pulvinar pellentesque
-                  habitant.
+                  Porta nibh venenatis cras sed felis eget velit aliquet sagittis. At in tellus
+                  integer feugiat scelerisque varius. Tincidunt arcu non sodales neque sodales ut
+                  etiam sit amet. Auctor urna nunc id cursus metus. Eros donec ac odio tempor orci
+                  dapibus ultrices in. Suspendisse sed nisi lacus sed. Sed risus ultricies tristique
+                  nulla aliquet. Aenean vel elit scelerisque mauris pellentesque pulvinar
+                  pellentesque habitant.
                 </p>
                 <div className="quote">
                   <div className="quote-text">
                     <img alt="quote" src="assets/img/elements-1.svg" />
                     <div className="quote-icon">
                       <h4>
-                        Whenever you feel like criticizing any one,» he told me,
-                        «just remember that all the people in this world haven’t
-                        had the advantages that you’ve had.
+                        Whenever you feel like criticizing any one,» he told me, «just remember that
+                        all the people in this world haven’t had the advantages that you’ve had.
                       </h4>
                     </div>
                   </div>
                   <h6>Francis Scott Key Fitzgerald "The Great Gatsby"</h6>
                 </div>
                 <h3>
-                  H3 Massa massa ultricies mi quis hendrerit. Sed enim ut sem
-                  viverra aliquet eget sit amet.
+                  H3 Massa massa ultricies mi quis hendrerit. Sed enim ut sem viverra aliquet eget
+                  sit amet.
                 </h3>
                 <p>
-                  Velit egestas dui id ornare arcu odio ut. Lacus suspendisse
-                  faucibus interdum posuere lorem ipsum. Commodo sed egestas
-                  egestas fringilla phasellus faucibus. Nullam vehicula ipsum a
-                  arcu cursus vitae. Nulla facilisi morbi tempus iaculis urna
-                  id. Tortor dignissim convallis aenean et. At erat pellentesque
-                  adipiscing commodo elit at.
+                  Velit egestas dui id ornare arcu odio ut. Lacus suspendisse faucibus interdum
+                  posuere lorem ipsum. Commodo sed egestas egestas fringilla phasellus faucibus.
+                  Nullam vehicula ipsum a arcu cursus vitae. Nulla facilisi morbi tempus iaculis
+                  urna id. Tortor dignissim convallis aenean et. At erat pellentesque adipiscing
+                  commodo elit at.
                 </p>
                 <div className="row">
                   <div className="col-lg-6">
@@ -155,15 +144,13 @@ const SingleBlog = () => {
                   </div>
                 </div>
                 <h4>
-                  H4 Quis imperdiet massa tincidunt nunc pulvinar sapien et. Eu
-                  consequat ac felis donec et odio. Platea dictumst quisque
-                  sagittis purus.
+                  H4 Quis imperdiet massa tincidunt nunc pulvinar sapien et. Eu consequat ac felis
+                  donec et odio. Platea dictumst quisque sagittis purus.
                 </h4>
                 <p>
-                  In fermentum posuere urna nec. Vestibulum lectus mauris
-                  ultrices eros in cursus turpis massa. Nisl purus in mollis
-                  nunc sed id. At urna condimentum mattis pellentesque id. Neque
-                  ornare aenean euismod elementum nisi quis eleifend quam
+                  In fermentum posuere urna nec. Vestibulum lectus mauris ultrices eros in cursus
+                  turpis massa. Nisl purus in mollis nunc sed id. At urna condimentum mattis
+                  pellentesque id. Neque ornare aenean euismod elementum nisi quis eleifend quam
                   adipiscing. Sit amet aliquam id diam.
                 </p>
                 <ul className="blog-list">
@@ -175,10 +162,9 @@ const SingleBlog = () => {
                   <li>IPellentesque habitant morbi tristique.</li>
                 </ul>
                 <p>
-                  At erat pellentesque adipiscing commodo elit. Dignissim enim
-                  sit amet venenatis urna cursus eget nunc. Ut ornare lectus sit
-                  amet est placerat in egestas erat. Ante metus dictum at
-                  tempor. Pulvinar elementum integer enim neque volutpat ac
+                  At erat pellentesque adipiscing commodo elit. Dignissim enim sit amet venenatis
+                  urna cursus eget nunc. Ut ornare lectus sit amet est placerat in egestas erat.
+                  Ante metus dictum at tempor. Pulvinar elementum integer enim neque volutpat ac
                   tincidunt vitae semper.
                 </p>
                 <h6 className="data">Updated: December 26, 2022</h6>
@@ -193,9 +179,7 @@ const SingleBlog = () => {
                     <div className="previous-posts">
                       <img alt="img" src="assets/img/author-posts-1.jpg" />
                       <div>
-                        <h6>
-                          How Restaurants Can Engage with Millennials in 2022
-                        </h6>{" "}
+                        <h6>How Restaurants Can Engage with Millennials in 2022</h6>{" "}
                         <a href="#">Prev. Posts by this author</a>
                       </div>
                     </div>
@@ -247,13 +231,11 @@ const SingleBlog = () => {
                 <li>
                   <div className="comment-text">
                     <p>
-                      Vitae congue mauris rhoncus aenean vel elit scelerisque.
-                      Mollis nunc sed id semper. Ac orci phasellus egestas
-                      tellus rutrum tellus pellentesque. Urna nec tincidunt
-                      praesent semper feugiat nibh sed pulvinar proin. Enim
-                      praesent elementum facilisis leo vel fringilla est. Porta
-                      nibh venenatis cras sed felis eget velit aliquet sagittis.
-                      At in tellus integer feugiat scelerisque varius.
+                      Vitae congue mauris rhoncus aenean vel elit scelerisque. Mollis nunc sed id
+                      semper. Ac orci phasellus egestas tellus rutrum tellus pellentesque. Urna nec
+                      tincidunt praesent semper feugiat nibh sed pulvinar proin. Enim praesent
+                      elementum facilisis leo vel fringilla est. Porta nibh venenatis cras sed felis
+                      eget velit aliquet sagittis. At in tellus integer feugiat scelerisque varius.
                     </p>{" "}
                     <a href="#">
                       <span>
@@ -273,9 +255,9 @@ const SingleBlog = () => {
                 <li className="reply one">
                   <div className="comment-text">
                     <p>
-                      Auctor urna nunc id cursus metus. Eros donec ac odio
-                      tempor orci dapibus ultrices in. Suspendisse sed nisi
-                      lacus sed. Sed risus ultricies tristique nulla aliquet.
+                      Auctor urna nunc id cursus metus. Eros donec ac odio tempor orci dapibus
+                      ultrices in. Suspendisse sed nisi lacus sed. Sed risus ultricies tristique
+                      nulla aliquet.
                     </p>{" "}
                     <a href="#">
                       <span>
@@ -295,10 +277,9 @@ const SingleBlog = () => {
                 <li className="reply two">
                   <div className="comment-text">
                     <p>
-                      Ac felis donec et odio pellentesque. Amet nisl suscipit
-                      adipiscing bibendum est ultricies. Tincidunt augue
-                      interdum velit euismod. Vitae sapien pellentesque habitant
-                      morbi. Feugiat nibh sed pulvinar proin gravida.
+                      Ac felis donec et odio pellentesque. Amet nisl suscipit adipiscing bibendum
+                      est ultricies. Tincidunt augue interdum velit euismod. Vitae sapien
+                      pellentesque habitant morbi. Feugiat nibh sed pulvinar proin gravida.
                     </p>{" "}
                     <a href="#">
                       <span>
@@ -318,11 +299,10 @@ const SingleBlog = () => {
                 <li className="reply three">
                   <div className="comment-text">
                     <p>
-                      Tortor condimentum lacinia quis vel eros donec ac odio
-                      tempor. Varius sit amet mattis vulputate enim. Velit
-                      egestas dui id ornare arcu odio ut. Lacus suspendisse
-                      faucibus interdum posuere lorem ipsum. Commodo sed egestas
-                      egestas fringilla phasellus.
+                      Tortor condimentum lacinia quis vel eros donec ac odio tempor. Varius sit amet
+                      mattis vulputate enim. Velit egestas dui id ornare arcu odio ut. Lacus
+                      suspendisse faucibus interdum posuere lorem ipsum. Commodo sed egestas egestas
+                      fringilla phasellus.
                     </p>{" "}
                     <a href="#">
                       <span>
@@ -351,13 +331,11 @@ const SingleBlog = () => {
                 <li>
                   <div className="comment-text">
                     <p>
-                      Vitae congue mauris rhoncus aenean vel elit scelerisque.
-                      Mollis nunc sed id semper. Ac orci phasellus egestas
-                      tellus rutrum tellus pellentesque. Urna nec tincidunt
-                      praesent semper feugiat nibh sed pulvinar proin. Enim
-                      praesent elementum facilisis leo vel fringilla est. Porta
-                      nibh venenatis cras sed felis eget velit aliquet sagittis.
-                      At in tellus integer feugiat scelerisque varius.
+                      Vitae congue mauris rhoncus aenean vel elit scelerisque. Mollis nunc sed id
+                      semper. Ac orci phasellus egestas tellus rutrum tellus pellentesque. Urna nec
+                      tincidunt praesent semper feugiat nibh sed pulvinar proin. Enim praesent
+                      elementum facilisis leo vel fringilla est. Porta nibh venenatis cras sed felis
+                      eget velit aliquet sagittis. At in tellus integer feugiat scelerisque varius.
                     </p>{" "}
                     <a href="#">
                       <span>
@@ -397,21 +375,14 @@ const SingleBlog = () => {
               </ul>
               <div className="comment">
                 <h2>Leave your comment</h2>
-                <form
-                  onSubmit={(e) => e.preventDefault()}
-                  className="comment-blog"
-                >
+                <form onSubmit={(e) => e.preventDefault()} className="comment-blog">
                   <textarea placeholder="Enter you comment" defaultValue={""} />
                   <div className="row">
                     <div className="col-lg-6">
                       <input type="text" name="name" placeholder="Your Name" />
                     </div>
                     <div className="col-lg-6">
-                      <input
-                        type="text"
-                        name="Email"
-                        placeholder="Email Address"
-                      />
+                      <input type="text" name="Email" placeholder="Email Address" />
                     </div>
                   </div>
                   <button className="button-price">Publish a comment</button>

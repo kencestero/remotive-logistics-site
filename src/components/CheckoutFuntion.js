@@ -27,10 +27,7 @@ const CheckoutFuntion = ({ sidebar }) => {
   useEffect(() => {
     setSubTotal(subTotal_());
     setTotalPrice(Number(subTotal_()).toFixed(2));
-    localStorage.setItem(
-      "munfirm",
-      JSON.stringify({ subTotal, totalPrice, cartData })
-    );
+    localStorage.setItem("munfirm", JSON.stringify({ subTotal, totalPrice, cartData }));
   });
 
   const subTotal_ = () => {
@@ -48,8 +45,8 @@ const CheckoutFuntion = ({ sidebar }) => {
           ? 1
           : findCartItem.quantity - 1
         : type == "+"
-        ? findCartItem.quantity + 1
-        : value;
+          ? findCartItem.quantity + 1
+          : value;
     setCartData([...cartData]);
   };
   return (
@@ -67,9 +64,7 @@ const CheckoutFuntion = ({ sidebar }) => {
           <li className="price-list" key={item.id}>
             <i
               className="closeButton fa-solid fa-xmark"
-              onClick={() =>
-                setCartData(cartData.filter((c) => c.id !== item.id))
-              }
+              onClick={() => setCartData(cartData.filter((c) => c.id !== item.id))}
             />
             <div className="counter-container">
               <div className="counter-food">
@@ -97,9 +92,7 @@ const CheckoutFuntion = ({ sidebar }) => {
                     className="product-qty"
                     type="number"
                     value={item.quantity}
-                    onChange={(e) =>
-                      updateQuantity(i, "value", Number(e.target.value))
-                    }
+                    onChange={(e) => updateQuantity(i, "value", Number(e.target.value))}
                     name="quantity"
                   />
                   <button

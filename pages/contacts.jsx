@@ -27,17 +27,15 @@ const Contacts = () => {
                 </ul>
                 <h2>Contact us</h2>
                 <p>
-                  Egestas sed tempus urna et pharetra pharetra massa. Fermentum
-                  posuere urna nec tincidunt praesent semper.
+                  Egestas sed tempus urna et pharetra pharetra massa. Fermentum posuere urna nec
+                  tincidunt praesent semper.
                 </p>
               </div>
               <div className="row">
                 <div className="col-lg-4 col-md-4 col-sm-12">
                   <div className="address">
                     <i className="fa-solid fa-location-dot" />
-                    <h5>
-                      1717 Harrison St, San Francisco, CA 94103, United States
-                    </h5>
+                    <h5>1717 Harrison St, San Francisco, CA 94103, United States</h5>
                   </div>
                 </div>
                 <div className="col-lg-4 col-md-4 col-sm-12">
@@ -95,33 +93,19 @@ const Contacts = () => {
                 <div className="join-courier content">
                   <h3>Get in touch with us</h3>
                   <p>
-                    Magna sit amet purus gravida quis blandit turpis cursus.
-                    Venenatis tellus in metus vulputate eu scelerisque felis.
+                    Magna sit amet purus gravida quis blandit turpis cursus. Venenatis tellus in
+                    metus vulputate eu scelerisque felis.
                   </p>
-                  <form
-                    onSubmit={(e) => e.preventDefault()}
-                    className="blog-form"
-                  >
+                  <form onSubmit={(e) => e.preventDefault()} className="blog-form">
                     <div className="name-form">
                       <i className="fa-regular fa-user" />
-                      <input
-                        type="text"
-                        name="name"
-                        placeholder="Enter your name"
-                      />
+                      <input type="text" name="name" placeholder="Enter your name" />
                     </div>
                     <div className="name-form">
                       <i className="fa-regular fa-envelope" />
-                      <input
-                        type="text"
-                        name="email"
-                        placeholder="Enter your email"
-                      />
+                      <input type="text" name="email" placeholder="Enter your email" />
                     </div>
-                    <textarea
-                      placeholder="Enter your message"
-                      defaultValue={""}
-                    />
+                    <textarea placeholder="Enter your message" defaultValue={""} />
                     <button className="button-price">Submit Application</button>
                   </form>
                 </div>

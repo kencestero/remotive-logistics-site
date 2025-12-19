@@ -58,9 +58,7 @@ const VideoPopup = () => {
   }, []);
   return (
     <Fragment>
-      {video && (
-        <VideoPopup_ close={() => setVideo(false)} videoID={videoValue} />
-      )}
+      {video && <VideoPopup_ close={() => setVideo(false)} videoID={videoValue} />}
     </Fragment>
   );
 };

@@ -31,9 +31,7 @@ const Item = ({ item }) => {
             <div className="dish-icon end">
               <i
                 className="info fa-solid fa-circle-info"
-                onClick={() =>
-                  setCardInfo(cardInfo == item.id ? false : item.id)
-                }
+                onClick={() => setCardInfo(cardInfo == item.id ? false : item.id)}
               />
               <div className="star">
                 {" "}
@@ -82,10 +80,7 @@ const Item = ({ item }) => {
             display: cardInfo == item.id ? "block" : "none",
           }}
         >
-          <i
-            className="info2 fa-solid fa-xmark"
-            onClick={() => setCardInfo(false)}
-          />
+          <i className="info2 fa-solid fa-xmark" onClick={() => setCardInfo(false)} />
           <h5>{item.title}</h5>
           <div className="cafa-button">
             {" "}
@@ -96,8 +91,8 @@ const Item = ({ item }) => {
             ))}
           </div>
           <p>
-            In egestas erat imperdiet sed euismod nisi porta. Ultrices sagittis
-            orci a scelerisque. Diam quam nulla porttitor.
+            In egestas erat imperdiet sed euismod nisi porta. Ultrices sagittis orci a scelerisque.
+            Diam quam nulla porttitor.
           </p>
           <ul className="menu-dish">
             <li>Nulla porttitor massa id;</li>

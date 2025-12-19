@@ -30,9 +30,8 @@ const Services = () => {
                 </ul>
                 <h2>Service shows good taste</h2>
                 <p>
-                  Mauris nunc congue nisi vitae suscipit tellus mauris. Ac
-                  tincidunt vitae semper quis lectus. Sollicitudin ac orci
-                  phasellus egestas tellus.
+                  Mauris nunc congue nisi vitae suscipit tellus mauris. Ac tincidunt vitae semper
+                  quis lectus. Sollicitudin ac orci phasellus egestas tellus.
                 </p>{" "}
                 <Link href="/restaurants" className="button button-2">
                   Select Restaurant
@@ -95,10 +94,9 @@ const Services = () => {
               <div className="services-info">
                 <h2>Make you easier and happier</h2>
                 <p>
-                  Risus quis varius quam quisque id diam vel quam elementum.
-                  Luctus venenatis lectus magna fringilla urna porttitor rhoncus
-                  dolor. Mauris pharetra et ultrices neque. Id ornare arcu odio
-                  ut sem. Sed vulputate mi sit amet mauris.
+                  Risus quis varius quam quisque id diam vel quam elementum. Luctus venenatis lectus
+                  magna fringilla urna porttitor rhoncus dolor. Mauris pharetra et ultrices neque.
+                  Id ornare arcu odio ut sem. Sed vulputate mi sit amet mauris.
                 </p>
               </div>
             </div>
@@ -119,8 +117,8 @@ const Services = () => {
                   </a>
                 </h4>
                 <p>
-                  Turpis cursus in hac habitasse platea. Magna fringilla urna
-                  porttitor dolor purus non enim. Molestie nunc non blandit.
+                  Turpis cursus in hac habitasse platea. Magna fringilla urna porttitor dolor purus
+                  non enim. Molestie nunc non blandit.
                 </p>
               </div>
             </div>
@@ -141,8 +139,8 @@ const Services = () => {
                   </a>
                 </h4>
                 <p>
-                  Tempor orci dapibus ultrices in iaculis nunc sed augue. Sed
-                  euismod nisi porta lorem mollis aliquam ut porttitor leo.
+                  Tempor orci dapibus ultrices in iaculis nunc sed augue. Sed euismod nisi porta
+                  lorem mollis aliquam ut porttitor leo.
                 </p>
               </div>
             </div>
@@ -163,8 +161,8 @@ const Services = () => {
                   </a>
                 </h4>
                 <p>
-                  Cras fermentum odio eu feugiat pretium nibh ipsum. Ut faucibus
-                  pulvinar elementum integer .
+                  Cras fermentum odio eu feugiat pretium nibh ipsum. Ut faucibus pulvinar elementum
+                  integer .
                 </p>
               </div>
             </div>
@@ -185,8 +183,8 @@ const Services = () => {
                   </a>
                 </h4>
                 <p>
-                  Morbi leo urna molestie at elementum eu facilisis sed odio.
-                  Mattis nunc sed blandit libero volutpat sed cras ornare.
+                  Morbi leo urna molestie at elementum eu facilisis sed odio. Mattis nunc sed
+                  blandit libero volutpat sed cras ornare.
                 </p>
               </div>
             </div>
@@ -224,16 +222,11 @@ const Services = () => {
       {/* works-section */}
       <section className="works-section gap" style={{ background: "#fcfcfc" }}>
         <div className="container">
-          <div
-            className="hading"
-            data-aos="fade-up"
-            data-aos-delay={200}
-            data-aos-duration={300}
-          >
+          <div className="hading" data-aos="fade-up" data-aos-delay={200} data-aos-duration={300}>
             <h2>How it works</h2>
             <p>
-              Magna sit amet purus gravida quis blandit turpis cursus. Venenatis
-              tellus in metus vulputate eu scelerisque felis.
+              Magna sit amet purus gravida quis blandit turpis cursus. Venenatis tellus in metus
+              vulputate eu scelerisque felis.
             </p>
           </div>
           <div className="row ">
@@ -247,9 +240,8 @@ const Services = () => {
                 <img alt="img" src="/assets/img/Illustration-1.png" />
                 <h4>Select Restaurant</h4>
                 <p>
-                  Non enim praesent elementum facilisis leo vel fringilla.
-                  Lectus proin nibh nisl condimentum id. Quis varius quam
-                  quisque id diam vel.
+                  Non enim praesent elementum facilisis leo vel fringilla. Lectus proin nibh nisl
+                  condimentum id. Quis varius quam quisque id diam vel.
                 </p>
               </div>
             </div>
@@ -263,9 +255,8 @@ const Services = () => {
                 <img alt="img" src="/assets/img/Illustration-2.png" />
                 <h4>Select menu</h4>
                 <p>
-                  Eu mi bibendum neque egestas congue quisque. Nulla facilisi
-                  morbi tempus iaculis lectus urna id volutpat lacus. Odio ut
-                  sem nulla{" "}
+                  Eu mi bibendum neque egestas congue quisque. Nulla facilisi morbi tempus iaculis
+                  lectus urna id volutpat lacus. Odio ut sem nulla{" "}
                 </p>
               </div>
             </div>
@@ -279,9 +270,8 @@ const Services = () => {
                 <img alt="img" src="/assets/img/illustration-3.png" />
                 <h4>Wait for delivery</h4>
                 <p>
-                  Nunc lobortis mattis aliquam faucibus. Nibh ipsum consequat
-                  nisl vel pretium lectus quam id leo. A scelerisque purus
-                  semper eget.
+                  Nunc lobortis mattis aliquam faucibus. Nibh ipsum consequat nisl vel pretium
+                  lectus quam id leo. A scelerisque purus semper eget.
                 </p>
               </div>
             </div>
@@ -319,8 +309,8 @@ const Services = () => {
               <div className="sit-at-home-description">
                 <h2>Sit at Home We Will Take Care Your Order</h2>
                 <p>
-                  Magna sit amet purus gravida quis blandit turpis cursus.
-                  Venenatis tellus in metus vulputate eu scelerisque felis.
+                  Magna sit amet purus gravida quis blandit turpis cursus. Venenatis tellus in metus
+                  vulputate eu scelerisque felis.
                 </p>
                 <ul className="food-dishes">
                   <li>

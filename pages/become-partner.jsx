@@ -29,8 +29,8 @@ const BecomePartner = () => {
                 </ul>
                 <h2>Want to join partnership?</h2>
                 <p>
-                  Egestas sed tempus urna et pharetra pharetra massa. Fermentum
-                  posuere urna nec tincidunt praesent semper.
+                  Egestas sed tempus urna et pharetra pharetra massa. Fermentum posuere urna nec
+                  tincidunt praesent semper.
                 </p>
               </div>
             </div>
@@ -38,41 +38,23 @@ const BecomePartner = () => {
               <div className="join-courier">
                 <h3>Join Courier</h3>
                 <p>
-                  Egestas sed tempus urna et pharetra pharetra massa. Fermentum
-                  posuere urna nec tincidunt praesent semper.
+                  Egestas sed tempus urna et pharetra pharetra massa. Fermentum posuere urna nec
+                  tincidunt praesent semper.
                 </p>
-                <form
-                  onSubmit={(e) => e.preventDefault()}
-                  className="blog-form"
-                >
+                <form onSubmit={(e) => e.preventDefault()} className="blog-form">
                   <div className="name-form">
                     <i className="fa-regular fa-user" />
-                    <input
-                      type="text"
-                      name="name"
-                      placeholder="Enter your name"
-                    />
+                    <input type="text" name="name" placeholder="Enter your name" />
                   </div>
                   <div className="name-form">
                     <i className="fa-solid fa-phone" />
-                    <input
-                      type="text"
-                      name="phone"
-                      placeholder="Enter your phone"
-                    />
+                    <input type="text" name="phone" placeholder="Enter your phone" />
                   </div>
                   <div className="name-form">
                     <i className="fa-regular fa-envelope" />
-                    <input
-                      type="text"
-                      name="email"
-                      placeholder="Enter your email"
-                    />
+                    <input type="text" name="email" placeholder="Enter your email" />
                   </div>
-                  <textarea
-                    placeholder="Enter your message"
-                    defaultValue={""}
-                  />
+                  <textarea placeholder="Enter your message" defaultValue={""} />
                   <button className="button-price">Submit Application</button>
                 </form>
               </div>
@@ -92,9 +74,9 @@ const BecomePartner = () => {
               <div className="benefit-text">
                 <h2>Benefits you get with Remotive Logistics</h2>
                 <p>
-                  Suspendisse in est ante in. Duis at consectetur lorem donec
-                  massa. Eget lorem dolor sed viverra ipsum. Aliquam id diam
-                  maecenas ultricies mi. Nulla facilisi morbi tempus iaculis.
+                  Suspendisse in est ante in. Duis at consectetur lorem donec massa. Eget lorem
+                  dolor sed viverra ipsum. Aliquam id diam maecenas ultricies mi. Nulla facilisi
+                  morbi tempus iaculis.
                 </p>
               </div>
             </div>
@@ -116,9 +98,8 @@ const BecomePartner = () => {
                   Friendly Team
                 </h4>
                 <p>
-                  Consequat semper viverra nam libero justo laoreet sit.
-                  Consequat semper viverra nam libero justo laoreet sit amet
-                  cursus. Morbi tincidunt ornare .
+                  Consequat semper viverra nam libero justo laoreet sit. Consequat semper viverra
+                  nam libero justo laoreet sit amet cursus. Morbi tincidunt ornare .
                 </p>
               </div>
             </div>
@@ -134,9 +115,8 @@ const BecomePartner = () => {
                   Flexible Schedule
                 </h4>
                 <p>
-                  Maecenas ultricies mi eget mauris pharetra. Sed ullamcorper
-                  morbi tincidunt ornare massa eget. Gravida neque convallis a
-                  cras semper.
+                  Maecenas ultricies mi eget mauris pharetra. Sed ullamcorper morbi tincidunt ornare
+                  massa eget. Gravida neque convallis a cras semper.
                 </p>
               </div>
             </div>
@@ -152,9 +132,8 @@ const BecomePartner = () => {
                   Official Employment
                 </h4>
                 <p>
-                  Dignissim cras tincidunt lobortis feugiat vivamus at augue
-                  eget. Cursus risus at ultrices mi tempus imperdiet. Non diam
-                  phasellus vestibulum.
+                  Dignissim cras tincidunt lobortis feugiat vivamus at augue eget. Cursus risus at
+                  ultrices mi tempus imperdiet. Non diam phasellus vestibulum.
                 </p>
               </div>
             </div>
@@ -170,9 +149,8 @@ const BecomePartner = () => {
                   Stable Income
                 </h4>
                 <p>
-                  Dui sapien eget mi proin sed. Nibh nisl condimentum id
-                  venenatis a. Vulputate eu scelerisque felis imperdiet proin
-                  fermentum leo.{" "}
+                  Dui sapien eget mi proin sed. Nibh nisl condimentum id venenatis a. Vulputate eu
+                  scelerisque felis imperdiet proin fermentum leo.{" "}
                 </p>
               </div>
             </div>
@@ -188,9 +166,8 @@ const BecomePartner = () => {
                   Career Growth
                 </h4>
                 <p>
-                  Euismod quis viverra nibh cras pulvinar mattis nunc sed
-                  blandit. Neque viverra justo nec ultrices dui sapien. Volutpat
-                  est velit egestas.
+                  Euismod quis viverra nibh cras pulvinar mattis nunc sed blandit. Neque viverra
+                  justo nec ultrices dui sapien. Volutpat est velit egestas.
                 </p>
               </div>
             </div>
@@ -206,9 +183,8 @@ const BecomePartner = () => {
                   Full Insurance
                 </h4>
                 <p>
-                  Cras semper auctor neque vitae tempus quam. Sed viverra tellus
-                  in hac habitasse platea. Sagittis aliquam malesuada bibendum
-                  arcu vitae.
+                  Cras semper auctor neque vitae tempus quam. Sed viverra tellus in hac habitasse
+                  platea. Sagittis aliquam malesuada bibendum arcu vitae.
                 </p>
               </div>
             </div>
@@ -237,9 +213,8 @@ const BecomePartner = () => {
               <div className="join-the">
                 <h2>Frequently asked questions</h2>
                 <p>
-                  Ultricies lacus sed turpis tincidunt id aliquet risus feugiat.
-                  Mauris augue neque gravida in fermentum et sollicitudin. Amet
-                  est placerat in egestas erat imperdiet.
+                  Ultricies lacus sed turpis tincidunt id aliquet risus feugiat. Mauris augue neque
+                  gravida in fermentum et sollicitudin. Amet est placerat in egestas erat imperdiet.
                 </p>
               </div>
               <div className="counter-blog">
@@ -280,8 +255,8 @@ const BecomePartner = () => {
                 </div>
                 <h3>We Have Received An Award For The Quality Of Our Work</h3>
                 <p>
-                  Donec adipiscing tristique risus nec feugiat in fermentum.
-                  Sapien eget mi proin sed...
+                  Donec adipiscing tristique risus nec feugiat in fermentum. Sapien eget mi proin
+                  sed...
                 </p>{" "}
                 <Link href="/single-blog">
                   Read More
@@ -323,9 +298,9 @@ const BecomePartner = () => {
                 </div>
                 <h3>With Quickeat you can order food for the whole day</h3>
                 <p>
-                  Nec tincidunt praesent semper feugiat nibh. Feugiat in ante
-                  metus dictum. Sapien nec sagittis aliquam malesuada bibendum
-                  arcu vitae. Non enim praesent elementum facilisis...
+                  Nec tincidunt praesent semper feugiat nibh. Feugiat in ante metus dictum. Sapien
+                  nec sagittis aliquam malesuada bibendum arcu vitae. Non enim praesent elementum
+                  facilisis...
                 </p>{" "}
                 <Link href="/single-blog">
                   Read More
@@ -367,9 +342,9 @@ const BecomePartner = () => {
                 </div>
                 <h3>127+ Couriers On Our Team!</h3>
                 <p>
-                  Pulvinar neque laoreet suspendisse interdum consectetur libero
-                  id faucibus nisl. Aliquam ultrices sagittis orci a scelerisque
-                  purus semper eget duis. Viverra vitae congue eu consequat...
+                  Pulvinar neque laoreet suspendisse interdum consectetur libero id faucibus nisl.
+                  Aliquam ultrices sagittis orci a scelerisque purus semper eget duis. Viverra vitae
+                  congue eu consequat...
                 </p>{" "}
                 <Link href="/single-blog">
                   Read More

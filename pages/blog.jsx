@@ -30,8 +30,8 @@ const Blog = () => {
                 </ul>
                 <h2>Current news about Us</h2>
                 <p>
-                  Egestas sed tempus urna et pharetra pharetra massa. Fermentum
-                  posuere urna nec tincidunt praesent semper.
+                  Egestas sed tempus urna et pharetra pharetra massa. Fermentum posuere urna nec
+                  tincidunt praesent semper.
                 </p>
               </div>
             </div>
@@ -78,10 +78,9 @@ const Blog = () => {
                 <div className="blog-post-data-img">
                   <h3>We Have Received An Award For The Quality Of Our Work</h3>
                   <p>
-                    Scelerisque purus semper eget duis at. Tincidunt ornare
-                    massa eget egestas purus viverra. Morbi enim nunc faucibus a
-                    pellentesque. Lobortis elementum nibh tellus molestie nunc
-                    non...
+                    Scelerisque purus semper eget duis at. Tincidunt ornare massa eget egestas purus
+                    viverra. Morbi enim nunc faucibus a pellentesque. Lobortis elementum nibh tellus
+                    molestie nunc non...
                   </p>{" "}
                   <Link href="/single-blog">
                     Read More
@@ -124,10 +123,9 @@ const Blog = () => {
                 </div>
                 <h3>With Remotive you can schedule deliveries all day</h3>
                 <p>
-                  Scelerisque purus semper eget duis at. Tincidunt ornare massa
-                  eget egestas purus viverra. Morbi enim nunc faucibus a
-                  pellentesque. Lobortis elementum nibh tellus molestie nunc
-                  non...
+                  Scelerisque purus semper eget duis at. Tincidunt ornare massa eget egestas purus
+                  viverra. Morbi enim nunc faucibus a pellentesque. Lobortis elementum nibh tellus
+                  molestie nunc non...
                 </p>{" "}
                 <Link href="/single-blog">
                   Read More
@@ -169,10 +167,9 @@ const Blog = () => {
                 </div>
                 <h3>127+ Couriers On Our Team Big Food Trends</h3>
                 <p>
-                  Scelerisque purus semper eget duis at. Tincidunt ornare massa
-                  eget egestas purus viverra. Morbi enim nunc faucibus a
-                  pellentesque. Lobortis elementum nibh tellus molestie nunc
-                  non...
+                  Scelerisque purus semper eget duis at. Tincidunt ornare massa eget egestas purus
+                  viverra. Morbi enim nunc faucibus a pellentesque. Lobortis elementum nibh tellus
+                  molestie nunc non...
                 </p>{" "}
                 <Link href="/single-blog">
                   Read More
@@ -214,10 +211,9 @@ const Blog = () => {
                 </div>
                 <h3>Why You Should Optimize Your Menu for Delivery</h3>
                 <p>
-                  Scelerisque purus semper eget duis at. Tincidunt ornare massa
-                  eget egestas purus viverra. Morbi enim nunc faucibus a
-                  pellentesque. Lobortis elementum nibh tellus molestie nunc
-                  non...
+                  Scelerisque purus semper eget duis at. Tincidunt ornare massa eget egestas purus
+                  viverra. Morbi enim nunc faucibus a pellentesque. Lobortis elementum nibh tellus
+                  molestie nunc non...
                 </p>{" "}
                 <Link href="/single-blog">
                   Read More
@@ -259,10 +255,9 @@ const Blog = () => {
                 </div>
                 <h3>How Restaurants Can Engage with Millennials in 2022</h3>
                 <p>
-                  Scelerisque purus semper eget duis at. Tincidunt ornare massa
-                  eget egestas purus viverra. Morbi enim nunc faucibus a
-                  pellentesque. Lobortis elementum nibh tellus molestie nunc
-                  non...
+                  Scelerisque purus semper eget duis at. Tincidunt ornare massa eget egestas purus
+                  viverra. Morbi enim nunc faucibus a pellentesque. Lobortis elementum nibh tellus
+                  molestie nunc non...
                 </p>{" "}
                 <Link href="/single-blog">
                   Read More
@@ -304,10 +299,9 @@ const Blog = () => {
                 </div>
                 <h3>Why You Should Optimize Your Menu for Delivery</h3>
                 <p>
-                  Scelerisque purus semper eget duis at. Tincidunt ornare massa
-                  eget egestas purus viverra. Morbi enim nunc faucibus a
-                  pellentesque. Lobortis elementum nibh tellus molestie nunc
-                  non...
+                  Scelerisque purus semper eget duis at. Tincidunt ornare massa eget egestas purus
+                  viverra. Morbi enim nunc faucibus a pellentesque. Lobortis elementum nibh tellus
+                  molestie nunc non...
                 </p>{" "}
                 <Link href="/single-blog">
                   Read More
@@ -349,10 +343,9 @@ const Blog = () => {
                 </div>
                 <h3>5 Big food Trends Coming Your Way in 2022</h3>
                 <p>
-                  Scelerisque purus semper eget duis at. Tincidunt ornare massa
-                  eget egestas purus viverra. Morbi enim nunc faucibus a
-                  pellentesque. Lobortis elementum nibh tellus molestie nunc
-                  non...
+                  Scelerisque purus semper eget duis at. Tincidunt ornare massa eget egestas purus
+                  viverra. Morbi enim nunc faucibus a pellentesque. Lobortis elementum nibh tellus
+                  molestie nunc non...
                 </p>{" "}
                 <Link href="/single-blog">
                   Read More

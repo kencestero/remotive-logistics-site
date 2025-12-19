@@ -28,20 +28,12 @@ const PricingTable = () => {
                     </Link>
                   </li>
                 </ul>
-                <h2
-                  data-aos="fade-up"
-                  data-aos-delay={300}
-                  data-aos-duration={400}
-                >
+                <h2 data-aos="fade-up" data-aos-delay={300} data-aos-duration={400}>
                   Lunch sets
                 </h2>
-                <p
-                  data-aos="fade-up"
-                  data-aos-delay={400}
-                  data-aos-duration={500}
-                >
-                  Ultricies lacus sed turpis tincidunt id aliquet risus feugiat.
-                  Mauris augue neque gravida in fermentum et sollicitudin.
+                <p data-aos="fade-up" data-aos-delay={400} data-aos-duration={500}>
+                  Ultricies lacus sed turpis tincidunt id aliquet risus feugiat. Mauris augue neque
+                  gravida in fermentum et sollicitudin.
                 </p>
               </div>
             </div>
@@ -74,9 +66,8 @@ const PricingTable = () => {
                   <h3>Small Business Lunch</h3>
                 </div>
                 <p>
-                  Commodo viverra maecenas accumsan lacus vel facilisis volutpat
-                  est. Amet justo donec enim malesuada diam vulputate ut
-                  pharetra.
+                  Commodo viverra maecenas accumsan lacus vel facilisis volutpat est. Amet justo
+                  donec enim malesuada diam vulputate ut pharetra.
                 </p>
                 <ul className="pricing-plan-list">
                   <li>
@@ -141,8 +132,8 @@ const PricingTable = () => {
                   <h3>Large Business Lunch</h3>
                 </div>
                 <p>
-                  Volutpat est velit egestas dui id. Elementum eu facilisis sed
-                  odio morbi quis. Imperdiet nulla malesuada pellentesque elit.
+                  Volutpat est velit egestas dui id. Elementum eu facilisis sed odio morbi quis.
+                  Imperdiet nulla malesuada pellentesque elit.
                 </p>
                 <ul className="pricing-plan-list">
                   <li>
@@ -207,9 +198,8 @@ const PricingTable = () => {
                   <h3>Medium Business Lunch</h3>
                 </div>
                 <p>
-                  Facilisi morbi tempus iaculis urna. Consequat id porta nibh
-                  venenatis cras sed felis eget. Lorem ipsum dolor sit amet
-                  consectetur adipiscing elit.
+                  Facilisi morbi tempus iaculis urna. Consequat id porta nibh venenatis cras sed
+                  felis eget. Lorem ipsum dolor sit amet consectetur adipiscing elit.
                 </p>
                 <ul className="pricing-plan-list">
                   <li>

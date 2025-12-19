@@ -15,11 +15,7 @@ const Footer = () => {
                   viewBox="0 0 163 38"
                 >
                   <g id="Logo-w" transform="translate(-260 -51)">
-                    <g
-                      id="Logo-2-w"
-                      data-name="Logo-w"
-                      transform="translate(260 51)"
-                    >
+                    <g id="Logo-2-w" data-name="Logo-w" transform="translate(260 51)">
                       <g id="Elements-w">
                         <path
                           id="Path_2429"
@@ -99,9 +95,8 @@ const Footer = () => {
               </Link>
               <h2>The Best Restaurants in Your Home</h2>
               <p>
-                Vitae congue mauris rhoncus aenean. Enim nulla aliquet porttitor
-                lacus luctus accumsan tortor posuere. Tempus egestas sed sed
-                risus pretium quam.
+                Vitae congue mauris rhoncus aenean. Enim nulla aliquet porttitor lacus luctus
+                accumsan tortor posuere. Tempus egestas sed sed risus pretium quam.
               </p>
             </div>
           </div>

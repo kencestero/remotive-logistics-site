@@ -28,8 +28,8 @@ const Restaurants = () => {
                 </ul>
                 <h2>Restaurants</h2>
                 <p>
-                  Egestas sed tempus urna et pharetra pharetra massa. Fermentum
-                  posuere urna nec tincidunt praesent semper.
+                  Egestas sed tempus urna et pharetra pharetra massa. Fermentum posuere urna nec
+                  tincidunt praesent semper.
                 </p>
                 <div className="restaurant">
                   <div className="nice-select-one">
@@ -74,17 +74,9 @@ const Restaurants = () => {
         </div>
       </section>
       {/* banner */}
-      <section
-        className="banner"
-        data-aos="fade-up"
-        data-aos-delay={200}
-        data-aos-duration={300}
-      >
+      <section className="banner" data-aos="fade-up" data-aos-delay={200} data-aos-duration={300}>
         <div className="container">
-          <div
-            className="banner-img"
-            style={{ backgroundImage: "url(assets/img/food-4.jpg)" }}
-          >
+          <div className="banner-img" style={{ backgroundImage: "url(assets/img/food-4.jpg)" }}>
             <div className="banner-logo">
               <h4>
                 Restaurant
@@ -144,9 +136,8 @@ const Restaurants = () => {
                     </a>
                   </div>
                   <p>
-                    Non enim praesent elementum facilisis leo vel fringilla.
-                    Lectus proin nibh nisl condimentum id. Quis varius quam
-                    quisque id diam vel.
+                    Non enim praesent elementum facilisis leo vel fringilla. Lectus proin nibh nisl
+                    condimentum id. Quis varius quam quisque id diam vel.
                   </p>
                 </div>
               </div>
@@ -178,9 +169,8 @@ const Restaurants = () => {
                     </a>
                   </div>
                   <p>
-                    Vulputate enim nulla aliquet porttitor lacus luctus.
-                    Suscipit adipiscing bibendum est ultricies integer. Sed
-                    adipiscing diam donec adipiscing tristique.
+                    Vulputate enim nulla aliquet porttitor lacus luctus. Suscipit adipiscing
+                    bibendum est ultricies integer. Sed adipiscing diam donec adipiscing tristique.
                   </p>
                 </div>
               </div>
@@ -212,9 +202,8 @@ const Restaurants = () => {
                     </a>
                   </div>
                   <p>
-                    Tortor at risus viverra adipiscing at in tellus. Cras semper
-                    auctor neque vitae tempus. Dui accumsan sit amet nulla
-                    facilisi. Sed adipiscing diam .
+                    Tortor at risus viverra adipiscing at in tellus. Cras semper auctor neque vitae
+                    tempus. Dui accumsan sit amet nulla facilisi. Sed adipiscing diam .
                   </p>
                 </div>
               </div>
@@ -246,9 +235,8 @@ const Restaurants = () => {
                     </a>
                   </div>
                   <p>
-                    Non enim praesent elementum facilisis leo vel fringilla.
-                    Lectus proin nibh nisl condimentum id. Quis varius quam
-                    quisque id diam vel.
+                    Non enim praesent elementum facilisis leo vel fringilla. Lectus proin nibh nisl
+                    condimentum id. Quis varius quam quisque id diam vel.
                   </p>
                 </div>
               </div>
@@ -280,9 +268,8 @@ const Restaurants = () => {
                     </a>
                   </div>
                   <p>
-                    At erat pellentesque adipiscing commodo elit at imperdiet
-                    dui. Suspendisse faucibus interdum posuere lorem. Elit sed
-                    vulputate mi sit.
+                    At erat pellentesque adipiscing commodo elit at imperdiet dui. Suspendisse
+                    faucibus interdum posuere lorem. Elit sed vulputate mi sit.
                   </p>
                 </div>
               </div>
@@ -314,9 +301,8 @@ const Restaurants = () => {
                     </a>
                   </div>
                   <p>
-                    Lacus vestibulum sed arcu non odio euismod lacinia at. Id
-                    neque aliquam vestibulum morbi. Ante metus dictum
-                    ullamcorper a lacus.
+                    Lacus vestibulum sed arcu non odio euismod lacinia at. Id neque aliquam
+                    vestibulum morbi. Ante metus dictum ullamcorper a lacus.
                   </p>
                 </div>
               </div>

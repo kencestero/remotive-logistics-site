@@ -3,8 +3,7 @@ import { useState } from "react";
 
 const MobileMenu = () => {
   const [activeMenu, setActiveMenu] = useState("");
-  const activeMenuSet = (value) =>
-      setActiveMenu(activeMenu === value ? "" : value),
+  const activeMenuSet = (value) => setActiveMenu(activeMenu === value ? "" : value),
     activeLi = (value) => (value === activeMenu ? "active" : "");
   return (
     <ul>

@@ -135,14 +135,12 @@ const RestaurantCard = () => {
                   <span>CUISINES:</span>
                   <div className="cafa-button">
                     {" "}
-                    <a href="#">american</a> <a href="#">steakhouse</a>{" "}
-                    <a href="#">seafood</a>
+                    <a href="#">american</a> <a href="#">steakhouse</a> <a href="#">seafood</a>
                   </div>
                   <span>FEATURES:</span>
                   <p>
-                    Lorem mollis aliquam ut porttitor. Nisl rhoncus mattis
-                    rhoncus urna neque. Pharetra sit amet aliquam id. Urna nec
-                    tincidunt praesent semper feugiat nibh.
+                    Lorem mollis aliquam ut porttitor. Nisl rhoncus mattis rhoncus urna neque.
+                    Pharetra sit amet aliquam id. Urna nec tincidunt praesent semper feugiat nibh.
                   </p>
                 </div>
               </div>
@@ -186,10 +184,7 @@ const RestaurantCard = () => {
           </h2>
           <div className="row">
             {items.map(
-              (item, i) =>
-                item.category.includes("others") && (
-                  <Item item={item} key={item.id} />
-                )
+              (item, i) => item.category.includes("others") && <Item item={item} key={item.id} />
             )}
           </div>
         </div>

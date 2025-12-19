@@ -17,7 +17,7 @@ export default function App({ Component, pageProps }) {
         {/* seo begin */}
         <title>Remotive Logistics</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        {/* seo end */}        
+        {/* seo end */}
       </Head>
       {preLoader && <PreLoader />}
       {!preLoader && <Component {...pageProps} />}

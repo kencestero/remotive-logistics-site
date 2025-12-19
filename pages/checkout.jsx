@@ -43,20 +43,12 @@ const Checkout = () => {
                     </Link>
                   </li>
                 </ul>
-                <h2
-                  data-aos="fade-up"
-                  data-aos-delay={300}
-                  data-aos-duration={400}
-                >
+                <h2 data-aos="fade-up" data-aos-delay={300} data-aos-duration={400}>
                   Checkout
                 </h2>
-                <p
-                  data-aos="fade-up"
-                  data-aos-delay={400}
-                  data-aos-duration={500}
-                >
-                  Sit amet nisl purus in mollis nunc sed id semper. Condimentum
-                  id venenatis a condimentum vitae sapien pellentesque.
+                <p data-aos="fade-up" data-aos-delay={400} data-aos-duration={500}>
+                  Sit amet nisl purus in mollis nunc sed id semper. Condimentum id venenatis a
+                  condimentum vitae sapien pellentesque.
                 </p>
               </div>
             </div>
@@ -81,10 +73,7 @@ const Checkout = () => {
               data-aos-delay={300}
               data-aos-duration={400}
             >
-              <form
-                onSubmit={(e) => e.preventDefault()}
-                className="checkout-form"
-              >
+              <form onSubmit={(e) => e.preventDefault()} className="checkout-form">
                 <h4>Buyer information</h4>
                 <input type="text" name="Name" placeholder="Full Name" />
                 <div className="row">
@@ -106,18 +95,10 @@ const Checkout = () => {
                 <input type="text" name="Name" placeholder="Street" />
                 <div className="row">
                   <div className="col-lg-6">
-                    <input
-                      type="text"
-                      name="E-mail"
-                      placeholder="House number"
-                    />
+                    <input type="text" name="E-mail" placeholder="House number" />
                   </div>
                   <div className="col-lg-6">
-                    <input
-                      type="number"
-                      name="E-mail"
-                      placeholder="Apartment number"
-                    />
+                    <input type="number" name="E-mail" placeholder="Apartment number" />
                     <span>*dispensable</span>
                   </div>
                 </div>
@@ -157,20 +138,13 @@ const Checkout = () => {
                 </div>
                 <div className="tab-content" id="v-pills-tabContent">
                   <div
-                    className={`tab-pane fade ${
-                      tab === "card" ? "show active" : ""
-                    }`}
+                    className={`tab-pane fade ${tab === "card" ? "show active" : ""}`}
                     id="v-pills-home"
                     role="tabpanel"
                     aria-labelledby="v-pills-home-tab"
                   >
                     <label>
-                      <input
-                        type="radio"
-                        name="test"
-                        defaultValue="small"
-                        defaultChecked
-                      />
+                      <input type="radio" name="test" defaultValue="small" defaultChecked />
                       <img alt="checkbox-img" src="assets/img/checkbox-1.png" />
                     </label>
                     <label>
@@ -181,18 +155,10 @@ const Checkout = () => {
                       <input type="radio" name="test" defaultValue="big" />
                       <img alt="checkbox-img" src="assets/img/checkbox-3.png" />
                     </label>
-                    <input
-                      type="number"
-                      name="Name"
-                      placeholder="Card number"
-                    />
+                    <input type="number" name="Name" placeholder="Card number" />
                     <div className="row">
                       <div className="col-lg-6">
-                        <input
-                          type="text"
-                          name="E-mail"
-                          placeholder="Expiration Date"
-                        />
+                        <input type="text" name="E-mail" placeholder="Expiration Date" />
                       </div>
                       <div className="col-lg-6">
                         <input type="password" placeholder="CVV" />

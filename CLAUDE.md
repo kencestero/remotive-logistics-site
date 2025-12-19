@@ -1,6 +1,7 @@
 # Remotive Logistics — Claude Code Operating Rules
 
 ## Project Overview
+
 - **Framework**: Next.js 13.4 (pages router)
 - **Template**: QuickEat (adapted for logistics)
 - **Style**: Dark mode first, Remotive red (#E63946) accents
@@ -8,16 +9,19 @@
 ## Quality Gates
 
 ### Before Every Change
+
 1. List exact files you will touch
 2. Keep changes small and focused
 3. Prefer editing existing files over creating new ones
 
 ### After Every Change
+
 1. Run `npm run build` — must pass
 2. Run `npm run dev` and verify visually
 3. Report: what changed + how to verify
 
 ### Non-Negotiables
+
 - Do NOT break `npm run build`
 - Do NOT migrate to app router (keep `/pages`)
 - Do NOT add unnecessary dependencies
@@ -44,13 +48,13 @@
 
 ## Color Palette
 
-| Purpose | Color |
-|---------|-------|
+| Purpose                | Color   |
+| ---------------------- | ------- |
 | Primary (Remotive Red) | #E63946 |
-| Dark Background | #1a1a1a |
-| Text Light | #ffffff |
-| Text Muted | #787878 |
-| Dark Gray | #363636 |
+| Dark Background        | #1a1a1a |
+| Text Light             | #ffffff |
+| Text Muted             | #787878 |
+| Dark Gray              | #363636 |
 
 ## Verification Steps
 

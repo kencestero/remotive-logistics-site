@@ -30,8 +30,7 @@ const About = () => {
                 </ul>
                 <h2>Nothing to worry about with Remotive Logistics</h2>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
                 </p>
               </div>
             </div>
@@ -71,13 +70,13 @@ const About = () => {
               <div className="our-mission-text">
                 <h2>Our mission is to save you time</h2>
                 <p>
-                  Viverra vitae congue eu consequat ac felis. Imperdiet massa
-                  tincidunt nunc pulvinar sapien et ligula ullamcorper. Velit ut
-                  tortor pretium viverra suspendisse potenti nullam ac tortor.
+                  Viverra vitae congue eu consequat ac felis. Imperdiet massa tincidunt nunc
+                  pulvinar sapien et ligula ullamcorper. Velit ut tortor pretium viverra suspendisse
+                  potenti nullam ac tortor.
                   <br />
                   <br />
-                  Eget egestas purus viverra accumsan in nisl nisi scelerisque.
-                  Tincidunt augue interdum velit euismod in pellentesque.
+                  Eget egestas purus viverra accumsan in nisl nisi scelerisque. Tincidunt augue
+                  interdum velit euismod in pellentesque.
                 </p>
               </div>
             </div>
@@ -95,20 +94,12 @@ const About = () => {
               data-aos-duration={300}
             >
               <div className="card-text-data">
-                <img
-                  className="on"
-                  alt="icon"
-                  src="assets/img/service-icon-2.svg"
-                />
-                <img
-                  className="off"
-                  alt="icon"
-                  src="assets/img/service-icon-1.svg"
-                />
+                <img className="on" alt="icon" src="assets/img/service-icon-2.svg" />
+                <img className="off" alt="icon" src="assets/img/service-icon-1.svg" />
                 <h3>Free Delivery</h3>
                 <p>
-                  Cras fermentum odio eu feugiat pretium nibh ipsum. Ut faucibus
-                  pulvinar elementum consequat integer enim neque volutpat.
+                  Cras fermentum odio eu feugiat pretium nibh ipsum. Ut faucibus pulvinar elementum
+                  consequat integer enim neque volutpat.
                 </p>
               </div>
             </div>
@@ -119,20 +110,12 @@ const About = () => {
               data-aos-duration={400}
             >
               <div className="card-text-data two">
-                <img
-                  className="on"
-                  alt="icon"
-                  src="assets/img/service-icon-3.svg"
-                />
-                <img
-                  className="off"
-                  alt="icon"
-                  src="assets/img/service-icon-4.svg"
-                />
+                <img className="on" alt="icon" src="assets/img/service-icon-3.svg" />
+                <img className="off" alt="icon" src="assets/img/service-icon-4.svg" />
                 <h3>Save Your Time</h3>
                 <p>
-                  Vulputate dignissim suspendisse in est ante in nibh mauris.
-                  Pretium nibh ipsum consequat nisl vel pretium lectus quam id.
+                  Vulputate dignissim suspendisse in est ante in nibh mauris. Pretium nibh ipsum
+                  consequat nisl vel pretium lectus quam id.
                 </p>
               </div>
             </div>
@@ -143,21 +126,12 @@ const About = () => {
               data-aos-duration={500}
             >
               <div className="card-text-data">
-                <img
-                  className="on"
-                  alt="icon"
-                  src="assets/img/service-icon-5.svg"
-                />
-                <img
-                  className="off"
-                  alt="icon"
-                  src="assets/img/service-icon-6.svg"
-                />
+                <img className="on" alt="icon" src="assets/img/service-icon-5.svg" />
+                <img className="off" alt="icon" src="assets/img/service-icon-6.svg" />
                 <h3>Regular Discounts</h3>
                 <p>
-                  Nec tincidunt praesent semper feugiat nibh. Feugiat in ante
-                  metus dictum. Sapien nec sagittis aliquam malesuada bibendum
-                  arcu.
+                  Nec tincidunt praesent semper feugiat nibh. Feugiat in ante metus dictum. Sapien
+                  nec sagittis aliquam malesuada bibendum arcu.
                 </p>
               </div>
             </div>
@@ -168,21 +142,12 @@ const About = () => {
               data-aos-duration={600}
             >
               <div className="card-text-data two">
-                <img
-                  className="on"
-                  alt="icon"
-                  src="assets/img/service-icon-7.svg"
-                />
-                <img
-                  className="off"
-                  alt="icon"
-                  src="assets/img/service-icon-8.svg"
-                />
+                <img className="on" alt="icon" src="assets/img/service-icon-7.svg" />
+                <img className="off" alt="icon" src="assets/img/service-icon-8.svg" />
                 <h3>Variety Food</h3>
                 <p>
-                  Molestie a iaculis at erat pellentesque. Pulvinar neque
-                  laoreet suspendisse interdum consectetur libero id faucibus
-                  nisl.
+                  Molestie a iaculis at erat pellentesque. Pulvinar neque laoreet suspendisse
+                  interdum consectetur libero id faucibus nisl.
                 </p>
               </div>
             </div>
@@ -202,9 +167,9 @@ const About = () => {
               <div className="wait-a-minute">
                 <h2>Wait a minute for delicious</h2>
                 <p>
-                  Amet massa vitae tortor condimentum lacinia quis. Elit at
-                  imperdiet dui accumsan sit amet nulla facilisi. Lacus laoreet
-                  non curabitur gravida arcu ac tortor dignissim.
+                  Amet massa vitae tortor condimentum lacinia quis. Elit at imperdiet dui accumsan
+                  sit amet nulla facilisi. Lacus laoreet non curabitur gravida arcu ac tortor
+                  dignissim.
                 </p>
                 <h6>Interdum varius sit amet mattis.</h6>
                 <ul className="paragraph">
@@ -222,9 +187,7 @@ const About = () => {
                   </li>
                   <li>
                     <i className="fa-solid fa-circle-check" />
-                    <h5>
-                      Feugiat pretium nibh ipsum consequat nisl vel pretium.
-                    </h5>
+                    <h5>Feugiat pretium nibh ipsum consequat nisl vel pretium.</h5>
                   </li>
                 </ul>
               </div>
@@ -237,10 +200,7 @@ const About = () => {
             >
               <div className="video-section-img">
                 <img alt="elements" src="assets/img/elements-1.jpg" />
-                <a
-                  data-fancybox
-                  href="https://www.youtube.com/watch?v=CKnGXZxK7zs"
-                >
+                <a data-fancybox href="https://www.youtube.com/watch?v=CKnGXZxK7zs">
                   <i className="fa-solid fa-play" />
                 </a>
               </div>
@@ -279,11 +239,7 @@ const About = () => {
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-6">
                   <div className="count-time">
-                    <h2
-                      className="timer count-title count-number"
-                      data-to={976}
-                      data-speed={2000}
-                    >
+                    <h2 className="timer count-title count-number" data-to={976} data-speed={2000}>
                       976
                     </h2>
                     <p>
@@ -300,11 +256,7 @@ const About = () => {
                   data-aos-duration={400}
                 >
                   <div className="count-time">
-                    <h2
-                      className="timer count-title count-number"
-                      data-to={12}
-                      data-speed={2000}
-                    >
+                    <h2 className="timer count-title count-number" data-to={12} data-speed={2000}>
                       12
                     </h2>
                     <p>
@@ -316,11 +268,7 @@ const About = () => {
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-6">
                   <div className="count-time sp">
-                    <h2
-                      className="timer count-title count-number"
-                      data-to={1}
-                      data-speed={2000}
-                    >
+                    <h2 className="timer count-title count-number" data-to={1} data-speed={2000}>
                       1
                     </h2>
                     <span>k+</span>
@@ -339,17 +287,11 @@ const About = () => {
       {/* Our Team Section */}
       <section className="our-team-section gap">
         <div className="container">
-          <div
-            className="hading"
-            data-aos="fade-up"
-            data-aos-delay={200}
-            data-aos-duration={300}
-          >
+          <div className="hading" data-aos="fade-up" data-aos-delay={200} data-aos-duration={300}>
             <h2>Our team</h2>
             <p>
-              Enim lobortis scelerisque fermentum dui faucibus. Tempor commodo
-              ullamcorper a lacus vestibulum sed arcu non. Magna ac placerat
-              vestibulum lectus mauris.
+              Enim lobortis scelerisque fermentum dui faucibus. Tempor commodo ullamcorper a lacus
+              vestibulum sed arcu non. Magna ac placerat vestibulum lectus mauris.
             </p>
           </div>
           <div className="row">
@@ -401,8 +343,7 @@ const About = () => {
                   <a href="#">Roxie Gilbert</a>
                 </h4>
                 <p>
-                  Velit dignissim sodales ut eu sem integer vitae. Interdum
-                  varius sit amet mattis.
+                  Velit dignissim sodales ut eu sem integer vitae. Interdum varius sit amet mattis.
                 </p>
                 <ul className="social-media">
                   <li>
@@ -532,8 +473,8 @@ const About = () => {
               <div className="good-taste">
                 <h2>Service shows good taste.</h2>
                 <p>
-                  Enim lobortis scelerisque fermentum dui faucibus. Tempor
-                  commodo ullamcorper a lacus vestibulum sed arcu non.
+                  Enim lobortis scelerisque fermentum dui faucibus. Tempor commodo ullamcorper a
+                  lacus vestibulum sed arcu non.
                 </p>
               </div>
             </div>
@@ -545,10 +486,9 @@ const About = () => {
                 <SwiperSlide>
                   <div className="author-text item">
                     <p>
-                      "Tortor vitae purus faucibus ornare suspendisse. Ut
-                      porttitor leo a diam. Massa tincidunt nunc pulvinar sapien
-                      et ligula ullamcorper malesuada proin. Ut tortor pretium
-                      viverra suspendisse".
+                      "Tortor vitae purus faucibus ornare suspendisse. Ut porttitor leo a diam.
+                      Massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin. Ut
+                      tortor pretium viverra suspendisse".
                     </p>
                     <div className="thomas">
                       <img alt="girl" src="assets/img/photo-5.jpg" />
@@ -566,10 +506,9 @@ const About = () => {
                 <SwiperSlide>
                   <div className="author-text item">
                     <p>
-                      "Tortor vitae purus faucibus ornare suspendisse. Ut
-                      porttitor leo a diam. Massa tincidunt nunc pulvinar sapien
-                      et ligula ullamcorper malesuada proin. Ut tortor pretium
-                      viverra suspendisse".
+                      "Tortor vitae purus faucibus ornare suspendisse. Ut porttitor leo a diam.
+                      Massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin. Ut
+                      tortor pretium viverra suspendisse".
                     </p>
                     <div className="thomas">
                       <img alt="girl" src="assets/img/photo-5.jpg" />
@@ -587,10 +526,9 @@ const About = () => {
                 <SwiperSlide>
                   <div className="author-text item">
                     <p>
-                      "Tortor vitae purus faucibus ornare suspendisse. Ut
-                      porttitor leo a diam. Massa tincidunt nunc pulvinar sapien
-                      et ligula ullamcorper malesuada proin. Ut tortor pretium
-                      viverra suspendisse".
+                      "Tortor vitae purus faucibus ornare suspendisse. Ut porttitor leo a diam.
+                      Massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin. Ut
+                      tortor pretium viverra suspendisse".
                     </p>
                     <div className="thomas">
                       <img alt="girl" src="assets/img/photo-5.jpg" />
@@ -608,10 +546,9 @@ const About = () => {
                 <SwiperSlide>
                   <div className="author-text item">
                     <p>
-                      "Tortor vitae purus faucibus ornare suspendisse. Ut
-                      porttitor leo a diam. Massa tincidunt nunc pulvinar sapien
-                      et ligula ullamcorper malesuada proin. Ut tortor pretium
-                      viverra suspendisse".
+                      "Tortor vitae purus faucibus ornare suspendisse. Ut porttitor leo a diam.
+                      Massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin. Ut
+                      tortor pretium viverra suspendisse".
                     </p>
                     <div className="thomas">
                       <img alt="girl" src="assets/img/photo-5.jpg" />
@@ -640,11 +577,7 @@ const About = () => {
           <div className="row">
             <div className="col-lg-12">
               <div className="get-the-menu">
-                <h2
-                  data-aos="fade-up"
-                  data-aos-delay={200}
-                  data-aos-duration={300}
-                >
+                <h2 data-aos="fade-up" data-aos-delay={200} data-aos-duration={300}>
                   Get the menu of your favorite restaurants every day
                 </h2>
                 <form
@@ -654,11 +587,7 @@ const About = () => {
                   data-aos-duration={400}
                 >
                   <i className="fa-regular fa-bell" />
-                  <input
-                    type="text"
-                    name="email"
-                    placeholder="Enter email address"
-                  />
+                  <input type="text" name="email" placeholder="Enter email address" />
                   <button className="button button-2">Subscribe</button>
                 </form>
               </div>
