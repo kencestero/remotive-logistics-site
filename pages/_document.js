@@ -1,9 +1,20 @@
 import { Head, Html, Main, NextScript } from "next/document";
 
+// Inline script to prevent flash of wrong theme
+const themeInitScript = `
+(function() {
+  try {
+    var theme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', theme);
+  } catch (e) {}
+})();
+`;
+
 export default function Document() {
   return (
-    <Html lang="en" data-theme="light">
+    <Html lang="en">
       <Head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
         {/* meta begin */}
         <meta charSet="utf-8" />
         {/* meta end */}

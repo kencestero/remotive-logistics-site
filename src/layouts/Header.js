@@ -1,9 +1,25 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import CheckoutFuntion from "../components/CheckoutFuntion";
 import MobileMenu from "./MobileMenu";
 
 const Header = ({ extraClass }) => {
+  // Theme toggle
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    // Read theme from localStorage on mount
+    const savedTheme = localStorage.getItem("theme") || "light";
+    setTheme(savedTheme);
+    document.documentElement.setAttribute("data-theme", savedTheme);
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    document.documentElement.setAttribute("data-theme", newTheme);
+    localStorage.setItem("theme", newTheme);
+  };
   const onClick = (e) => {
     const body = document.querySelector("body");
     body.classList.toggle("active");
@@ -150,6 +166,26 @@ const Header = ({ extraClass }) => {
           </div>
           <div className="col-lg-3">
             <div className="extras bag">
+              <button
+                onClick={toggleTheme}
+                className="theme-toggle"
+                aria-label="Toggle theme"
+                style={{
+                  background: "none",
+                  border: "none",
+                  cursor: "pointer",
+                  fontSize: "1.2rem",
+                  padding: "0.5rem",
+                  marginRight: "1rem",
+                  color: "inherit",
+                }}
+              >
+                {theme === "light" ? (
+                  <i className="fa-solid fa-moon" />
+                ) : (
+                  <i className="fa-solid fa-sun" />
+                )}
+              </button>
               <a href="#" id="desktop-menu" className="menu-btn" onClick={(e) => onClick(e)}>
                 <i className="fa-solid fa-bag-shopping" />
               </a>
