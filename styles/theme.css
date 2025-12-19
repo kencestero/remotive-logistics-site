@@ -93,3 +93,146 @@ a:hover {
   background-color: var(--primary);
   color: var(--primary-contrast);
 }
+
+/* --------------------------------------------------------------------------
+   Dark Theme Overrides for Template Sections
+   -------------------------------------------------------------------------- */
+[data-theme="dark"] {
+  /* Override hardcoded white/light backgrounds */
+  section,
+  .gap,
+  .hero-section,
+  .about-section,
+  .services-section,
+  .restaurant-section,
+  .how-it-works,
+  .testimonials,
+  .blog-section,
+  .contact-section,
+  .faq-section,
+  .pricing-section,
+  .partner-section,
+  .checkout-section {
+    background-color: var(--bg) !important;
+  }
+
+  /* Cards and boxes */
+  .card,
+  .box,
+  .item,
+  .blog-card,
+  .service-card,
+  .pricing-card,
+  .restaurant-card,
+  .testimonial-card,
+  .faq-item,
+  .contact-box,
+  .checkout-box,
+  .feature-box {
+    background-color: var(--surface) !important;
+    border-color: var(--border) !important;
+  }
+
+  /* Text colors */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .heading,
+  .title {
+    color: var(--text) !important;
+  }
+
+  p,
+  span,
+  li,
+  .description,
+  .text {
+    color: var(--muted) !important;
+  }
+
+  /* Header/Footer */
+  header,
+  .header,
+  footer,
+  .footer {
+    background-color: var(--bg) !important;
+  }
+
+  /* SVG text fills */
+  svg text,
+  svg tspan {
+    fill: var(--text) !important;
+  }
+
+  /* Form inputs */
+  input,
+  textarea,
+  select,
+  .form-control,
+  .nice-select {
+    background-color: var(--surface) !important;
+    border-color: var(--border) !important;
+    color: var(--text) !important;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--muted) !important;
+  }
+
+  /* Dropdowns */
+  .dropdown,
+  .nice-select .list {
+    background-color: var(--surface) !important;
+    border-color: var(--border) !important;
+  }
+
+  /* Navbar links */
+  .navbar-links a,
+  .nav-link,
+  nav a {
+    color: var(--text) !important;
+  }
+
+  .navbar-links a:hover,
+  .nav-link:hover,
+  nav a:hover {
+    color: var(--primary) !important;
+  }
+
+  /* Buttons - keep primary buttons visible */
+  .button,
+  .btn {
+    background-color: var(--primary) !important;
+    color: var(--primary-contrast) !important;
+  }
+
+  /* Borders and dividers */
+  hr,
+  .divider {
+    border-color: var(--border) !important;
+  }
+
+  /* Accordion/FAQ */
+  .accordion-item,
+  .accordion-header,
+  .accordion-body {
+    background-color: var(--surface) !important;
+    border-color: var(--border) !important;
+  }
+
+  /* Mobile menu */
+  .mobile-nav,
+  .hmburger-menu {
+    background-color: var(--bg) !important;
+  }
+
+  /* Sidebar/Menu */
+  .menu-wrap,
+  .menu-inner {
+    background-color: var(--surface) !important;
+  }
+}
