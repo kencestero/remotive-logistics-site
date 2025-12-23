@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import CheckoutFuntion from "../components/CheckoutFuntion";
 import MobileMenu from "./MobileMenu";
 
 const Header = ({ extraClass }) => {
@@ -20,11 +19,7 @@ const Header = ({ extraClass }) => {
     document.documentElement.setAttribute("data-theme", newTheme);
     localStorage.setItem("theme", newTheme);
   };
-  const onClick = (e) => {
-    const body = document.querySelector("body");
-    body.classList.toggle("active");
-    e.preventDefault();
-  };
+
   // mobile menu
   const [mobileToggle, setMobileToggle] = useState(false);
   return (
@@ -42,9 +37,6 @@ const Header = ({ extraClass }) => {
                 />
               </Link>
               <div className="extras bag">
-                <a href="#" className="menu-btn" onClick={(e) => onClick(e)}>
-                  <i className="fa-solid fa-bag-shopping" />
-                </a>
                 <div className="bar-menu" onClick={() => setMobileToggle(true)}>
                   <i className="fa-solid fa-bars" />
                 </div>
@@ -55,33 +47,16 @@ const Header = ({ extraClass }) => {
             <nav className="navbar">
               <ul className="navbar-links">
                 <li className="navbar-dropdown">
-                  <Link href="/">Home</Link>
+                  <Link href="/trailers">Trailers</Link>
                 </li>
                 <li className="navbar-dropdown">
-                  <Link href="about">About Us</Link>
+                  <Link href="/about">About Us</Link>
                 </li>
                 <li className="navbar-dropdown">
-                  <Link href="restaurants">Restaurants</Link>
-                  <div className="dropdown">
-                    <Link href="restaurants">Restaurants</Link>
-                    <Link href="restaurant-card">Restaurant Card</Link>
-                    <Link href="checkout">Checkout</Link>
-                  </div>
+                  <Link href="/careers">Careers</Link>
                 </li>
                 <li className="navbar-dropdown">
-                  <Link href="#">Pages</Link>
-                  <div className="dropdown">
-                    <Link href="blog">Blog</Link>
-                    <Link href="single-blog">Single Blog</Link>
-                    <Link href="services">Services</Link>
-                    <Link href="faq">FAQ</Link>
-                    <Link href="pricing-table">Pricing Table</Link>
-                    <Link href="become-partner">Become A Partner</Link>
-                    <Link href="404">404</Link>
-                  </div>
-                </li>
-                <li className="navbar-dropdown">
-                  <Link href="contacts">Contacts</Link>
+                  <Link href="/contact">Contact</Link>
                 </li>
               </ul>
             </nav>
@@ -108,21 +83,9 @@ const Header = ({ extraClass }) => {
                   <i className="fa-solid fa-sun" />
                 )}
               </button>
-              <a href="#" id="desktop-menu" className="menu-btn" onClick={(e) => onClick(e)}>
-                <i className="fa-solid fa-bag-shopping" />
-              </a>
-              <Link href="checkout" className="button button-2">
-                Order Now
+              <Link href="/contact" className="button button-2">
+                Get a Quote
               </Link>
-            </div>
-          </div>
-          <div className="menu-wrap">
-            <div className="menu-inner ps ps--active-x ps--active-y">
-              <span className="menu-cls-btn" onClick={(e) => onClick(e)}>
-                <i className="cls-leftright" />
-                <i className="cls-rightleft" />
-              </span>
-              <CheckoutFuntion sidebar />
             </div>
           </div>
           <div

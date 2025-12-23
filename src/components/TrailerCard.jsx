@@ -49,7 +49,7 @@ export default function TrailerCard({ trailer }) {
         )}
 
         {/* View Details Button */}
-        <Link href={`/inventory/${trailer.slug}`} className="view-details-btn">
+        <Link href={`/trailers/${trailer.slug}`} className="view-details-btn">
           VIEW DETAILS
         </Link>
       </div>

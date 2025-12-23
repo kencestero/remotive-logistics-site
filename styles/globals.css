@@ -651,3 +651,653 @@
   font-size: 0.75rem;
   color: var(--muted);
 }
+
+/* ==========================================================================
+   About Page
+   ========================================================================== */
+
+.about-content,
+.mission-section,
+.what-we-do,
+.financing-section,
+.customer-service {
+  padding: 4rem 0;
+}
+
+.content-block {
+  margin-bottom: 2rem;
+}
+
+.content-block h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.content-block p {
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.content-block p.lead {
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+.check-list,
+.trailer-list,
+.belief-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.check-list li,
+.trailer-list li,
+.belief-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  color: var(--text);
+}
+
+.check-list li i,
+.trailer-list li i {
+  color: var(--primary);
+  margin-top: 0.25rem;
+}
+
+/* Payment Options Grid */
+.payment-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+@media (max-width: 991px) {
+  .payment-options {
+    grid-template-columns: 1fr;
+  }
+}
+
+.payment-option {
+  text-align: center;
+  padding: 1.5rem;
+  background: var(--surface);
+  border-radius: 12px;
+}
+
+.payment-option i {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.payment-option h4 {
+  margin: 0 0 0.5rem;
+}
+
+.payment-option p {
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+.disclaimer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--bg);
+  border-radius: 8px;
+  margin-top: 1.5rem;
+}
+
+/* Founder Message */
+.founder-message {
+  background: var(--surface);
+  padding: 2rem;
+  border-radius: 16px;
+  border-left: 4px solid var(--primary);
+}
+
+.founder-message h3 {
+  margin: 0 0 1rem;
+  color: var(--primary);
+}
+
+.founder-message p {
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.founder-signature {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+/* CTA Section */
+.cta-section {
+  padding: 4rem 0;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+/* ==========================================================================
+   Careers Page
+   ========================================================================== */
+
+.careers-intro {
+  padding: 4rem 0;
+}
+
+.job-badges {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.job-badges .badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--surface);
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.job-badges .badge i {
+  color: var(--primary);
+}
+
+/* What We Provide Section */
+.what-we-provide {
+  padding: 4rem 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.provide-card {
+  background: var(--surface);
+  padding: 2rem;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+  height: 100%;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.provide-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px var(--shadow-lg);
+}
+
+.provide-card i {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.provide-card h4 {
+  margin: 0 0 0.75rem;
+}
+
+.provide-card p {
+  color: var(--muted);
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+/* Compensation Section */
+.compensation {
+  padding: 4rem 0;
+}
+
+.compensation-list,
+.recognition-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.compensation-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.compensation-list li:last-child {
+  border-bottom: none;
+}
+
+.compensation-list li i {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-secondary);
+  border-radius: 10px;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.compensation-list li div {
+  display: flex;
+  flex-direction: column;
+}
+
+.compensation-list li strong {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.compensation-list li span {
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+.recognition-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+  color: var(--text);
+}
+
+.recognition-list li i {
+  color: var(--primary);
+}
+
+.note {
+  background: var(--bg-secondary);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+}
+
+/* Ideal Candidate Section */
+.ideal-candidate {
+  padding: 4rem 0;
+}
+
+.candidate-list {
+  background: var(--surface);
+  padding: 2rem;
+  border-radius: 16px;
+  height: 100%;
+}
+
+.candidate-list h4 {
+  margin: 0 0 1.5rem;
+  color: var(--primary);
+}
+
+.candidate-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.candidate-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem 0;
+}
+
+.candidate-list li i {
+  color: var(--primary);
+}
+
+/* ==========================================================================
+   Contact Page
+   ========================================================================== */
+
+.contact-info {
+  padding: 4rem 0;
+}
+
+.contact-card {
+  text-align: center;
+  padding: 2rem;
+  background: var(--surface);
+  border-radius: 16px;
+  height: 100%;
+  margin-bottom: 2rem;
+}
+
+.contact-card i {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.contact-card h4 {
+  margin: 0 0 0.5rem;
+}
+
+.contact-link {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text) !important;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.contact-card p {
+  color: var(--muted);
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+/* Contact Form */
+.contact-form-section {
+  padding: 4rem 0;
+}
+
+.contact-form-wrapper {
+  background: var(--surface);
+  padding: 3rem;
+  border-radius: 16px;
+}
+
+.contact-form-wrapper h2 {
+  margin: 0 0 0.5rem;
+}
+
+.contact-form-wrapper > p {
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+.contact-form .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 575px) {
+  .contact-form .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-form .form-group.full-width {
+  margin-bottom: 1.5rem;
+}
+
+.contact-form label {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--text);
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  padding: 0.875rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Success Message */
+.success-message {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.success-message i {
+  font-size: 4rem;
+  color: #22c55e;
+  margin-bottom: 1.5rem;
+}
+
+.success-message h3 {
+  margin: 0 0 1rem;
+}
+
+.success-message p {
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+/* Quick Links Section */
+.quick-links {
+  padding: 4rem 0;
+}
+
+.quick-link-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.quick-link-buttons .button i {
+  margin-right: 0.5rem;
+}
+
+/* ==========================================================================
+   Homepage Sections
+   ========================================================================== */
+
+/* How It Works */
+.how-it-works {
+  padding: 4rem 0;
+}
+
+.step-card {
+  text-align: center;
+  padding: 2rem;
+  background: var(--surface);
+  border-radius: 16px;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-4px);
+}
+
+.step-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.step-card h4 {
+  margin: 0 0 0.75rem;
+}
+
+.step-card p {
+  color: var(--muted);
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+/* Featured Trailers */
+.featured-trailers {
+  padding: 4rem 0;
+}
+
+/* Why Choose Us */
+.why-choose-us {
+  padding: 4rem 0;
+}
+
+.feature-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+}
+
+.feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.feature-list li:last-child {
+  border-bottom: none;
+}
+
+.feature-list li i {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  color: var(--primary);
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.feature-list li div {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-list li strong {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.feature-list li span {
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
+/* Founder Quote */
+.founder-quote {
+  background: var(--surface);
+  padding: 2.5rem;
+  border-radius: 16px;
+  border-left: 4px solid var(--primary);
+}
+
+.founder-quote blockquote {
+  font-size: 1.25rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0 0 1.5rem;
+}
+
+.founder-quote cite {
+  display: flex;
+  flex-direction: column;
+}
+
+.founder-quote cite strong {
+  font-size: 1rem;
+  font-style: normal;
+}
+
+.founder-quote cite span {
+  color: var(--muted);
+  font-size: 0.875rem;
+  font-style: normal;
+}
+
+/* Trailer Categories */
+.trailer-categories {
+  padding: 4rem 0;
+}
+
+.category-card {
+  display: block;
+  text-align: center;
+  padding: 2rem;
+  background: var(--surface);
+  border-radius: 16px;
+  margin-bottom: 2rem;
+  text-decoration: none;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px var(--shadow-lg);
+}
+
+.category-card i {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.category-card h4 {
+  margin: 0 0 0.5rem;
+  color: var(--text);
+}
+
+.category-card p {
+  color: var(--muted);
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+/* Heading Styles */
+.hading {
+  margin-bottom: 3rem;
+}
+
+.hading h2 {
+  margin-bottom: 0.5rem;
+}
+
+.hading p {
+  color: var(--muted);
+  margin: 0;
+}

@@ -1,15 +1,13 @@
-import Subscribe from "@/src/components/Subscribe";
 import Layout from "@/src/layouts/Layout";
-import { sliderProps } from "@/src/sliderProps";
 import Link from "next/link";
-import { Swiper, SwiperSlide } from "swiper/react";
-const Index = () => {
+import { getTrailers } from "@/lib/inventory";
+import TrailerCard from "@/src/components/TrailerCard";
+
+const Index = ({ featuredTrailers }) => {
   return (
     <Layout>
-      <section
-        className="hero-section gap"
-        style={{ backgroundImage: "url(assets/img/background-1.png)" }}
-      >
+      {/* Hero Section */}
+      <section className="hero-section gap" style={{ backgroundColor: "var(--bg-secondary)" }}>
         <div className="container">
           <div className="row align-items-center">
             <div
@@ -19,15 +17,16 @@ const Index = () => {
               data-aos-duration={300}
             >
               <div className="hero-content">
-                <h1>Quality Trailers for Every Job</h1>
+                <h1>Quality Trailers, Remote Convenience</h1>
                 <p>
-                  Enclosed, flatbed, dump, and utility trailers — built to work as hard as you do.
+                  Browse our selection of enclosed, open, dump, and utility trailers — all from the
+                  comfort of your home. Customer service is our number one priority.
                 </p>
                 <div className="hero-cta">
-                  <Link href="#inventory" className="button button-2">
-                    Browse Inventory
+                  <Link href="/trailers" className="button button-2">
+                    Browse Trailers
                   </Link>
-                  <Link href="contacts" className="button button-outline">
+                  <Link href="/contact" className="button button-outline">
                     Get a Quote
                   </Link>
                 </div>
@@ -39,636 +38,239 @@ const Index = () => {
               data-aos-delay={300}
               data-aos-duration={400}
             >
-              <div className="hero-video">
-                <div className="video-wrapper">
-                  <iframe
-                    src="https://www.youtube.com/embed/VIDEO_ID"
-                    title="Remotive Logistics"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
-                </div>
+              <div className="hero-image-box">
+                <img
+                  src="/assets/trailers/default-trailer-images/6x12-enclosed.jpg"
+                  alt="Quality Trailers"
+                  style={{
+                    width: "100%",
+                    borderRadius: "16px",
+                    boxShadow: "0 20px 60px var(--shadow-lg)",
+                  }}
+                />
               </div>
             </div>
           </div>
         </div>
       </section>
-      {/* works-section */}
-      <section className="works-section gap no-top">
+
+      {/* How It Works */}
+      <section className="how-it-works gap">
         <div className="container">
-          <div className="hading" data-aos="fade-up" data-aos-delay={200} data-aos-duration={300}>
-            <h2>How it works</h2>
-            <p>
-              Magna sit amet purus gravida quis blandit turpis cursus. Venenatis tellus in
-              <br /> metus vulputate eu scelerisque felis.
-            </p>
+          <div className="hading text-center" data-aos="fade-up">
+            <h2>How It Works</h2>
+            <p>Simple, transparent, and built around your convenience</p>
           </div>
-          <div className="row ">
-            <div
-              className="col-lg-4 col-md-6 col-sm-12"
-              data-aos="flip-up"
-              data-aos-delay={200}
-              data-aos-duration={300}
-            >
-              <div className="work-card">
-                <img alt="img" src="assets/img/Illustration-1.png" />
-                <h4>
-                  <span>01</span> Select Restaurant
-                </h4>
+          <div className="row">
+            <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay={100}>
+              <div className="step-card">
+                <div className="step-number">01</div>
+                <h4>Browse & Select</h4>
                 <p>
-                  Non enim praesent elementum facilisis leo vel fringilla. Lectus proin nibh nisl
-                  condimentum id. Quis varius quam quisque id diam vel.
+                  Explore our inventory of quality trailers online. Filter by type, size, and
+                  features to find exactly what you need.
                 </p>
               </div>
             </div>
-            <div
-              className="col-lg-4 col-md-6 col-sm-12"
-              data-aos="flip-up"
-              data-aos-delay={300}
-              data-aos-duration={400}
-            >
-              <div className="work-card">
-                <img alt="img" src="assets/img/Illustration-2.png" />
-                <h4>
-                  <span>02</span> Select menu
-                </h4>
+            <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay={200}>
+              <div className="step-card">
+                <div className="step-number">02</div>
+                <h4>Get Expert Guidance</h4>
                 <p>
-                  Eu mi bibendum neque egestas congue quisque. Nulla facilisi morbi tempus iaculis
-                  urna id volutpat lacus. Odio ut sem nulla pharetra diam sit amet.
+                  Our team helps you understand options, pricing, and financing. We answer questions
+                  honestly — no pressure, no gimmicks.
                 </p>
               </div>
             </div>
-            <div
-              className="col-lg-4 col-md-6 col-sm-12"
-              data-aos="flip-up"
-              data-aos-delay={400}
-              data-aos-duration={500}
-            >
-              <div className="work-card">
-                <img alt="img" src="assets/img/illustration-3.png" />
-                <h4>
-                  <span>03</span> Wait for delivery
-                </h4>
+            <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay={300}>
+              <div className="step-card">
+                <div className="step-number">03</div>
+                <h4>Complete Your Purchase</h4>
                 <p>
-                  Nunc lobortis mattis aliquam faucibus. Nibh ipsum consequat nisl vel pretium
-                  lectus quam id leo. A scelerisque purus semper eget. Tincidunt arcu non.
+                  Choose cash, financing, or rent-to-own. We handle the details so you can focus on
+                  putting your trailer to work.
                 </p>
               </div>
             </div>
           </div>
         </div>
       </section>
-      {/* best-restaurants */}
-      <section className="best-restaurants gap" style={{ background: "#fcfcfc" }}>
+
+      {/* Featured Trailers */}
+      <section className="featured-trailers gap" style={{ backgroundColor: "var(--bg-secondary)" }}>
         <div className="container">
-          <div className="row align-items-center">
-            <div
-              className="col-lg-6"
-              data-aos="flip-up"
-              data-aos-delay={200}
-              data-aos-duration={300}
-            >
-              <div className="city-restaurants">
-                <h2>12 Best Restaurants in Your City</h2>
-                <p>
-                  Magna sit amet purus gravida quis blandit turpis cursus. Venenatis tellus in metus
-                  vulputate.
-                </p>
-              </div>
-            </div>
-            <div
-              className="col-lg-6"
-              data-aos="flip-up"
-              data-aos-delay={300}
-              data-aos-duration={400}
-            >
-              <div className="logos-card">
-                <img alt="logo" src="assets/img/logos-2.jpg" />
-                <div className="cafa">
-                  <h4>
-                    <Link href="restaurant-card">Kennington Lane Cafe</Link>
-                  </h4>
-                  <div>
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-regular fa-star" />
-                  </div>
-                  <div className="cafa-button">
-                    {" "}
-                    <a href="#">american</a> <a href="#">steakhouse</a>{" "}
-                    <a className="end" href="#">
-                      seafood
-                    </a>
-                  </div>
-                  <p>
-                    Non enim praesent elementum facilisis leo vel fringilla. Lectus proin nibh nisl
-                    condimentum id. Quis varius quam quisque id diam vel.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-lg-6"
-              data-aos="flip-up"
-              data-aos-delay={400}
-              data-aos-duration={500}
-            >
-              <div className="logos-card two">
-                <img alt="logo" src="assets/img/logos-1.jpg" />
-                <div className="cafa">
-                  <h4>
-                    <Link href="restaurant-card">The Wilmington</Link>
-                  </h4>
-                  <div>
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                  </div>
-                  <div className="cafa-button">
-                    {" "}
-                    <a href="#">american</a> <a href="#">steakhouse</a>{" "}
-                    <a className="end" href="#">
-                      seafood
-                    </a>
-                  </div>
-                  <p>
-                    Vulputate enim nulla aliquet porttitor lacus luctus. Suscipit adipiscing
-                    bibendum est ultricies integer. Sed adipiscing diam donec adipiscing tristique.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-lg-6"
-              data-aos="flip-up"
-              data-aos-delay={500}
-              data-aos-duration={600}
-            >
-              <div className="logos-card three">
-                <img alt="logo" src="assets/img/logos-3.jpg" />
-                <div className="cafa">
-                  <h4>
-                    <Link href="restaurant-card">Kings Arms</Link>
-                  </h4>
-                  <div>
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-solid fa-star" />
-                    <i className="fa-regular fa-star-half-stroke" />
-                  </div>
-                  <div className="cafa-button">
-                    {" "}
-                    <a href="#">healthy</a> <a href="#">steakhouse</a>{" "}
-                    <a className="end" href="#">
-                      vegetarian
-                    </a>
-                  </div>
-                  <p>
-                    Tortor at risus viverra adipiscing at in tellus. Cras semper auctor neque vitae
-                    tempus. Dui accumsan sit amet nulla facilisi. Sed adipiscing diam donec
-                    adipiscing tristique.
-                  </p>
-                </div>
-              </div>
-            </div>
+          <div className="hading text-center" data-aos="fade-up">
+            <h2>Featured Trailers</h2>
+            <p>Quality trailers at competitive prices</p>
           </div>
-          <div className="button-gap">
-            <Link href="restaurants" className="button button-2 non">
-              See All
-              <i className="fa-solid fa-arrow-right" />
+          <div className="trailer-grid" data-aos="fade-up" data-aos-delay={100}>
+            {featuredTrailers.map((trailer) => (
+              <TrailerCard key={trailer.id} trailer={trailer} />
+            ))}
+          </div>
+          <div className="text-center" style={{ marginTop: "2rem" }}>
+            <Link href="/trailers" className="button button-2">
+              View All Trailers
             </Link>
           </div>
         </div>
       </section>
-      {/* your-favorite-food */}
-      <section
-        className="your-favorite-food gap"
-        style={{ backgroundImage: "url(assets/img/background-1.png)" }}
-      >
+
+      {/* Why Choose Us */}
+      <section className="why-choose-us gap">
         <div className="container">
           <div className="row align-items-center">
-            <div
-              className="col-lg-5"
-              data-aos="fade-up"
-              data-aos-delay={200}
-              data-aos-duration={300}
-            >
-              <div className="food-photo-section">
-                <img alt="img" src="assets/img/photo-3.png" />{" "}
-                <a href="#" className="one">
-                  <i className="fa-solid fa-burger" />
-                  Burgers
-                </a>{" "}
-                <a href="#" className="two">
-                  <i className="fa-solid fa-cheese" />
-                  Steaks
-                </a>{" "}
-                <a href="#" className="three">
-                  <i className="fa-solid fa-pizza-slice" />
-                  Pizza
-                </a>
-              </div>
-            </div>
-            <div
-              className="col-lg-6 offset-lg-1"
-              data-aos="fade-up"
-              data-aos-delay={300}
-              data-aos-duration={400}
-            >
-              <div className="food-content-section">
-                <h2>Food from your favorite restaurants to your table</h2>
+            <div className="col-lg-6" data-aos="fade-up">
+              <div className="content-block">
+                <h2>Why Remotive Logistics?</h2>
                 <p>
-                  Pretium lectus quam id leo in vitae turpis massa sed. Lorem donec massa sapien
-                  faucibus et molestie. Vitae elementum curabitur vitae nunc.
-                </p>{" "}
-                <Link href="checkout" className="button button-2">
-                  Order Now
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* counters-section */}
-      <section className="counters-section">
-        <div className="container">
-          <div className="row align-items-center">
-            <div
-              className="col-lg-3 col-md-6 col-sm-12"
-              data-aos="flip-up"
-              data-aos-delay={200}
-              data-aos-duration={300}
-            >
-              <div>
-                <h2>Service shows good taste.</h2>
-              </div>
-            </div>
-            <div
-              className="col-lg-3 col-md-6 col-sm-12"
-              data-aos="flip-up"
-              data-aos-delay={300}
-              data-aos-duration={400}
-            >
-              <div className="count-time">
-                <h2 className="timer count-title count-number" data-to={976} data-speed={2000}>
-                  976
-                </h2>
-                <p>
-                  Satisfied
-                  <br />
-                  Customer
+                  We're not just selling trailers — we're building relationships based on trust,
+                  transparency, and service.
                 </p>
-              </div>
-            </div>
-            <div
-              className="col-lg-3 col-md-6 col-sm-12"
-              data-aos="flip-up"
-              data-aos-delay={400}
-              data-aos-duration={500}
-            >
-              <div className="count-time">
-                <h2 className="timer count-title count-number" data-to={12} data-speed={2000}>
-                  12
-                </h2>
-                <p>
-                  Best
-                  <br />
-                  Restaurants
-                </p>
-              </div>
-            </div>
-            <div
-              className="col-lg-3 col-md-6 col-sm-12"
-              data-aos="flip-up"
-              data-aos-delay={500}
-              data-aos-duration={600}
-            >
-              <div className="count-time sp">
-                <h2 className="timer count-title count-number" data-to={1} data-speed={2000}>
-                  1
-                </h2>
-                <span>k+</span>
-                <p>
-                  Food
-                  <br />
-                  Delivered
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* reviews-sections */}
-      <section className="reviews-sections gap">
-        <div className="container">
-          <div className="row align-items-center">
-            <div
-              className="col-xl-6 col-lg-12"
-              data-aos="fade-up"
-              data-aos-delay={200}
-              data-aos-duration={300}
-            >
-              <div className="reviews-content">
-                <h2>What customers say about us</h2>
-                <div className="custome owl-carousel">
-                  <Swiper {...sliderProps.index1Testmoninal}>
-                    <SwiperSlide className="item">
-                      <h4>
-                        "Dapibus ultrices in iaculis nunc sed augue lacus viverra vitae. Mauris a
-                        diam maecenas sed enim. Egestas diam in arcu cursus euismod quis. Quam
-                        quisque id diam vel".
-                      </h4>
-                      <div className="thomas">
-                        <img alt="girl" src="assets/img/photo-5.jpg" />
-                        <div>
-                          <h6>Thomas Adamson</h6>
-                          <i className="fa-solid fa-star" />
-                          <i className="fa-solid fa-star" />
-                          <i className="fa-solid fa-star" />
-                          <i className="fa-solid fa-star" />
-                          <i className="fa-solid fa-star" />
-                        </div>
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide className="item">
-                      <h4>
-                        "Dapibus ultrices in iaculis nunc sed augue lacus viverra vitae. Mauris a
-                        diam maecenas sed enim. Egestas diam in arcu cursus euismod quis. Quam
-                        quisque id diam vel".
-                      </h4>
-                      <div className="thomas">
-                        <img alt="girl" src="assets/img/photo-5.jpg" />
-                        <div>
-                          <h6>Thomas Adamson</h6>
-                          <i className="fa-solid fa-star" />
-                          <i className="fa-solid fa-star" />
-                          <i className="fa-solid fa-star" />
-                          <i className="fa-solid fa-star" />
-                          <i className="fa-solid fa-star" />
-                        </div>
-                      </div>
-                    </SwiperSlide>
-                    <SwiperSlide className="item">
-                      <h4>
-                        "Dapibus ultrices in iaculis nunc sed augue lacus viverra vitae. Mauris a
-                        diam maecenas sed enim. Egestas diam in arcu cursus euismod quis. Quam
-                        quisque id diam vel".
-                      </h4>
-                      <div className="thomas">
-                        <img alt="girl" src="assets/img/photo-5.jpg" />
-                        <div>
-                          <h6>Thomas Adamson</h6>
-                          <i className="fa-solid fa-star" />
-                          <i className="fa-solid fa-star" />
-                          <i className="fa-solid fa-star" />
-                          <i className="fa-solid fa-star" />
-                          <i className="fa-solid fa-star" />
-                        </div>
-                      </div>
-                    </SwiperSlide>
-                  </Swiper>
-                  <div className="owl-nav mt-4">
-                    <button className="owl-prev">
-                      <i className="fa-solid fa-arrow-left"></i>
-                    </button>
-                    <button className="owl-next ms-3">
-                      <i className="fa-solid fa-arrow-right"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-xl-6 col-lg-12"
-              data-aos="fade-up"
-              data-aos-delay={300}
-              data-aos-duration={400}
-            >
-              <div className="reviews-img">
-                <img alt="photo" src="assets/img/photo-4.png" />
-                <i className="fa-regular fa-thumbs-up" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* join-partnership */}
-      <section className="join-partnership gap" style={{ backgroundColor: "#363636" }}>
-        <div className="container">
-          <h2>Want to Join Partnership?</h2>
-          <div className="row">
-            <div
-              className="col-lg-6"
-              data-aos="flip-up"
-              data-aos-delay={200}
-              data-aos-duration={300}
-            >
-              <div className="join-img">
-                <img alt="img" src="assets/img/photo-6.jpg" />
-                <div className="Join-courier">
-                  <h3>Join Courier</h3>
-                  <Link href="become-partner" className="button button-2">
-                    Learn More <i className="fa-solid fa-arrow-right" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-lg-6"
-              data-aos="flip-up"
-              data-aos-delay={300}
-              data-aos-duration={400}
-            >
-              <div className="join-img">
-                <img alt="img" src="assets/img/photo-7.jpg" />
-                <div className="Join-courier">
-                  <h3>Join Merchant</h3>
-                  <Link href="become-partner" className="button button-2">
-                    Learn More <i className="fa-solid fa-arrow-right" />
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* news-section */}
-      <section className="news-section gap">
-        <div className="container">
-          <h2>Latest news and events</h2>
-          <div className="row">
-            <div
-              className="col-xl-6 col-lg-12"
-              data-aos="flip-up"
-              data-aos-delay={200}
-              data-aos-duration={300}
-            >
-              <div className="news-posts-one">
-                <img alt="man" src="assets/img/photo-8.jpg" />
-                <div className="quickeat">
-                  {" "}
-                  <a href="#">news</a> <a href="#">quickeat</a>
-                </div>
-                <h3>We Have Received An Award For The Quality Of Our Work</h3>
-                <p>
-                  Donec adipiscing tristique risus nec feugiat in fermentum. Sapien eget mi proin
-                  sed libero. Et magnis dis parturient montes nascetur. Praesent semper feugiat nibh
-                  sed pulvinar proin gravida.
-                </p>{" "}
-                <Link href="/single-blog">
-                  Read More
-                  <i className="fa-solid fa-arrow-right" />
-                </Link>
-                <ul className="data">
+                <ul className="feature-list">
                   <li>
-                    <h6>
-                      <i className="fa-solid fa-user" />
-                      by Remotive
-                    </h6>
+                    <i className="fa-solid fa-laptop-house" />
+                    <div>
+                      <strong>100% Remote</strong>
+                      <span>Shop from the comfort of your home</span>
+                    </div>
                   </li>
                   <li>
-                    <h6>
-                      <i className="fa-regular fa-calendar-days" />
-                      01.Jan. 2022
-                    </h6>
+                    <i className="fa-solid fa-comments" />
+                    <div>
+                      <strong>No Pressure Sales</strong>
+                      <span>Honest guidance, not pushy tactics</span>
+                    </div>
                   </li>
                   <li>
-                    <h6>
-                      <i className="fa-solid fa-eye" />
-                      132
-                    </h6>
+                    <i className="fa-solid fa-dollar-sign" />
+                    <div>
+                      <strong>Flexible Payment Options</strong>
+                      <span>Cash, financing, or rent-to-own</span>
+                    </div>
+                  </li>
+                  <li>
+                    <i className="fa-solid fa-language" />
+                    <div>
+                      <strong>Bilingual Support</strong>
+                      <span>We speak English and Spanish</span>
+                    </div>
                   </li>
                 </ul>
               </div>
             </div>
-            <div
-              className="col-xl-6 col-lg-12"
-              data-aos="flip-up"
-              data-aos-delay={300}
-              data-aos-duration={400}
-            >
-              <div className="news-post-two">
-                <img alt="food-img" src="assets/img/food-1.jpg" />
-                <div className="news-post-two-data">
-                  <div className="quickeat">
-                    {" "}
-                    <a href="#">restaurants</a> <a href="#">cooking</a>
-                  </div>
-                  <h6>
-                    <Link href="single-blog">
-                      With Remotive you can schedule deliveries all day
-                    </Link>
-                  </h6>
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor...
-                  </p>
-                  <ul className="data">
-                    <li>
-                      <h6>
-                        <i className="fa-solid fa-user" />
-                        by Remotive
-                      </h6>
-                    </li>
-                    <li>
-                      <h6>
-                        <i className="fa-regular fa-calendar-days" />
-                        01.Jan. 2022
-                      </h6>
-                    </li>
-                    <li>
-                      <h6>
-                        <i className="fa-solid fa-eye" />
-                        132
-                      </h6>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="news-post-two">
-                <img alt="food-img" src="assets/img/food-2.jpg" />
-                <div className="news-post-two-data">
-                  <div className="quickeat">
-                    {" "}
-                    <a href="#">restaurants</a> <a href="#">cooking</a>
-                  </div>
-                  <h6>
-                    <Link href="single-blog">127+ Couriers On Our Team!</Link>
-                  </h6>
-                  <p>
-                    Urna condimentum mattis pellentesque id nibh tortor id aliquet. Tellus at urna
-                    condimentum mattis...
-                  </p>
-                  <ul className="data">
-                    <li>
-                      <h6>
-                        <i className="fa-solid fa-user" />
-                        by Remotive
-                      </h6>
-                    </li>
-                    <li>
-                      <h6>
-                        <i className="fa-regular fa-calendar-days" />
-                        01.Jan. 2022
-                      </h6>
-                    </li>
-                    <li>
-                      <h6>
-                        <i className="fa-solid fa-eye" />
-                        132
-                      </h6>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="news-post-two end">
-                <img alt="food-img" src="assets/img/food-3.jpg" />
-                <div className="news-post-two-data">
-                  <div className="quickeat">
-                    {" "}
-                    <a href="#">restaurants</a> <a href="#">cooking</a>
-                  </div>
-                  <h6>
-                    <Link href="single-blog">Why You Should Optimize Your Menu for Delivery</Link>
-                  </h6>
-                  <p>
-                    Enim lobortis scelerisque fermentum dui. Sit amet cursus sit amet dictum sit
-                    amet. Rutrum tellus...
-                  </p>
-                  <ul className="data">
-                    <li>
-                      <h6>
-                        <i className="fa-solid fa-user" />
-                        by Remotive
-                      </h6>
-                    </li>
-                    <li>
-                      <h6>
-                        <i className="fa-regular fa-calendar-days" />
-                        01.Jan. 2022
-                      </h6>
-                    </li>
-                    <li>
-                      <h6>
-                        <i className="fa-solid fa-eye" />
-                        132
-                      </h6>
-                    </li>
-                  </ul>
-                </div>
+            <div className="col-lg-6" data-aos="fade-up" data-aos-delay={200}>
+              <div className="founder-quote">
+                <blockquote>
+                  "Customer service is our number one focus. We work hard to make sure every
+                  customer feels heard, informed, and respected."
+                </blockquote>
+                <cite>
+                  <strong>Kenneth Cestero Campos</strong>
+                  <span>Founder, Remotive Logistics LLC</span>
+                </cite>
               </div>
             </div>
           </div>
         </div>
       </section>
-      {/* subscribe-section */}
-      <Subscribe />
+
+      {/* Trailer Categories */}
+      <section
+        className="trailer-categories gap"
+        style={{ backgroundColor: "var(--bg-secondary)" }}
+      >
+        <div className="container">
+          <div className="hading text-center" data-aos="fade-up">
+            <h2>What We Offer</h2>
+            <p>A curated selection of quality trailers for every need</p>
+          </div>
+          <div className="row">
+            <div className="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay={100}>
+              <Link href="/trailers" className="category-card">
+                <i className="fa-solid fa-box" />
+                <h4>Enclosed Cargo</h4>
+                <p>Protect your cargo from weather and theft</p>
+              </Link>
+            </div>
+            <div className="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay={200}>
+              <Link href="/trailers" className="category-card">
+                <i className="fa-solid fa-car" />
+                <h4>Car Haulers</h4>
+                <p>Open and enclosed options available</p>
+              </Link>
+            </div>
+            <div className="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay={300}>
+              <Link href="/trailers" className="category-card">
+                <i className="fa-solid fa-dumpster" />
+                <h4>Dump Trailers</h4>
+                <p>Built tough for heavy loads</p>
+              </Link>
+            </div>
+            <div className="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay={400}>
+              <Link href="/trailers" className="category-card">
+                <i className="fa-solid fa-tractor" />
+                <h4>Equipment & Utility</h4>
+                <p>Versatile solutions for any job</p>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="cta-section gap" style={{ backgroundColor: "var(--primary)" }}>
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-12 text-center" data-aos="fade-up">
+              <h2 style={{ color: "var(--primary-contrast)" }}>Ready to Find Your Trailer?</h2>
+              <p style={{ color: "var(--primary-contrast)", opacity: 0.9 }}>
+                Browse our inventory or contact us for personalized assistance.
+              </p>
+              <div className="cta-buttons">
+                <Link
+                  href="/trailers"
+                  className="button"
+                  style={{
+                    backgroundColor: "var(--primary-contrast)",
+                    color: "var(--primary)",
+                  }}
+                >
+                  Browse Trailers
+                </Link>
+                <Link
+                  href="/contact"
+                  className="button button-outline"
+                  style={{
+                    borderColor: "var(--primary-contrast)",
+                    color: "var(--primary-contrast)",
+                  }}
+                >
+                  Contact Us
+                </Link>
+              </div>
+              <p style={{ color: "var(--primary-contrast)", marginTop: "1.5rem" }}>
+                <i className="fa-solid fa-phone" style={{ marginRight: "0.5rem" }} />
+                1-866-REMOTIV
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </Layout>
   );
 };
+
+export async function getStaticProps() {
+  const allTrailers = getTrailers();
+  // Get first 3 non-sold trailers for featured section
+  const featuredTrailers = allTrailers.filter((t) => t.status !== "Sold").slice(0, 3);
+
+  return {
+    props: {
+      featuredTrailers,
+    },
+  };
+}
+
 export default Index;
