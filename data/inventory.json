@@ -1,0 +1,110 @@
+{
+  "trailers": [
+    {
+      "id": "1",
+      "slug": "enclosed-cargo-6x12",
+      "name": "6x12 Enclosed Cargo Trailer",
+      "category": "Enclosed Cargo",
+      "size": "6x12",
+      "price": 4999,
+      "status": "Stock",
+      "images": [],
+      "specs": {
+        "gvwr": "2990 lbs",
+        "payload": "1890 lbs",
+        "axles": "Single",
+        "interior_height": "6'0\""
+      },
+      "description": "Perfect for hauling equipment, furniture, and supplies. Features rear ramp door and side entry."
+    },
+    {
+      "id": "2",
+      "slug": "enclosed-car-hauler-8.5x20",
+      "name": "8.5x20 Enclosed Car Hauler",
+      "category": "Enclosed Car Haulers",
+      "size": "8.5x20",
+      "price": 12999,
+      "status": "Stock",
+      "images": [],
+      "specs": {
+        "gvwr": "7000 lbs",
+        "payload": "4500 lbs",
+        "axles": "Tandem",
+        "interior_height": "7'0\""
+      },
+      "description": "Professional-grade enclosed car hauler with tandem axles. Ideal for classic cars and show vehicles."
+    },
+    {
+      "id": "3",
+      "slug": "dump-trailer-7x14",
+      "name": "7x14 Dump Trailer",
+      "category": "Dump",
+      "size": "7x14",
+      "price": 8999,
+      "status": "In-Transit",
+      "images": [],
+      "specs": {
+        "gvwr": "14000 lbs",
+        "payload": "10000 lbs",
+        "axles": "Tandem",
+        "sides": "24\" tall"
+      },
+      "description": "Heavy-duty hydraulic dump trailer. Perfect for landscaping, construction, and hauling materials."
+    },
+    {
+      "id": "4",
+      "slug": "equipment-trailer-7x18",
+      "name": "7x18 Equipment Trailer",
+      "category": "Equipment",
+      "size": "7x18",
+      "price": 5499,
+      "status": "Stock",
+      "images": [],
+      "specs": {
+        "gvwr": "9990 lbs",
+        "payload": "7500 lbs",
+        "axles": "Tandem",
+        "deck_type": "Wood floor"
+      },
+      "description": "Flatbed equipment trailer with stand-up ramps. Great for skid steers, tractors, and heavy equipment."
+    },
+    {
+      "id": "5",
+      "slug": "utility-trailer-5x10",
+      "name": "5x10 Utility Trailer",
+      "category": "Open Utility/Landscape",
+      "size": "5x10",
+      "price": 1899,
+      "status": "On Sale",
+      "images": [],
+      "specs": {
+        "gvwr": "2990 lbs",
+        "payload": "2200 lbs",
+        "axles": "Single",
+        "gate": "4' mesh gate"
+      },
+      "description": "Versatile utility trailer for everyday hauling. Mesh sides and fold-down gate."
+    }
+  ],
+  "categories": [
+    "Enclosed Landscape",
+    "Enclosed Car Haulers",
+    "Enclosed Cargo",
+    "Open Car Haulers",
+    "Dump",
+    "Equipment",
+    "Open Utility/Landscape",
+    "Deckover",
+    "Watercraft Trailers",
+    "Used",
+    "Clearance"
+  ],
+  "statuses": ["Stock", "In-Transit", "Sold", "On Sale", "Repo"],
+  "statusLabels": {
+    "Stock": "In Stock",
+    "In-Transit": "Arriving Soon",
+    "Sold": "Sold",
+    "On Sale": "On Sale",
+    "Repo": "Repo"
+  }
+}

@@ -4,63 +4,76 @@
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   Light Theme (Default)
+   Light Theme (Default) — New Palette
+   #FFFEF9 (off-white) | #E7E2E0 (warm gray) | #FC8161 (coral) | #E7311D (red) | #030504 (black)
    -------------------------------------------------------------------------- */
 :root {
-  /* Typography - set by next/font, fallbacks here */
-  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
-  --font-heading: "Sora", var(--font-sans);
+  /* Typography - Inter for body (set by next/font), Metropolis for headings */
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+  --font-heading: "Metropolis", system-ui, -apple-system, sans-serif;
 
-  /* Primary brand color */
-  --primary: #e10600;
+  /* Primary brand color (red-orange) */
+  --primary: #e7311d;
+  --primary-hover: #c92a18;
   --primary-contrast: #ffffff;
 
+  /* Secondary accent (coral) */
+  --accent: #fc8161;
+  --accent-contrast: #030504;
+
   /* Backgrounds */
-  --bg: #ffffff;
-  --surface: #f7f7f8;
+  --bg: #fffef9;
+  --bg-secondary: #e7e2e0;
+  --surface: #f5f3f1;
 
   /* Text */
-  --text: #0b0d12;
-  --muted: #5b6270;
+  --text: #030504;
+  --muted: #5b5855;
 
   /* Borders */
-  --border: #e6e8ee;
+  --border: #d4d0cc;
 
   /* Interactive */
-  --link: #e10600;
-  --focus: #e10600;
+  --link: #e7311d;
+  --focus: #e7311d;
 
   /* Shadows */
-  --shadow: rgba(0, 0, 0, 0.1);
-  --shadow-lg: rgba(0, 0, 0, 0.15);
+  --shadow: rgba(3, 5, 4, 0.08);
+  --shadow-lg: rgba(3, 5, 4, 0.15);
 }
 
 /* --------------------------------------------------------------------------
-   Dark Theme
+   Dark Theme — Same palette, inverted
    -------------------------------------------------------------------------- */
 [data-theme="dark"] {
-  /* Primary brand color (same across themes) */
-  --primary: #e10600;
-  --primary-contrast: #ffffff;
+  /* Primary brand color (red-orange) */
+  --primary: #fc8161;
+  --primary-hover: #e7311d;
+  --primary-contrast: #030504;
+
+  /* Secondary accent */
+  --accent: #e7311d;
+  --accent-contrast: #ffffff;
 
   /* Backgrounds */
-  --bg: #0b0d12;
-  --surface: #111522;
+  --bg: #030504;
+  --bg-secondary: #1a1918;
+  --surface: #252322;
 
   /* Text */
-  --text: #f4f6fb;
-  --muted: #a7afbf;
+  --text: #fffef9;
+  --muted: #a8a5a2;
 
   /* Borders */
-  --border: #1f2637;
+  --border: #3d3a38;
 
   /* Interactive */
-  --link: #ff3b30;
-  --focus: #ff3b30;
+  --link: #fc8161;
+  --focus: #fc8161;
 
   /* Shadows */
-  --shadow: rgba(0, 0, 0, 0.3);
-  --shadow-lg: rgba(0, 0, 0, 0.5);
+  --shadow: rgba(0, 0, 0, 0.4);
+  --shadow-lg: rgba(0, 0, 0, 0.6);
 }
 
 /* --------------------------------------------------------------------------

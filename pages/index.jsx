@@ -18,21 +18,17 @@ const Index = () => {
               data-aos-delay={200}
               data-aos-duration={300}
             >
-              <div className="restaurant">
-                <h1>The Best restaurants in your home</h1>
+              <div className="hero-content">
+                <h1>Quality Trailers for Every Job</h1>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
+                  Enclosed, flatbed, dump, and utility trailers — built to work as hard as you do.
                 </p>
-                <div className="nice-select-one">
-                  <select className="nice-select Advice">
-                    <option>Choose a Restaurant</option>
-                    <option>Choose a Restaurant 1</option>
-                    <option>Choose a Restaurant 2</option>
-                    <option>Choose a Restaurant 3</option>
-                    <option>Choose a Restaurant 4</option>
-                  </select>{" "}
-                  <Link href="checkout" className="button button-2">
-                    Order Now
+                <div className="hero-cta">
+                  <Link href="#inventory" className="button button-2">
+                    Browse Inventory
+                  </Link>
+                  <Link href="contacts" className="button button-outline">
+                    Get a Quote
                   </Link>
                 </div>
               </div>
@@ -43,28 +39,14 @@ const Index = () => {
               data-aos-delay={300}
               data-aos-duration={400}
             >
-              <div className="img-restaurant">
-                <img alt="man" src="assets/img/photo-1.png" />
-                <div className="wilmington">
-                  <img alt="img" src="assets/img/photo-2.jpg" />
-                  <div>
-                    <p>Restaurant of the Month</p>
-                    <h6>The Wilmington</h6>
-                    <div>
-                      <i className="fa-solid fa-star" />
-                      <i className="fa-solid fa-star" />
-                      <i className="fa-solid fa-star" />
-                      <i className="fa-solid fa-star" />
-                      <i className="fa-regular fa-star-half-stroke" />
-                    </div>
-                  </div>
-                </div>
-                <div className="wilmington location-restaurant">
-                  <i className="fa-solid fa-location-dot" />
-                  <div>
-                    <h6>12 Restaurant</h6>
-                    <p>In Your city</p>
-                  </div>
+              <div className="hero-video">
+                <div className="video-wrapper">
+                  <iframe
+                    src="https://www.youtube.com/embed/VIDEO_ID"
+                    title="Remotive Logistics"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
                 </div>
               </div>
             </div>

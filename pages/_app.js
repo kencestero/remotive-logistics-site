@@ -1,24 +1,24 @@
 import Head from "next/head";
 import { useEffect, useState } from "react";
-import { Inter, Sora } from "next/font/google";
+import { Inter } from "next/font/google";
 import PreLoader from "@/src/layouts/PreLoader";
-import "@/styles/theme.css";
-import "@/styles/typography.css";
-import "@/styles/globals.css";
 
-// Body/UI font
+// Inter for body text (via next/font)
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
 });
 
-// Heading font
-const sora = Sora({
-  subsets: ["latin"],
-  variable: "--font-heading",
-  display: "swap",
-});
+// Metropolis for headings (via Fontsource)
+import "@fontsource/metropolis/400.css";
+import "@fontsource/metropolis/500.css";
+import "@fontsource/metropolis/600.css";
+import "@fontsource/metropolis/700.css";
+
+import "@/styles/theme.css";
+import "@/styles/typography.css";
+import "@/styles/globals.css";
 
 export default function App({ Component, pageProps }) {
   const [preLoader, setPreLoader] = useState(true);
@@ -29,7 +29,7 @@ export default function App({ Component, pageProps }) {
   }, []);
 
   return (
-    <div className={`${inter.variable} ${sora.variable}`}>
+    <div className={inter.variable}>
       <Head>
         {/* seo begin */}
         <title>Remotive Logistics</title>
