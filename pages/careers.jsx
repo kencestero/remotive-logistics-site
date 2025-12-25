@@ -57,6 +57,23 @@ const Careers = () => {
         </div>
       </section>
 
+      {/* Remote Work Image */}
+      <section className="careers-image-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-8 offset-lg-2">
+              <div className="careers-image-wrapper" data-aos="fade-up">
+                <img
+                  src="/assets/img/remotecareers.webp"
+                  alt="Remote work from anywhere"
+                  className="careers-featured-image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* What We Provide */}
       <section className="what-we-provide gap" style={{ backgroundColor: "var(--bg-secondary)" }}>
         <div className="container">
@@ -298,7 +315,7 @@ const Careers = () => {
                 you. Send us a message and tell us why you'd be a great fit for Remotive Logistics.
               </p>
               <Link
-                href="/contact"
+                href="/careers/apply"
                 className="button"
                 style={{
                   backgroundColor: "var(--primary-contrast)",

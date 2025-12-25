@@ -4,8 +4,8 @@
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
-   Light Theme (Default) — New Palette
-   #FFFEF9 (off-white) | #E7E2E0 (warm gray) | #FC8161 (coral) | #E7311D (red) | #030504 (black)
+   Light Theme (Default) — Professional Neutral Palette
+   #FFFFFF (white) | #F5F7FA (cool gray) | #E7311D (red) | #030504 (black)
    -------------------------------------------------------------------------- */
 :root {
   /* Typography - Inter for body (set by next/font), Metropolis for headings */
@@ -17,21 +17,21 @@
   --primary-hover: #c92a18;
   --primary-contrast: #ffffff;
 
-  /* Secondary accent (coral) */
-  --accent: #fc8161;
-  --accent-contrast: #030504;
+  /* Secondary accent (red) */
+  --accent: #e7311d;
+  --accent-contrast: #ffffff;
 
-  /* Backgrounds */
-  --bg: #fffef9;
-  --bg-secondary: #e7e2e0;
-  --surface: #f5f3f1;
+  /* Backgrounds — Professional cool neutrals */
+  --bg: #ffffff;
+  --bg-secondary: #f5f7fa;
+  --surface: #eef1f5;
 
   /* Text */
   --text: #030504;
   --muted: #5b5855;
 
-  /* Borders */
-  --border: #d4d0cc;
+  /* Borders — cooler tone */
+  --border: #dce0e6;
 
   /* Interactive */
   --link: #e7311d;
@@ -46,10 +46,10 @@
    Dark Theme — Same palette, inverted
    -------------------------------------------------------------------------- */
 [data-theme="dark"] {
-  /* Primary brand color (red-orange) */
-  --primary: #fc8161;
-  --primary-hover: #e7311d;
-  --primary-contrast: #030504;
+  /* Primary brand color (red) */
+  --primary: #e7311d;
+  --primary-hover: #c92a18;
+  --primary-contrast: #ffffff;
 
   /* Secondary accent */
   --accent: #e7311d;
@@ -68,8 +68,8 @@
   --border: #3d3a38;
 
   /* Interactive */
-  --link: #fc8161;
-  --focus: #fc8161;
+  --link: #e7311d;
+  --focus: #e7311d;
 
   /* Shadows */
   --shadow: rgba(0, 0, 0, 0.4);
