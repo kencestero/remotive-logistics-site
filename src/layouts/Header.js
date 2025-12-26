@@ -88,11 +88,15 @@ const Header = ({ extraClass }) => {
               </button>
               <a
                 href="https://saleshub.remotivelogistics.com"
-                className="staff-login-link"
+                className="saleshub-button-link"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fa-solid fa-user-lock" /> Staff Login
+                <img
+                  src="/assets/img/saleshub-button.png"
+                  alt="Remotive SalesHub Portal"
+                  className="saleshub-button-img"
+                />
               </a>
               <Link href="/contact" className="button button-2">
                 Get a Quote

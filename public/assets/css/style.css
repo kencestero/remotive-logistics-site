@@ -190,32 +190,30 @@ header {
     width: 100%;
     z-index: 10;
     background-color: var(--bg);
+    overflow: visible;
 }
 
-/* Staff Login Link */
-.staff-login-link {
+/* SalesHub Portal Button */
+.saleshub-button-link {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--text);
-    text-decoration: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    transition: all 0.2s ease;
-    border: 1px solid rgba(231, 49, 29, 0.2);
-    margin-right: 12px;
+    margin-right: 16px;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    position: relative;
+    z-index: 5;
 }
 
-.staff-login-link:hover {
-    background-color: rgba(231, 49, 29, 0.05);
-    border-color: rgba(231, 49, 29, 0.4);
-    color: var(--primary);
+.saleshub-button-link:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
 }
 
-.staff-login-link i {
-    font-size: 13px;
+.saleshub-button-img {
+    height: 180px;
+    width: auto;
+    display: block;
+    /* Allow the glow to overflow header bounds */
+    margin: -50px 0;
 }
 
 /* Mobile Staff Login */
