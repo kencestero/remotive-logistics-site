@@ -185,10 +185,11 @@ figure {
     border-right: 0;
 }
 header {
-    position: absolute;
-    padding: 30px 0;
+    position: relative;
+    padding: 20px 0;
     width: 100%;
-    z-index: 1;
+    z-index: 10;
+    background-color: var(--bg);
 }
 /*------------------------        navbar end      --------------------------*/
 /*------------------------        restaurant      --------------------------*/
@@ -305,27 +306,28 @@ select.nice-select + div.nice-select + div.nice-select {
     color: #000;
     text-transform: uppercase;
     display: inline-block;
-    font-size: 16px;
-    padding: 0 25px;
-    border-radius: 10px;
-    height: 55px;
-    line-height: 55px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 0 28px;
+    border-radius: 4px;
+    height: 48px;
+    line-height: 48px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
 }
 .button-2 {
   color: #fff;
-  border: 2px solid #E7311D;
-  background-image: -webkit-linear-gradient(30deg, #E7311D 50%, transparent 50%);
-  background-image: linear-gradient(30deg, #E7311D 50%, transparent 50%);
-  background-size: 500px;
-  background-repeat: no-repeat;
-  background-position: 0%;
-  -webkit-transition: background 300ms ease-in-out;
-  transition: background 300ms ease-in-out;
-  line-height: 51px;
+  border: 2px solid var(--primary, #E7311D);
+  background-color: var(--primary, #E7311D);
+  background-image: none;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  line-height: 44px;
 }
 .button-2:hover {
-  background-position: 100%;
-  background-color: transparent;
+  background-color: var(--primary-hover, #c92a18);
+  border-color: var(--primary-hover, #c92a18);
+  transform: translateY(-1px);
 }
 /*------------- button end --------*/
 .bag i {
@@ -335,7 +337,7 @@ select.nice-select + div.nice-select + div.nice-select {
     align-items: center;
     justify-content: center;
     display: inline-flex;
-    border-radius: 10px;
+    border-radius: 4px;
     margin-right: 15px;
 }
 .bag {

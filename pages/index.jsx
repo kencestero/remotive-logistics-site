@@ -38,16 +38,16 @@ const Index = ({ featuredTrailers }) => {
               data-aos-delay={300}
               data-aos-duration={400}
             >
-              <div className="hero-image-box">
-                <img
-                  src="/assets/trailers/default-trailer-images/6x12-enclosed.jpg"
-                  alt="Quality Trailers"
-                  style={{
-                    width: "100%",
-                    borderRadius: "16px",
-                    boxShadow: "0 20px 60px var(--shadow-lg)",
-                  }}
-                />
+              <div className="hero-video">
+                <div className="video-wrapper">
+                  {/* Replace VIDEO_ID with your YouTube video ID */}
+                  <iframe
+                    src="https://www.youtube.com/embed/VIDEO_ID?autoplay=0&mute=1&controls=1&rel=0"
+                    title="Remotive Logistics - Quality Trailers"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
               </div>
             </div>
           </div>
