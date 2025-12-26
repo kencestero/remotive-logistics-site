@@ -86,6 +86,14 @@ const Header = ({ extraClass }) => {
                   <i className="fa-solid fa-sun" />
                 )}
               </button>
+              <a
+                href="https://saleshub.remotivelogistics.com"
+                className="staff-login-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa-solid fa-user-lock" /> Staff Login
+              </a>
               <Link href="/contact" className="button button-2">
                 Get a Quote
               </Link>

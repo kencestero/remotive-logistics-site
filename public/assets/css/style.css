@@ -191,6 +191,52 @@ header {
     z-index: 10;
     background-color: var(--bg);
 }
+
+/* Staff Login Link */
+.staff-login-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    border: 1px solid rgba(231, 49, 29, 0.2);
+    margin-right: 12px;
+}
+
+.staff-login-link:hover {
+    background-color: rgba(231, 49, 29, 0.05);
+    border-color: rgba(231, 49, 29, 0.4);
+    color: var(--primary);
+}
+
+.staff-login-link i {
+    font-size: 13px;
+}
+
+/* Mobile Staff Login */
+.staff-login-mobile {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.staff-login-mobile a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary);
+    font-weight: 500;
+}
+
+.staff-login-mobile a i {
+    font-size: 14px;
+}
+
 /*------------------------        navbar end      --------------------------*/
 /*------------------------        restaurant      --------------------------*/
 .restaurant h1 {

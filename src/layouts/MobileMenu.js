@@ -18,6 +18,11 @@ const MobileMenu = () => {
       <li>
         <Link href="/contact">Contact</Link>
       </li>
+      <li className="staff-login-mobile">
+        <a href="https://saleshub.remotivelogistics.com" target="_blank" rel="noopener noreferrer">
+          <i className="fa-solid fa-user-lock" /> Staff Login
+        </a>
+      </li>
     </ul>
   );
 };
