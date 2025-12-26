@@ -11,6 +11,8 @@ const Contact = () => {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState(null);
 
   const handleChange = (e) => {
     setFormData({
@@ -19,11 +21,31 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // For now, just show success message
-    // TODO: Integrate with Formspree or email API
-    setSubmitted(true);
+    setError(null);
+    setSubmitting(true);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        const data = await response.json().catch(() => ({}));
+        throw new Error(data?.error || "Failed to send message. Please try again.");
+      }
+
+      setSubmitted(true);
+    } catch (err) {
+      setError(err?.message || "Something went wrong. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -112,6 +134,7 @@ const Contact = () => {
                       className="button button-2"
                       onClick={() => {
                         setSubmitted(false);
+                        setError(null);
                         setFormData({
                           name: "",
                           email: "",
@@ -125,81 +148,107 @@ const Contact = () => {
                     </button>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="contact-form">
-                    <div className="form-row">
-                      <div className="form-group">
-                        <label htmlFor="name">Your Name *</label>
-                        <input
-                          type="text"
-                          id="name"
-                          name="name"
-                          value={formData.name}
+                  <>
+                    {error && (
+                      <div
+                        style={{
+                          marginBottom: "1.5rem",
+                          padding: "1rem",
+                          backgroundColor: "rgba(239, 68, 68, 0.1)",
+                          border: "1px solid rgba(239, 68, 68, 0.3)",
+                          borderRadius: "8px",
+                          color: "#ef4444",
+                          fontSize: "0.875rem",
+                        }}
+                      >
+                        {error}
+                      </div>
+                    )}
+
+                    <form onSubmit={handleSubmit} className="contact-form">
+                      <div className="form-row">
+                        <div className="form-group">
+                          <label htmlFor="name">Your Name *</label>
+                          <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            value={formData.name}
+                            onChange={handleChange}
+                            placeholder="John Doe"
+                            required
+                          />
+                        </div>
+                        <div className="form-group">
+                          <label htmlFor="email">Email Address *</label>
+                          <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            placeholder="john@example.com"
+                            required
+                          />
+                        </div>
+                      </div>
+
+                      <div className="form-row">
+                        <div className="form-group">
+                          <label htmlFor="phone">Phone Number</label>
+                          <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            value={formData.phone}
+                            onChange={handleChange}
+                            placeholder="(555) 123-4567"
+                          />
+                        </div>
+                        <div className="form-group">
+                          <label htmlFor="subject">Subject *</label>
+                          <select
+                            id="subject"
+                            name="subject"
+                            value={formData.subject}
+                            onChange={handleChange}
+                            required
+                          >
+                            <option value="">Select a topic...</option>
+                            <option value="trailer-inquiry">Trailer Inquiry</option>
+                            <option value="financing">Financing Question</option>
+                            <option value="careers">Join Our Team</option>
+                            <option value="other">Other</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div className="form-group full-width">
+                        <label htmlFor="message">Your Message *</label>
+                        <textarea
+                          id="message"
+                          name="message"
+                          value={formData.message}
                           onChange={handleChange}
-                          placeholder="John Doe"
+                          placeholder="Tell us how we can help..."
+                          rows={5}
                           required
                         />
                       </div>
-                      <div className="form-group">
-                        <label htmlFor="email">Email Address *</label>
-                        <input
-                          type="email"
-                          id="email"
-                          name="email"
-                          value={formData.email}
-                          onChange={handleChange}
-                          placeholder="john@example.com"
-                          required
-                        />
-                      </div>
-                    </div>
 
-                    <div className="form-row">
-                      <div className="form-group">
-                        <label htmlFor="phone">Phone Number</label>
-                        <input
-                          type="tel"
-                          id="phone"
-                          name="phone"
-                          value={formData.phone}
-                          onChange={handleChange}
-                          placeholder="(555) 123-4567"
-                        />
-                      </div>
-                      <div className="form-group">
-                        <label htmlFor="subject">Subject *</label>
-                        <select
-                          id="subject"
-                          name="subject"
-                          value={formData.subject}
-                          onChange={handleChange}
-                          required
-                        >
-                          <option value="">Select a topic...</option>
-                          <option value="trailer-inquiry">Trailer Inquiry</option>
-                          <option value="financing">Financing Question</option>
-                          <option value="careers">Join Our Team</option>
-                          <option value="other">Other</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    <div className="form-group full-width">
-                      <label htmlFor="message">Your Message *</label>
-                      <textarea
-                        id="message"
-                        name="message"
-                        value={formData.message}
-                        onChange={handleChange}
-                        placeholder="Tell us how we can help..."
-                        rows={5}
-                        required
-                      />
-                    </div>
-
-                    <button type="submit" className="button button-2">
-                      Send Message
-                    </button>
-                  </form>
+                      <button
+                        type="submit"
+                        disabled={submitting}
+                        className="button button-2"
+                        style={{
+                          opacity: submitting ? 0.7 : 1,
+                          cursor: submitting ? "not-allowed" : "pointer",
+                        }}
+                      >
+                        {submitting ? "Sending..." : "Send Message"}
+                      </button>
+                    </form>
+                  </>
                 )}
               </div>
             </div>
