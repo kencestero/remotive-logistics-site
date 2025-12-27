@@ -124,34 +124,40 @@ export default async function handler(req, res) {
 
 // Helper function to parse FormData from the request
 async function parseFormData(req) {
-  return new Promise((resolve, reject) => {
-    const { IncomingForm } = require("formidable");
-    const form = new IncomingForm({
-      keepExtensions: true,
-      maxFileSize: 10 * 1024 * 1024, // 10MB max file size
-    });
+  const formidable = require("formidable");
+  const form = formidable({
+    keepExtensions: true,
+    maxFileSize: 10 * 1024 * 1024, // 10MB max file size
+  });
 
+  return new Promise((resolve, reject) => {
     form.parse(req, (err, fields, files) => {
       if (err) {
+        console.error("Formidable parse error:", err);
         reject(err);
         return;
       }
 
-      // Convert fields to plain object (formidable returns arrays)
+      console.log("Parsed fields:", fields);
+      console.log("Parsed files:", files);
+
+      // Convert fields to plain object (formidable v3 returns arrays)
       const data = {};
       Object.keys(fields).forEach((key) => {
-        data[key] = Array.isArray(fields[key]) ? fields[key][0] : fields[key];
+        const value = fields[key];
+        data[key] = Array.isArray(value) ? value[0] : value;
       });
 
       // Add resume file info if present
       if (files.resume) {
         const resume = Array.isArray(files.resume) ? files.resume[0] : files.resume;
-        data.resumeFileName = resume.originalFilename;
+        data.resumeFileName = resume.originalFilename || resume.newFilename;
         data.resumePath = resume.filepath;
         data.resumeSize = resume.size;
         data.resumeType = resume.mimetype;
       }
 
+      console.log("Final data:", data);
       resolve(data);
     });
   });
