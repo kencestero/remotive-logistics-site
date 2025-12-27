@@ -1,5 +1,6 @@
 // Employee Application API Endpoint
 // Handles FormData submissions with optional resume file upload
+// Sends email notifications via Resend to ken@remotivelogistics.com
 
 import { Resend } from "resend";
 
