@@ -125,8 +125,8 @@ export default async function handler(req, res) {
 // Helper function to parse FormData from the request
 async function parseFormData(req) {
   return new Promise((resolve, reject) => {
-    const formidable = require("formidable");
-    const form = new formidable.IncomingForm({
+    const { IncomingForm } = require("formidable");
+    const form = new IncomingForm({
       keepExtensions: true,
       maxFileSize: 10 * 1024 * 1024, // 10MB max file size
     });
