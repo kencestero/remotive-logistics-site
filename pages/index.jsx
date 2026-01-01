@@ -7,16 +7,27 @@ const Index = ({ featuredTrailers }) => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="hero-section cinematic-bg-primary gap">
-        <div className="container">
-          <div className="row align-items-center">
-            <div
-              className="col-lg-6"
-              data-aos="fade-up"
-              data-aos-delay={200}
-              data-aos-duration={300}
-            >
-              <div className="hero-content">
+      <section className="hero-section-overlay gap">
+        <div className="hero-background-image">
+          <img
+            src="/assets/img/blackoutR.png"
+            alt="Premium enclosed trailer"
+            className="hero-bg-img"
+            loading="eager"
+            fetchPriority="high"
+          />
+          <div className="hero-overlay"></div>
+          <div className="orange-frame"></div>
+        </div>
+        <div className="container hero-content-wrapper">
+          <div className="row">
+            <div className="col-lg-7 col-xl-6">
+              <div
+                className="hero-content"
+                data-aos="fade-up"
+                data-aos-delay={200}
+                data-aos-duration={300}
+              >
                 <h1>Quality Trailers. Remote Convenience.</h1>
                 <p>
                   Browse our selection of enclosed, open, dump, and utility trailers — all from the
@@ -29,26 +40,6 @@ const Index = ({ featuredTrailers }) => {
                   <Link href="/contact" className="button button-outline">
                     Get a Quote
                   </Link>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-lg-6"
-              data-aos="fade-up"
-              data-aos-delay={300}
-              data-aos-duration={400}
-            >
-              <div className="hero-image-container">
-                <div className="hero-image-wrapper">
-                  <img
-                    src="/assets/img/blackoutR.png"
-                    alt="Premium enclosed trailer with professional lighting"
-                    className="hero-product-image"
-                    loading="eager"
-                    fetchPriority="high"
-                  />
-                  <div className="image-glow-effect"></div>
-                  <div className="orange-frame"></div>
                 </div>
               </div>
             </div>
