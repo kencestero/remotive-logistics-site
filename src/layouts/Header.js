@@ -93,7 +93,7 @@ const Header = ({ extraClass }) => {
                 rel="noopener noreferrer"
               >
                 <img
-                  src="/assets/img/saleshub-button.png"
+                  src="/assets/img/saleshub-button.webp"
                   alt="Remotive SalesHub Portal"
                   className="saleshub-button-img"
                 />
