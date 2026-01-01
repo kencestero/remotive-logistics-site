@@ -7,27 +7,11 @@ const Index = ({ featuredTrailers }) => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="hero-section-overlay gap">
-        <div className="hero-background-image">
-          <img
-            src="/assets/img/blackoutR.png"
-            alt="Premium enclosed trailer"
-            className="hero-bg-img"
-            loading="eager"
-            fetchPriority="high"
-          />
-          <div className="hero-overlay"></div>
-          <div className="orange-frame"></div>
-        </div>
-        <div className="container hero-content-wrapper">
-          <div className="row">
-            <div className="col-lg-7 col-xl-6">
-              <div
-                className="hero-content"
-                data-aos="fade-up"
-                data-aos-delay={200}
-                data-aos-duration={300}
-              >
+      <section className="hero-section-premium gap">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-lg-6" data-aos="fade-up" data-aos-delay={200}>
+              <div className="hero-content">
                 <h1>Quality Trailers. Remote Convenience.</h1>
                 <p>
                   Browse our selection of enclosed, open, dump, and utility trailers — all from the
@@ -41,6 +25,17 @@ const Index = ({ featuredTrailers }) => {
                     Get a Quote
                   </Link>
                 </div>
+              </div>
+            </div>
+            <div className="col-lg-6" data-aos="fade-up" data-aos-delay={400}>
+              <div className="hero-image-container">
+                <img
+                  src="/assets/img/blackoutR.png"
+                  alt="Premium enclosed trailer"
+                  className="hero-trailer-img"
+                  loading="eager"
+                  fetchPriority="high"
+                />
               </div>
             </div>
           </div>
