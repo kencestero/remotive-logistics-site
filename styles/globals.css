@@ -323,8 +323,8 @@
 
 .button-outline {
   background: transparent;
-  border: 2px solid rgba(255, 107, 53, 0.6);
-  color: #ffffff;
+  border: 2px solid var(--primary);
+  color: var(--primary);
   padding: 0 28px;
   height: 48px;
   line-height: 44px;
