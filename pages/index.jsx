@@ -7,36 +7,30 @@ const Index = ({ featuredTrailers }) => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="hero-section-premium gap">
+      <section className="hero-section-fullbleed">
+        <div className="hero-background">
+          <img
+            src="/assets/img/blackoutR.png"
+            alt="Premium enclosed trailer"
+            loading="eager"
+            fetchPriority="high"
+          />
+          <div className="hero-overlay"></div>
+        </div>
         <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-6" data-aos="fade-up" data-aos-delay={200}>
-              <div className="hero-content">
-                <h1>Quality Trailers. Remote Convenience.</h1>
-                <p>
-                  Browse our selection of enclosed, open, dump, and utility trailers — all from the
-                  comfort of your home. Customer service is our number one priority.
-                </p>
-                <div className="hero-cta">
-                  <Link href="/trailers" className="button button-2">
-                    Browse Trailers
-                  </Link>
-                  <Link href="/contact" className="button button-outline">
-                    Get a Quote
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6" data-aos="fade-up" data-aos-delay={400}>
-              <div className="hero-image-container">
-                <img
-                  src="/assets/img/blackoutR.png"
-                  alt="Premium enclosed trailer"
-                  className="hero-trailer-img"
-                  loading="eager"
-                  fetchPriority="high"
-                />
-              </div>
+          <div className="hero-content-overlay" data-aos="fade-up" data-aos-delay={200}>
+            <h1>Quality Trailers. Remote Convenience.</h1>
+            <p>
+              Browse our selection of enclosed, open, dump, and utility trailers — all from the
+              comfort of your home. Customer service is our number one priority.
+            </p>
+            <div className="hero-cta">
+              <Link href="/trailers" className="button button-2">
+                Browse Trailers
+              </Link>
+              <Link href="/contact" className="button button-outline">
+                Get a Quote
+              </Link>
             </div>
           </div>
         </div>
