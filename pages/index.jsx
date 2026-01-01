@@ -7,7 +7,7 @@ const Index = ({ featuredTrailers }) => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="hero-section gap" style={{ backgroundColor: "var(--bg-secondary)" }}>
+      <section className="hero-section cinematic-bg-primary gap">
         <div className="container">
           <div className="row align-items-center">
             <div
@@ -17,7 +17,7 @@ const Index = ({ featuredTrailers }) => {
               data-aos-duration={300}
             >
               <div className="hero-content">
-                <h1>Quality Trailers, Remote Convenience</h1>
+                <h1>Quality Trailers. Remote Convenience.</h1>
                 <p>
                   Browse our selection of enclosed, open, dump, and utility trailers — all from the
                   comfort of your home. Customer service is our number one priority.
@@ -38,15 +38,17 @@ const Index = ({ featuredTrailers }) => {
               data-aos-delay={300}
               data-aos-duration={400}
             >
-              <div className="hero-video">
-                <div className="video-wrapper">
-                  {/* Replace VIDEO_ID with your YouTube video ID */}
-                  <iframe
-                    src="https://www.youtube.com/embed/VIDEO_ID?autoplay=0&mute=1&controls=1&rel=0"
-                    title="Remotive Logistics - Quality Trailers"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
+              <div className="hero-image-container">
+                <div className="hero-image-wrapper">
+                  <img
+                    src="/assets/img/blackoutR.png"
+                    alt="Premium enclosed trailer with professional lighting"
+                    className="hero-product-image"
+                    loading="eager"
+                    fetchPriority="high"
                   />
+                  <div className="image-glow-effect"></div>
+                  <div className="orange-frame"></div>
                 </div>
               </div>
             </div>
@@ -97,7 +99,10 @@ const Index = ({ featuredTrailers }) => {
       </section>
 
       {/* Featured Trailers */}
-      <section className="featured-trailers gap" style={{ backgroundColor: "var(--bg-secondary)" }}>
+      <section
+        className="featured-trailers subtle-glow-top gap"
+        style={{ backgroundColor: "var(--bg-secondary)" }}
+      >
         <div className="container">
           <div className="hading text-center" data-aos="fade-up">
             <h2>Featured Trailers</h2>
@@ -219,7 +224,14 @@ const Index = ({ featuredTrailers }) => {
       </section>
 
       {/* CTA Section */}
-      <section className="cta-section gap" style={{ backgroundColor: "var(--primary)" }}>
+      <section
+        className="cta-section gap"
+        style={{
+          background: "linear-gradient(135deg, #FF6B35 0%, #E55A2B 100%)",
+          position: "relative",
+        }}
+      >
+        <div className="cta-glow-overlay"></div>
         <div className="container">
           <div className="row">
             <div className="col-lg-12 text-center" data-aos="fade-up">

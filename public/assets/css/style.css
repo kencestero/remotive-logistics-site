@@ -362,16 +362,18 @@ select.nice-select + div.nice-select + div.nice-select {
 }
 .button-2 {
   color: #fff;
-  border: 2px solid var(--primary, #E7311D);
-  background-color: var(--primary, #E7311D);
+  border: 2px solid var(--primary, #FF6B35);
+  background-color: var(--primary, #FF6B35);
   background-image: none;
-  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  transition: all 0.2s ease;
   line-height: 44px;
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
 }
 .button-2:hover {
-  background-color: var(--primary-hover, #c92a18);
-  border-color: var(--primary-hover, #c92a18);
-  transform: translateY(-1px);
+  background-color: var(--primary-hover, #E55A2B);
+  border-color: var(--primary-hover, #E55A2B);
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+  transform: translateY(-2px);
 }
 /*------------- button end --------*/
 .bag i {
