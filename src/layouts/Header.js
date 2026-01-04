@@ -66,6 +66,9 @@ const Header = ({ extraClass }) => {
                   <Link href="/trailers">Inventory</Link>
                 </li>
                 <li>
+                  <Link href="/get-approved">Get Approved</Link>
+                </li>
+                <li>
                   <Link href="/about">About Us</Link>
                 </li>
                 <li>
