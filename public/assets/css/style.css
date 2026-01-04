@@ -209,11 +209,11 @@ header {
 }
 
 .saleshub-button-img {
-    height: 180px;
+    height: 107px;
     width: auto;
     display: block;
     /* Allow the glow to overflow header bounds */
-    margin: -50px 0;
+    margin: -30px 0;
 }
 
 /* Mobile Staff Login */
@@ -837,7 +837,7 @@ footer p {
   font-size: 16px;
 }
 .footer-description h2 {
-    color: white;
+    color: #1a1a1a;
     font-weight: bold;
     width: 59%;
     padding: 35px 0 20px;

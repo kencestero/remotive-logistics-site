@@ -216,7 +216,7 @@ const Index = ({ featuredTrailers }) => {
           <div className="row">
             <div className="col-lg-12 text-center" data-aos="fade-up">
               <h2 style={{ color: "var(--primary-contrast)" }}>Ready to Find Your Trailer?</h2>
-              <p style={{ color: "var(--primary-contrast)", opacity: 0.9 }}>
+              <p style={{ color: "#ffffff" }}>
                 Browse our inventory or contact us for personalized assistance.
               </p>
               <div className="cta-buttons">
@@ -241,7 +241,7 @@ const Index = ({ featuredTrailers }) => {
                   Contact Us
                 </Link>
               </div>
-              <p style={{ color: "var(--primary-contrast)", marginTop: "1.5rem" }}>
+              <p style={{ color: "#ffffff", marginTop: "1.5rem" }}>
                 <i className="fa-solid fa-phone" style={{ marginRight: "0.5rem" }} />
                 1-866-REMOTIV
               </p>

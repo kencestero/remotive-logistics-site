@@ -3,12 +3,12 @@ import { useState, useEffect } from "react";
 import MobileMenu from "./MobileMenu";
 
 const Header = ({ extraClass }) => {
-  // Theme toggle
-  const [theme, setTheme] = useState("light");
+  // Theme toggle - default to dark mode
+  const [theme, setTheme] = useState("dark");
 
   useEffect(() => {
-    // Read theme from localStorage on mount
-    const savedTheme = localStorage.getItem("theme") || "light";
+    // Read theme from localStorage on mount, default to dark
+    const savedTheme = localStorage.getItem("theme") || "dark";
     setTheme(savedTheme);
     document.documentElement.setAttribute("data-theme", savedTheme);
   }, []);
@@ -31,7 +31,7 @@ const Header = ({ extraClass }) => {
           <div className="top-contact-inner">
             <div className="contact-item">
               <i className="fa-solid fa-phone" />
-              <a href="tel:+18667366848">1-866-736-6848</a>
+              <a href="tel:+18667366848">1-866-REMOTIV (736-6848)</a>
             </div>
             <div className="contact-item">
               <i className="fa-solid fa-envelope" />

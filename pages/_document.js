@@ -1,10 +1,10 @@
 import { Head, Html, Main, NextScript } from "next/document";
 
-// Inline script to prevent flash of wrong theme
+// Inline script to prevent flash of wrong theme - defaults to dark
 const themeInitScript = `
 (function() {
   try {
-    var theme = localStorage.getItem('theme') || 'light';
+    var theme = localStorage.getItem('theme') || 'dark';
     document.documentElement.setAttribute('data-theme', theme);
   } catch (e) {}
 })();
