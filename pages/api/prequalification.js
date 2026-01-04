@@ -4,23 +4,33 @@ export default async function handler(req, res) {
     return res.status(405).json({ success: false, message: "Method not allowed" });
   }
 
-  const { firstName, lastName, email, phone, zipcode, creditBand, source, pageUrl, repCode } =
-    req.body;
+  const {
+    firstName,
+    lastName,
+    email,
+    phone,
+    zip,
+    creditRange,
+    repCode,
+    source,
+    sourcePage,
+    recommendedPath,
+  } = req.body;
 
   // Basic validation
-  if (!firstName || !lastName || !email || !phone || !zipcode || !creditBand) {
+  if (!firstName || !lastName || !email || !phone || !zip || !creditRange) {
     return res.status(400).json({
       success: false,
       message: "Missing required fields",
     });
   }
 
-  // Validate credit band
-  const validCreditBands = ["780+", "700-779", "650-699", "620-649", "below-620"];
-  if (!validCreditBands.includes(creditBand)) {
+  // Validate credit range (now with underscores)
+  const validCreditRanges = ["780+", "700_779", "650_699", "620_649", "below_620"];
+  if (!validCreditRanges.includes(creditRange)) {
     return res.status(400).json({
       success: false,
-      message: "Invalid credit band",
+      message: "Invalid credit range",
     });
   }
 
@@ -38,11 +48,12 @@ export default async function handler(req, res) {
           lastName,
           email,
           phone,
-          zipcode,
-          creditBand,
-          source: source || "get-approved",
-          pageUrl: pageUrl || "/get-approved",
-          ...(repCode && { repCode }),
+          zip,
+          creditRange,
+          repCode,
+          source,
+          sourcePage,
+          recommendedPath,
         }),
       }
     );
@@ -56,7 +67,6 @@ export default async function handler(req, res) {
         message: data.message || "Submission successful",
       });
     } else {
-      // Log error server-side for debugging
       console.error("SalesHub API error:", data);
       return res.status(response.status || 500).json({
         success: false,

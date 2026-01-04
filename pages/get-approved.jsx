@@ -12,8 +12,8 @@ const CREDIT_BANDS = [
 ];
 
 const LENDER_URLS = {
-  rocksolid: "https://rocksolidfunding.com/apply", // Replace with actual URL
-  clicklease: "https://app.clicklease.com/apply", // Replace with actual URL
+  rocksolid: "https://www.rocksolidfunding.com/loan-application/",
+  clicklease: "https://app.clicklease.com/inlineapp?token=b2ac1485-d611-4584-bcbc-1ccfc9d83cf1",
 };
 
 // Format phone number as user types: 0000000000 -> 000-000-0000
@@ -48,6 +48,14 @@ const GetApproved = () => {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitResult, setSubmitResult] = useState(null);
+
+  // Get recommended path based on credit band
+  const getRecommendedPath = (creditBand) => {
+    if (["780+", "700-779", "650-699", "620-649"].includes(creditBand)) {
+      return "rock_solid";
+    }
+    return "clicklease";
+  };
 
   // Extract rep code from URL query parameter
   useEffect(() => {
@@ -121,10 +129,16 @@ const GetApproved = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          ...formData,
-          source: "get-approved",
-          pageUrl: window.location.href,
-          ...(repCode && { repCode }),
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          phone: formData.phone.replace(/\D/g, ""), // Send digits only
+          zip: formData.zipcode,
+          creditRange: formData.creditBand.replace(/-/g, "_"), // 650-699 -> 650_699
+          repCode: repCode || null,
+          source: "website",
+          sourcePage: "/get-approved",
+          recommendedPath: getRecommendedPath(formData.creditBand),
         }),
       });
 
@@ -198,7 +212,17 @@ const GetApproved = () => {
     };
   };
 
-  const openLenderApp = (url) => {
+  const openLenderApp = (url, ctaLabel) => {
+    // Track which CTA was clicked
+    fetch("/api/prequalification/cta", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        leadId: submitResult?.leadId,
+        ctaClicked: ctaLabel,
+      }),
+    }).catch(() => {}); // Fire and forget
+
     window.open(url, "_blank", "noopener,noreferrer");
   };
 
@@ -362,10 +386,54 @@ const GetApproved = () => {
                 <h2>Thank You!</h2>
                 <p className="recommendation-message">{getRecommendation().message}</p>
 
+                {/* Lender Badge */}
+                {getRecommendedPath(submitResult.creditBand) === "rock_solid" ? (
+                  <div className="lender-badge">
+                    <img
+                      src="/assets/img/lenders/rocksolid-logo.webp"
+                      alt="Rock Solid Funding"
+                      className="lender-logo"
+                    />
+                    <div className="lender-trust">
+                      <div className="stars">
+                        <i className="fa-solid fa-star"></i>
+                        <i className="fa-solid fa-star"></i>
+                        <i className="fa-solid fa-star"></i>
+                        <i className="fa-solid fa-star"></i>
+                        <i className="fa-solid fa-star-half-stroke"></i>
+                      </div>
+                      <span className="trust-text">Trusted Financing Partner</span>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="lender-badge">
+                    <img
+                      src="/assets/img/lenders/clicklease-logo.webp"
+                      alt="ClickLease"
+                      className="lender-logo"
+                    />
+                    <div className="lender-trust">
+                      <div className="stars">
+                        <i className="fa-solid fa-star"></i>
+                        <i className="fa-solid fa-star"></i>
+                        <i className="fa-solid fa-star"></i>
+                        <i className="fa-solid fa-star"></i>
+                        <i className="fa-solid fa-star"></i>
+                      </div>
+                      <span className="trust-text">Lease-to-Own Partner</span>
+                    </div>
+                  </div>
+                )}
+
                 <div className="recommendation-actions">
                   <button
                     className="button button-2"
-                    onClick={() => openLenderApp(getRecommendation().primaryAction.url)}
+                    onClick={() =>
+                      openLenderApp(
+                        getRecommendation().primaryAction.url,
+                        getRecommendation().primaryAction.label
+                      )
+                    }
                   >
                     {getRecommendation().primaryAction.label}
                   </button>
@@ -373,14 +441,24 @@ const GetApproved = () => {
                   {getRecommendation().showBoth ? (
                     <button
                       className="button button-outline"
-                      onClick={() => openLenderApp(getRecommendation().secondaryAction.url)}
+                      onClick={() =>
+                        openLenderApp(
+                          getRecommendation().secondaryAction.url,
+                          getRecommendation().secondaryAction.label
+                        )
+                      }
                     >
                       {getRecommendation().secondaryAction.label}
                     </button>
                   ) : (
                     <button
                       className="secondary-link"
-                      onClick={() => openLenderApp(getRecommendation().secondaryAction.url)}
+                      onClick={() =>
+                        openLenderApp(
+                          getRecommendation().secondaryAction.url,
+                          getRecommendation().secondaryAction.label
+                        )
+                      }
                     >
                       {getRecommendation().secondaryAction.label}
                     </button>
