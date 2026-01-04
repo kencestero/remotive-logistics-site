@@ -13,7 +13,7 @@ const CREDIT_BANDS = [
 
 const LENDER_URLS = {
   rocksolid: "https://www.rocksolidfunding.com/loan-application/",
-  clicklease: "https://app.clicklease.com/inlineapp?token=b2ac1485-d611-4584-bcbc-1ccfc9d83cf1",
+  clicklease: "/api/redirect/clicklease",
 };
 
 // Format phone number as user types: 0000000000 -> 000-000-0000
