@@ -5,12 +5,20 @@ import MobileMenu from "./MobileMenu";
 const Header = ({ extraClass }) => {
   // Theme toggle - default to dark mode
   const [theme, setTheme] = useState("dark");
+  const [showTooltip, setShowTooltip] = useState(true);
 
   useEffect(() => {
     // Read theme from localStorage on mount, default to dark
     const savedTheme = localStorage.getItem("theme") || "dark";
     setTheme(savedTheme);
     document.documentElement.setAttribute("data-theme", savedTheme);
+
+    // Hide tooltip after 20 seconds
+    const timer = setTimeout(() => {
+      setShowTooltip(false);
+    }, 20000);
+
+    return () => clearTimeout(timer);
   }, []);
 
   const toggleTheme = () => {
@@ -82,13 +90,18 @@ const Header = ({ extraClass }) => {
 
             {/* Actions */}
             <div className="header-actions">
-              <button onClick={toggleTheme} className="theme-toggle" aria-label="Toggle theme">
-                {theme === "light" ? (
-                  <i className="fa-solid fa-moon" />
-                ) : (
-                  <i className="fa-solid fa-sun" />
+              <div className="theme-toggle-wrapper">
+                <button onClick={toggleTheme} className="theme-toggle" aria-label="Toggle theme">
+                  {theme === "light" ? (
+                    <i className="fa-solid fa-moon" />
+                  ) : (
+                    <i className="fa-solid fa-sun" />
+                  )}
+                </button>
+                {showTooltip && theme === "dark" && (
+                  <div className="theme-tooltip">Click me for Light Mode</div>
                 )}
-              </button>
+              </div>
               <a
                 href="https://saleshub.remotivelogistics.com"
                 className="saleshub-button-link"

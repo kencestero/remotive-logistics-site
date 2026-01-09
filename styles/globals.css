@@ -8,6 +8,97 @@
 }
 
 /* ==========================================================================
+   Theme Toggle with Tooltip
+   ========================================================================== */
+
+.theme-toggle-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.25rem;
+  color: var(--text);
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+  animation: sunPulse 2s ease-in-out infinite;
+}
+
+.theme-toggle:hover {
+  color: var(--primary);
+  transform: scale(1.1);
+}
+
+@keyframes sunPulse {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.05) rotate(15deg);
+  }
+}
+
+.theme-tooltip {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary);
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  animation:
+    tooltipBounce 1s ease-in-out infinite,
+    tooltipFadeIn 0.3s ease-out;
+  pointer-events: none;
+}
+
+.theme-tooltip::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-bottom-color: var(--primary);
+}
+
+@keyframes tooltipBounce {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(3px);
+  }
+}
+
+@keyframes tooltipFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* ==========================================================================
    Remotive Header
    ========================================================================== */
 
