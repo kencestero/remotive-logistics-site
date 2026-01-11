@@ -280,12 +280,16 @@
 .saleshub-button-link {
   display: inline-block;
   line-height: 0;
+  position: relative;
+  z-index: 10;
 }
 
 .saleshub-button-img {
-  max-height: 45px;
+  max-height: 70px;
   width: auto;
   display: block;
+  position: relative;
+  top: 8px;
   transition:
     transform 0.2s ease,
     opacity 0.2s ease;
