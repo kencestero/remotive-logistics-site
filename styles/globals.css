@@ -276,6 +276,26 @@
   color: var(--primary);
 }
 
+/* SalesHub Button */
+.saleshub-button-link {
+  display: inline-block;
+  line-height: 0;
+}
+
+.saleshub-button-img {
+  max-height: 45px;
+  width: auto;
+  display: block;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.saleshub-button-link:hover .saleshub-button-img {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
 /* Mobile Menu Toggle */
 .mobile-toggle {
   display: none;
