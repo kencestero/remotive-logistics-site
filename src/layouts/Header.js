@@ -13,10 +13,10 @@ const Header = ({ extraClass }) => {
     setTheme(savedTheme);
     document.documentElement.setAttribute("data-theme", savedTheme);
 
-    // Hide tooltip after 20 seconds
+    // Hide tooltip after 10 seconds
     const timer = setTimeout(() => {
       setShowTooltip(false);
-    }, 20000);
+    }, 10000);
 
     return () => clearTimeout(timer);
   }, []);
