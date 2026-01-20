@@ -109,8 +109,11 @@ export default function TrailerDetail({ trailer }) {
 
                 {/* CTA */}
                 <div className="trailer-cta">
-                  <Link href="/contacts" className="button button-2">
-                    Get a Quote
+                  <Link
+                    href={`/get-a-quote?type=${encodeURIComponent(trailer.category)}&trailer=${encodeURIComponent(trailer.name)}`}
+                    className="button button-2"
+                  >
+                    Request a Quote
                   </Link>
                   <Link href="/inventory" className="button button-outline">
                     Back to Inventory

@@ -2,19 +2,48 @@ import { useState } from "react";
 import Layout from "@/src/layouts/Layout";
 import TrailerCard from "@/src/components/TrailerCard";
 import TrailerFilters from "@/src/components/TrailerFilters";
-import { getTrailers, getCategories, getStatuses } from "@/lib/inventory";
+import { getTrailers, getCategories } from "@/lib/inventory";
 
-export default function Trailers({ trailers, categories, statuses }) {
+// Helper to parse size string (e.g., "6x12" -> 72 sq ft)
+const parseSizeToNumber = (size) => {
+  if (!size) return 0;
+  const match = size.toLowerCase().match(/(\d+\.?\d*)x(\d+\.?\d*)/);
+  if (match) {
+    return parseFloat(match[1]) * parseFloat(match[2]);
+  }
+  return 0;
+};
+
+export default function Trailers({ trailers, categories }) {
   const [selectedCategory, setSelectedCategory] = useState("");
-  const [selectedStatus, setSelectedStatus] = useState("");
+  const [selectedSort, setSelectedSort] = useState("");
 
-  // Filter trailers based on selection
+  // Filter trailers based on category
   const filteredTrailers = trailers.filter((trailer) => {
     const matchesCategory = !selectedCategory || trailer.category === selectedCategory;
-    const matchesStatus = !selectedStatus || trailer.status === selectedStatus;
     // Hide sold trailers from public grid by default
     const notSold = trailer.status !== "Sold";
-    return matchesCategory && matchesStatus && notSold;
+    return matchesCategory && notSold;
+  });
+
+  // Sort trailers based on selection
+  const sortedTrailers = [...filteredTrailers].sort((a, b) => {
+    switch (selectedSort) {
+      case "price-low":
+        return (a.price || 0) - (b.price || 0);
+      case "price-high":
+        return (b.price || 0) - (a.price || 0);
+      case "size-small":
+        return parseSizeToNumber(a.size) - parseSizeToNumber(b.size);
+      case "size-large":
+        return parseSizeToNumber(b.size) - parseSizeToNumber(a.size);
+      case "newest":
+        return (b.id || 0) - (a.id || 0);
+      case "oldest":
+        return (a.id || 0) - (b.id || 0);
+      default:
+        return 0;
+    }
   });
 
   return (
@@ -39,25 +68,24 @@ export default function Trailers({ trailers, categories, statuses }) {
           {/* Filters */}
           <TrailerFilters
             categories={categories}
-            statuses={statuses}
             selectedCategory={selectedCategory}
-            selectedStatus={selectedStatus}
+            selectedSort={selectedSort}
             onCategoryChange={setSelectedCategory}
-            onStatusChange={setSelectedStatus}
+            onSortChange={setSelectedSort}
           />
 
           {/* Results Count */}
           <div className="inventory-results-count">
             <p>
-              Showing <strong>{filteredTrailers.length}</strong> trailer
-              {filteredTrailers.length !== 1 ? "s" : ""}
+              Showing <strong>{sortedTrailers.length}</strong> trailer
+              {sortedTrailers.length !== 1 ? "s" : ""}
             </p>
           </div>
 
           {/* Trailer Grid */}
-          {filteredTrailers.length > 0 ? (
+          {sortedTrailers.length > 0 ? (
             <div className="trailer-grid">
-              {filteredTrailers.map((trailer) => (
+              {sortedTrailers.map((trailer) => (
                 <TrailerCard key={trailer.id} trailer={trailer} />
               ))}
             </div>
@@ -68,7 +96,7 @@ export default function Trailers({ trailers, categories, statuses }) {
                 className="button button-2"
                 onClick={() => {
                   setSelectedCategory("");
-                  setSelectedStatus("");
+                  setSelectedSort("");
                 }}
               >
                 Clear Filters
@@ -84,13 +112,11 @@ export default function Trailers({ trailers, categories, statuses }) {
 export async function getStaticProps() {
   const trailers = getTrailers();
   const categories = getCategories();
-  const statuses = getStatuses();
 
   return {
     props: {
       trailers,
       categories,
-      statuses,
     },
   };
 }

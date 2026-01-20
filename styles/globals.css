@@ -2978,3 +2978,396 @@
     font-size: 24px;
   }
 }
+
+/* ==========================================================================
+   Get a Quote Page Styles
+   ========================================================================== */
+
+/* General Error Message */
+.general-error-message {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 8px;
+  color: #ef4444;
+  font-size: 0.9375rem;
+  margin-bottom: 1.5rem;
+}
+
+.general-error-message i {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+/* Required asterisk */
+.form-group label .required {
+  color: #ef4444;
+  font-weight: 700;
+}
+
+/* Optional label */
+.form-group label .optional {
+  color: var(--muted);
+  font-weight: 400;
+  font-size: 0.8125rem;
+}
+
+/* Textarea styling */
+.form-group textarea {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: inherit;
+  resize: vertical;
+  min-height: 100px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.15);
+}
+
+.form-group textarea::placeholder {
+  color: var(--muted);
+}
+
+/* ==========================================================================
+   Quote Thank You / Financing Comparison Styles
+   ========================================================================== */
+
+.financing-comparison-section {
+  background: var(--bg);
+  padding: 3rem 0 4rem;
+}
+
+.financing-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+}
+
+.financing-intro h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.financing-intro p {
+  font-size: 1.0625rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* VS Comparison Table - Dynamic Style */
+.financing-comparison-table-vs {
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+  background: linear-gradient(145deg, rgba(45, 45, 45, 0.95) 0%, rgba(25, 25, 25, 0.98) 100%);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 0 40px rgba(255, 107, 53, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.vs-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  gap: 1rem;
+}
+
+.lender-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.lender-logo-large {
+  max-height: 60px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(1.1);
+}
+
+.lender-logo-large.clickable {
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.lender-logo-large.clickable:hover {
+  transform: scale(1.08);
+  filter: brightness(1.3);
+}
+
+.lender-type-badge {
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.rocksolid-badge {
+  background: linear-gradient(135deg, #e91e8c 0%, #ff6bb3 100%);
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important;
+  box-shadow: 0 4px 15px rgba(233, 30, 140, 0.4);
+  font-weight: 800;
+}
+
+.clicklease-badge {
+  background: linear-gradient(135deg, #00b4d8 0%, #48cae4 100%);
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important;
+  box-shadow: 0 4px 15px rgba(0, 180, 216, 0.4);
+  font-weight: 800;
+}
+
+.vs-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #2d2d2d 0%, #3a3a3a 100%);
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.vs-divider span {
+  font-size: 1.75rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ff6b35 0%, #ff8c5a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.vs-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.vs-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.vs-feature {
+  background: linear-gradient(135deg, #2d2d2d 0%, #3a3a3a 100%);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  min-width: 200px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.vs-value {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.vs-value.rocksolid-value {
+  justify-content: flex-end;
+  text-align: right;
+  color: #ff6bb3;
+}
+
+.vs-value.clicklease-value {
+  justify-content: flex-start;
+  text-align: left;
+  color: #48cae4;
+}
+
+/* Hover effects */
+.vs-row {
+  transition: transform 0.2s ease;
+}
+
+.vs-row:hover {
+  transform: scale(1.01);
+}
+
+.vs-row:hover .vs-feature {
+  background: linear-gradient(135deg, #3a3a3a 0%, #4a4a4a 100%);
+}
+
+/* Mobile responsive for VS table */
+@media (max-width: 768px) {
+  .financing-comparison-table-vs {
+    padding: 1.5rem 1rem;
+  }
+
+  .vs-header {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .vs-divider {
+    width: 60px;
+    height: 60px;
+  }
+
+  .vs-divider span {
+    font-size: 1.25rem;
+  }
+
+  .vs-row {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .vs-feature {
+    order: -1;
+    margin-bottom: 0.5rem;
+    min-width: unset;
+  }
+
+  .vs-value {
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .vs-value.rocksolid-value {
+    border-bottom: 1px solid rgba(255, 107, 179, 0.2);
+    padding-bottom: 0.75rem;
+  }
+
+  .lender-logo-large {
+    max-height: 45px;
+  }
+}
+
+/* Financing CTA Section */
+.financing-cta-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+}
+
+.financing-cta-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.financing-cta-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+}
+
+.financing-cta-card p {
+  font-size: 0.9375rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.financing-cta-card .button {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Back Home Section */
+.back-home-section {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.back-home-section .button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Mobile Responsive - Financing */
+@media (max-width: 768px) {
+  .comparison-header,
+  .comparison-row {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-cell.feature-header {
+    display: none;
+  }
+
+  .comparison-cell.lender-header {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .comparison-cell.lender-header:last-child {
+    border-bottom: none;
+  }
+
+  .comparison-row {
+    padding: 0.5rem 0;
+  }
+
+  .comparison-cell {
+    padding: 0.5rem 1rem;
+  }
+
+  .comparison-cell.feature-name {
+    font-weight: 700;
+    background: transparent;
+    padding-bottom: 0.25rem;
+    color: var(--primary);
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  .financing-cta-section {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .financing-intro h2 {
+    font-size: 1.5rem;
+  }
+}

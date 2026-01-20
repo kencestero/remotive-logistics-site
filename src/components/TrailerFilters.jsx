@@ -1,15 +1,12 @@
-import { getStatusLabel } from "@/lib/inventory";
-
 /**
- * TrailerFilters - Category dropdown and status tabs
+ * TrailerFilters - Category dropdown and Sort By dropdown
  */
 export default function TrailerFilters({
   categories,
-  statuses,
   selectedCategory,
-  selectedStatus,
+  selectedSort,
   onCategoryChange,
-  onStatusChange,
+  onSortChange,
 }) {
   return (
     <div className="trailer-filters">
@@ -31,28 +28,23 @@ export default function TrailerFilters({
         </select>
       </div>
 
-      {/* Status Pills */}
+      {/* Sort By Dropdown */}
       <div className="filter-group">
-        <label>Status</label>
-        <div className="status-pills">
-          <button
-            className={`status-pill ${selectedStatus === "" ? "active" : ""}`}
-            onClick={() => onStatusChange("")}
-          >
-            All
-          </button>
-          {statuses
-            .filter((s) => s !== "Sold") // Don't show Sold filter on public page
-            .map((status) => (
-              <button
-                key={status}
-                className={`status-pill ${selectedStatus === status ? "active" : ""}`}
-                onClick={() => onStatusChange(status)}
-              >
-                {getStatusLabel(status)}
-              </button>
-            ))}
-        </div>
+        <label htmlFor="sort-filter">Sort By</label>
+        <select
+          id="sort-filter"
+          value={selectedSort}
+          onChange={(e) => onSortChange(e.target.value)}
+          className="filter-select"
+        >
+          <option value="">Default</option>
+          <option value="price-low">Price: Low to High</option>
+          <option value="price-high">Price: High to Low</option>
+          <option value="size-small">Size: Small to Large</option>
+          <option value="size-large">Size: Large to Small</option>
+          <option value="newest">Newest First</option>
+          <option value="oldest">Oldest First</option>
+        </select>
       </div>
     </div>
   );

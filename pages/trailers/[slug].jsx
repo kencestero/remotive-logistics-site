@@ -173,7 +173,10 @@ export default function TrailerDetail({
                   <Link href="/get-approved" className="button button-2">
                     Get Pre-Approved
                   </Link>
-                  <Link href="/contact" className="button button-outline">
+                  <Link
+                    href={`/get-a-quote?type=${encodeURIComponent(trailer.category)}&trailer=${encodeURIComponent(trailer.name)}`}
+                    className="button button-outline"
+                  >
                     Request a Quote
                   </Link>
                 </div>
