@@ -2211,32 +2211,140 @@
 /* How It Works */
 .how-it-works {
   padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Ambient glow background for liquid glass effect */
+.how-it-works::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 60%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 107, 53, 0.08) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Liquid Glass Card Effect */
 .step-card {
   text-align: center;
   padding: 2rem;
-  background: linear-gradient(135deg, #252525 0%, #1f1f1f 100%);
-  border-radius: 8px;
-  border: 1px solid rgba(255, 107, 53, 0.1);
   margin-bottom: 2rem;
-  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+
+  /* Glass background */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.02) 50%,
+    rgba(255, 107, 53, 0.05) 100%
+  );
+
+  /* Frosted glass blur */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  /* Multi-layer border for depth */
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow:
+    /* Outer glow */
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 0 60px rgba(255, 107, 53, 0.08),
+    /* Inner light edge */
+    inset 0 1px 1px rgba(255, 255, 255, 0.1),
+    /* Inner shadow for depth */
+    inset 0 -1px 1px rgba(0, 0, 0, 0.1);
+
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Liquid highlight overlay */
+.step-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.02) 50%,
+    transparent 100%
+  );
+  border-radius: 24px 24px 100% 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Animated glow ring */
+.step-card::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 26px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 107, 53, 0.3) 0%,
+    transparent 30%,
+    transparent 70%,
+    rgba(255, 107, 53, 0.15) 100%
+  );
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
 
 .step-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 32px var(--shadow-warm);
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(255, 107, 53, 0.3);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    0 0 80px rgba(255, 107, 53, 0.15),
+    inset 0 1px 2px rgba(255, 255, 255, 0.15),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.step-card:hover::after {
+  opacity: 1;
+}
+
+/* Ensure content stays above overlays */
+.step-card > * {
+  position: relative;
+  z-index: 2;
 }
 
 .step-number {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #ff6b35 0%, #ffa366 100%);
+  background: linear-gradient(135deg, #ff6b35 0%, #ffaa70 50%, #ff6b35 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 1rem;
-  filter: drop-shadow(0 2px 8px rgba(255, 107, 53, 0.3));
+  filter: drop-shadow(0 4px 20px rgba(255, 107, 53, 0.5));
+  text-shadow: 0 0 40px rgba(255, 107, 53, 0.3);
+  animation: numberGlow 3s ease-in-out infinite;
+}
+
+@keyframes numberGlow {
+  0%, 100% {
+    filter: drop-shadow(0 4px 20px rgba(255, 107, 53, 0.5));
+  }
+  50% {
+    filter: drop-shadow(0 4px 30px rgba(255, 107, 53, 0.7));
+  }
 }
 
 .step-card h4 {
