@@ -676,23 +676,66 @@
   }
 }
 
-/* Trailer Card — Roxbury Style */
+/* Trailer Card — Liquid Glass Style */
 .trailer-card {
-  background: linear-gradient(180deg, var(--surface) 0%, #1f1f1f 100%);
-  border-radius: 8px;
   overflow: hidden;
-  border: 1px solid rgba(255, 107, 53, 0.15);
   display: flex;
   flex-direction: column;
-  transition: all 0.3s ease;
   position: relative;
+  border-radius: 16px;
+
+  /* Glass background */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.02) 50%,
+    rgba(255, 107, 53, 0.05) 100%
+  );
+
+  /* Frosted glass blur */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  /* Multi-layer border */
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 0 60px rgba(255, 107, 53, 0.08),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.1);
+
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.trailer-card::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 18px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 107, 53, 0.3) 0%,
+    transparent 30%,
+    transparent 70%,
+    rgba(255, 107, 53, 0.15) 100%
+  );
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
 
 .trailer-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(255, 107, 53, 0.3);
   box-shadow:
-    0 12px 48px var(--shadow-warm),
-    0 0 0 1px rgba(255, 107, 53, 0.3);
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    0 0 80px rgba(255, 107, 53, 0.15),
+    inset 0 1px 2px rgba(255, 255, 255, 0.15),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.trailer-card:hover::after {
+  opacity: 1;
 }
 
 .trailer-card-image {
@@ -2099,9 +2142,52 @@
 }
 
 .contact-form-wrapper {
-  background: var(--surface);
   padding: 3rem;
-  border-radius: 16px;
+  position: relative;
+  border-radius: 20px;
+
+  /* Glass background */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.02) 50%,
+    rgba(255, 107, 53, 0.05) 100%
+  );
+
+  /* Frosted glass blur */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  /* Multi-layer border */
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 0 60px rgba(255, 107, 53, 0.08),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.1);
+
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-form-wrapper::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 22px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 107, 53, 0.2) 0%,
+    transparent 30%,
+    transparent 70%,
+    rgba(255, 107, 53, 0.1) 100%
+  );
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.contact-form-wrapper:hover::after {
+  opacity: 1;
 }
 
 .contact-form-wrapper h2 {
@@ -2414,12 +2500,46 @@
   font-size: 0.875rem;
 }
 
-/* Founder Quote */
+/* Founder Quote — Liquid Glass */
 .founder-quote {
-  background: var(--surface);
   padding: 2.5rem;
-  border-radius: 6px;
+  position: relative;
+  border-radius: 16px;
+
+  /* Glass background */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.02) 50%,
+    rgba(255, 107, 53, 0.05) 100%
+  );
+
+  /* Frosted glass blur */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  /* Orange left accent */
   border-left: 4px solid var(--primary);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 0 60px rgba(255, 107, 53, 0.08),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.1);
+
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.founder-quote:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    0 0 80px rgba(255, 107, 53, 0.15),
+    inset 0 1px 2px rgba(255, 255, 255, 0.15),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.1);
 }
 
 .founder-quote blockquote {
@@ -2455,19 +2575,64 @@
   display: block;
   text-align: center;
   padding: 2rem;
-  background: linear-gradient(135deg, #252525 0%, #1a1a1a 100%);
-  border-radius: 8px;
-  border: 1px solid rgba(255, 107, 53, 0.1);
   margin-bottom: 2rem;
   text-decoration: none;
-  transition: all 0.3s ease;
   cursor: pointer;
+  position: relative;
+  border-radius: 16px;
+
+  /* Glass background */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.02) 50%,
+    rgba(255, 107, 53, 0.05) 100%
+  );
+
+  /* Frosted glass blur */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  /* Multi-layer border */
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 0 60px rgba(255, 107, 53, 0.08),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.1);
+
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.category-card::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 18px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 107, 53, 0.3) 0%,
+    transparent 30%,
+    transparent 70%,
+    rgba(255, 107, 53, 0.15) 100%
+  );
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
 
 .category-card:hover {
-  background: linear-gradient(135deg, #2f2f2f 0%, #252525 100%);
-  transform: translateY(-4px);
-  box-shadow: 0 8px 32px var(--shadow-warm);
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(255, 107, 53, 0.3);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    0 0 80px rgba(255, 107, 53, 0.15),
+    inset 0 1px 2px rgba(255, 255, 255, 0.15),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.category-card:hover::after {
+  opacity: 1;
 }
 
 .category-card i {
@@ -2536,10 +2701,52 @@
 }
 
 .prequalify-form {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
-  border-radius: 12px;
   padding: 2rem;
+  position: relative;
+  border-radius: 20px;
+
+  /* Glass background */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.02) 50%,
+    rgba(255, 107, 53, 0.05) 100%
+  );
+
+  /* Frosted glass blur */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  /* Multi-layer border */
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 0 60px rgba(255, 107, 53, 0.08),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.1);
+
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.prequalify-form::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 22px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 107, 53, 0.2) 0%,
+    transparent 30%,
+    transparent 70%,
+    rgba(255, 107, 53, 0.1) 100%
+  );
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.prequalify-form:hover::after {
+  opacity: 1;
 }
 
 .form-row {
@@ -3444,11 +3651,63 @@
 }
 
 .financing-cta-card {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
-  border-radius: 12px;
   padding: 2rem;
   text-align: center;
+  position: relative;
+  border-radius: 16px;
+
+  /* Glass background */
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.02) 50%,
+    rgba(255, 107, 53, 0.05) 100%
+  );
+
+  /* Frosted glass blur */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  /* Multi-layer border */
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 0 60px rgba(255, 107, 53, 0.08),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.1);
+
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.financing-cta-card::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 18px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 107, 53, 0.3) 0%,
+    transparent 30%,
+    transparent 70%,
+    rgba(255, 107, 53, 0.15) 100%
+  );
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.financing-cta-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 107, 53, 0.3);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    0 0 80px rgba(255, 107, 53, 0.15),
+    inset 0 1px 2px rgba(255, 255, 255, 0.15),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.financing-cta-card:hover::after {
+  opacity: 1;
 }
 
 .financing-cta-card h3 {
