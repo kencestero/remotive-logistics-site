@@ -12,10 +12,15 @@
   --font-body: "Inter", system-ui, -apple-system, sans-serif;
   --font-heading: "Metropolis", system-ui, -apple-system, sans-serif;
 
-  /* Primary brand color (industrial orange) */
-  --primary: #ff6b35;
-  --primary-hover: #e55a2b;
+  /* Primary brand color (burnt orange - matches logo) */
+  --primary: #D35400;
+  --primary-hover: #B84500;
+  --primary-light: #E86A17;
   --primary-contrast: #ffffff;
+
+  /* Metallic gradient for buttons/accents */
+  --primary-gradient: linear-gradient(145deg, #E86A17 0%, #D35400 45%, #B84500 100%);
+  --primary-gradient-hover: linear-gradient(145deg, #D35400 0%, #B84500 45%, #9A3A00 100%);
 
   /* Secondary accent (red) */
   --accent: #e7311d;
@@ -41,18 +46,23 @@
   --shadow: rgba(3, 5, 4, 0.08);
   --shadow-lg: rgba(3, 5, 4, 0.15);
   --shadow-xl: 0 20px 60px rgba(3, 5, 4, 0.15);
-  --shadow-warm: 0 8px 32px rgba(255, 107, 53, 0.15);
-  --primary-glow: rgba(255, 107, 53, 0.3);
+  --shadow-warm: 0 8px 32px rgba(211, 84, 0, 0.15);
+  --primary-glow: rgba(211, 84, 0, 0.3);
 }
 
 /* --------------------------------------------------------------------------
    Dark Theme — Same palette, inverted
    -------------------------------------------------------------------------- */
 [data-theme="dark"] {
-  /* Primary brand color (industrial orange) */
-  --primary: #ff6b35;
-  --primary-hover: #e55a2b;
+  /* Primary brand color (burnt orange - matches logo) */
+  --primary: #D35400;
+  --primary-hover: #B84500;
+  --primary-light: #E86A17;
   --primary-contrast: #ffffff;
+
+  /* Metallic gradient for buttons/accents */
+  --primary-gradient: linear-gradient(145deg, #E86A17 0%, #D35400 45%, #B84500 100%);
+  --primary-gradient-hover: linear-gradient(145deg, #D35400 0%, #B84500 45%, #9A3A00 100%);
 
   /* Secondary accent */
   --accent: #e7311d;
@@ -78,7 +88,8 @@
   --shadow: rgba(0, 0, 0, 0.4);
   --shadow-lg: rgba(0, 0, 0, 0.6);
   --shadow-xl: 0 20px 60px rgba(0, 0, 0, 0.6);
-  --shadow-warm: 0 8px 32px rgba(255, 107, 53, 0.2);
+  --shadow-warm: 0 8px 32px rgba(211, 84, 0, 0.2);
+  --primary-glow: rgba(211, 84, 0, 0.3);
 }
 
 /* --------------------------------------------------------------------------
@@ -301,7 +312,7 @@ a:hover {
   transform: translateX(-50%);
   width: 80%;
   height: 200px;
-  background: radial-gradient(ellipse, rgba(255, 107, 53, 0.08) 0%, transparent 70%);
+  background: radial-gradient(ellipse, rgba(211, 84, 0, 0.08) 0%, transparent 70%);
   pointer-events: none;
   z-index: 0;
 }

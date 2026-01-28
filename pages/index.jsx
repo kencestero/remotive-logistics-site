@@ -207,7 +207,7 @@ const Index = ({ featuredTrailers }) => {
       <section
         className="cta-section gap"
         style={{
-          background: "linear-gradient(135deg, #FF6B35 0%, #E55A2B 100%)",
+          background: "linear-gradient(145deg, #E86A17 0%, #D35400 45%, #B84500 100%)",
           position: "relative",
         }}
       >
