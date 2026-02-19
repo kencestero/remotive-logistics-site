@@ -7,7 +7,7 @@
       "category": "Enclosed Cargo",
       "size": "4x6",
       "axleType": "SA",
-      "price": 2595,
+      "price": 3374,
       "priceLabel": "Starting at",
       "status": "Stock",
       "images": [
@@ -50,7 +50,7 @@
       "category": "Enclosed Cargo",
       "size": "5x8",
       "axleType": "SA",
-      "price": 3195,
+      "price": 4154,
       "priceLabel": "Starting at",
       "status": "Stock",
       "images": [
@@ -94,7 +94,7 @@
       "category": "Enclosed Cargo",
       "size": "6x10",
       "axleType": "SA",
-      "price": 3995,
+      "price": 5194,
       "priceLabel": "Starting at",
       "status": "Stock",
       "images": [
@@ -140,7 +140,7 @@
       "category": "Enclosed Cargo",
       "size": "6x12",
       "axleType": "SA",
-      "price": 4495,
+      "price": 5844,
       "priceLabel": "Starting at",
       "status": "Stock",
       "images": [
@@ -186,7 +186,7 @@
       "category": "Enclosed Cargo",
       "size": "7x14",
       "axleType": "TA",
-      "price": 5295,
+      "price": 6884,
       "priceLabel": "Starting at",
       "status": "Stock",
       "images": [
@@ -232,7 +232,7 @@
       "category": "Enclosed Cargo",
       "size": "7x16",
       "axleType": "TA",
-      "price": 5995,
+      "price": 7794,
       "priceLabel": "Starting at",
       "status": "Stock",
       "images": [
@@ -278,7 +278,7 @@
       "category": "Enclosed Cargo",
       "size": "8.5x20",
       "axleType": "TA",
-      "price": 7995,
+      "price": 10394,
       "priceLabel": "Starting at",
       "status": "Stock",
       "images": [
