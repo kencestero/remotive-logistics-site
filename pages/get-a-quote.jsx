@@ -1,6 +1,7 @@
 import Layout from "@/src/layouts/Layout";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import { formatPrice } from "@/lib/inventory";
 
 const PURCHASE_TIMELINE = [
   { value: "", label: "Select your timeline" },
@@ -50,6 +51,7 @@ const GetAQuote = () => {
     trailerType: "",
     additionalInfo: "",
   });
+  const [selectedUnit, setSelectedUnit] = useState(null);
   const [errors, setErrors] = useState({});
   const [showGeneralError, setShowGeneralError] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -79,6 +81,35 @@ const GetAQuote = () => {
         } else if (trailerName.includes("concession")) {
           setFormData((prev) => ({ ...prev, trailerType: "Concession" }));
         }
+      }
+      // If coming from inventory page with a specific unit
+      if (router.query.unitId) {
+        fetch(`/api/inventory-unit?id=${encodeURIComponent(router.query.unitId)}`)
+          .then((res) => (res.ok ? res.json() : null))
+          .then((unit) => {
+            if (unit) {
+              setSelectedUnit(unit);
+              // Auto-populate trailer type from unit title
+              const titleLower = unit.title.toLowerCase();
+              if (titleLower.includes("dump")) {
+                setFormData((prev) => ({ ...prev, trailerType: "Dump" }));
+              } else if (titleLower.includes("cargo") || titleLower.includes("enclosed")) {
+                setFormData((prev) => ({ ...prev, trailerType: "Enclosed Cargo" }));
+              } else if (titleLower.includes("utility")) {
+                setFormData((prev) => ({ ...prev, trailerType: "Utility" }));
+              }
+              // Prepend unit info to additional info
+              setFormData((prev) => ({
+                ...prev,
+                additionalInfo:
+                  prev.additionalInfo ||
+                  `Interested in: ${unit.title} (${formatPrice(unit.startingPrice)})`,
+              }));
+            }
+          })
+          .catch(() => {
+            // Silently fail — the form still works without unit preloading
+          });
       }
     }
   }, [router.isReady, router.query]);
@@ -177,7 +208,9 @@ const GetAQuote = () => {
           trailerType: formData.trailerType,
           additionalInfo: formData.additionalInfo,
           repCode: repCode || null,
-          source: "website",
+          unitId: selectedUnit?.id || null,
+          unitTitle: selectedUnit?.title || null,
+          source: router.query.source || "website",
           sourcePage: "/get-a-quote",
         }),
       });
@@ -217,7 +250,23 @@ const GetAQuote = () => {
             {showGeneralError && (
               <div className="general-error-message">
                 <i className="fa-solid fa-circle-info"></i>
-                <span>In order to provide you with the most accurate quote we will need additional information.</span>
+                <span>
+                  In order to provide you with the most accurate quote we will need additional
+                  information.
+                </span>
+              </div>
+            )}
+
+            {/* Selected Unit from Inventory */}
+            {selectedUnit && (
+              <div className="selected-unit-banner">
+                <div className="unit-info">
+                  <div className="unit-label">Selected Trailer</div>
+                  <div className="unit-title">{selectedUnit.title}</div>
+                  <div className="unit-price">
+                    Starting at {formatPrice(selectedUnit.startingPrice)}
+                  </div>
+                </div>
               </div>
             )}
 
@@ -237,9 +286,7 @@ const GetAQuote = () => {
                     placeholder="John"
                     autoComplete="given-name"
                   />
-                  {errors.firstName && (
-                    <span className="error-message">{errors.firstName}</span>
-                  )}
+                  {errors.firstName && <span className="error-message">{errors.firstName}</span>}
                 </div>
 
                 <div className="form-group">
@@ -315,7 +362,9 @@ const GetAQuote = () => {
               </div>
 
               <div className="form-group">
-                <label htmlFor="purchaseTimeline">How soon are you looking to purchase your new trailer?</label>
+                <label htmlFor="purchaseTimeline">
+                  How soon are you looking to purchase your new trailer?
+                </label>
                 <select
                   id="purchaseTimeline"
                   name="purchaseTimeline"
@@ -364,17 +413,11 @@ const GetAQuote = () => {
                 </span>
               </div>
 
-              <button
-                type="submit"
-                className="button button-2 submit-btn"
-                disabled={isSubmitting}
-              >
+              <button type="submit" className="button button-2 submit-btn" disabled={isSubmitting}>
                 {isSubmitting ? "Submitting..." : "REQUEST QUOTE"}
               </button>
 
-              {errors.submit && (
-                <div className="submit-error">{errors.submit}</div>
-              )}
+              {errors.submit && <div className="submit-error">{errors.submit}</div>}
             </form>
 
             {/* Trust Notes */}

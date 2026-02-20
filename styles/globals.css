@@ -470,7 +470,10 @@
    ========================================================================== */
 .button-metallic,
 .btn-metallic {
-  background: var(--primary-gradient, linear-gradient(145deg, #E86A17 0%, #D35400 45%, #B84500 100%));
+  background: var(
+    --primary-gradient,
+    linear-gradient(145deg, #e86a17 0%, #d35400 45%, #b84500 100%)
+  );
   border: none;
   color: var(--primary-contrast);
   position: relative;
@@ -501,7 +504,10 @@
 
 .button-metallic:hover,
 .btn-metallic:hover {
-  background: var(--primary-gradient-hover, linear-gradient(145deg, #D35400 0%, #B84500 45%, #9A3A00 100%));
+  background: var(
+    --primary-gradient-hover,
+    linear-gradient(145deg, #d35400 0%, #b84500 45%, #9a3a00 100%)
+  );
   box-shadow: 0 6px 20px rgba(211, 84, 0, 0.4);
   transform: translateY(-2px);
 }
@@ -510,13 +516,19 @@
 [data-theme="dark"] .button-2,
 [data-theme="dark"] .button,
 [data-theme="dark"] .btn {
-  background: var(--primary-gradient, linear-gradient(145deg, #E86A17 0%, #D35400 45%, #B84500 100%)) !important;
+  background: var(
+    --primary-gradient,
+    linear-gradient(145deg, #e86a17 0%, #d35400 45%, #b84500 100%)
+  ) !important;
 }
 
 [data-theme="dark"] .button-2:hover,
 [data-theme="dark"] .button:hover,
 [data-theme="dark"] .btn:hover {
-  background: var(--primary-gradient-hover, linear-gradient(145deg, #D35400 0%, #B84500 45%, #9A3A00 100%)) !important;
+  background: var(
+    --primary-gradient-hover,
+    linear-gradient(145deg, #d35400 0%, #b84500 45%, #9a3a00 100%)
+  ) !important;
 }
 
 /* Responsive */
@@ -886,7 +898,10 @@
   display: block;
   width: 100%;
   padding: 0.875rem 1rem;
-  background: var(--primary-gradient, linear-gradient(145deg, #E86A17 0%, #D35400 45%, #B84500 100%));
+  background: var(
+    --primary-gradient,
+    linear-gradient(145deg, #e86a17 0%, #d35400 45%, #b84500 100%)
+  );
   color: var(--primary-contrast) !important;
   text-align: center;
   font-weight: 600;
@@ -910,7 +925,12 @@
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.15) 50%, transparent 100%);
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.15) 50%,
+    transparent 100%
+  );
   transition: left 0.4s ease;
 }
 
@@ -919,7 +939,10 @@
 }
 
 .view-details-btn:hover {
-  background: var(--primary-gradient-hover, linear-gradient(145deg, #D35400 0%, #B84500 45%, #9A3A00 100%));
+  background: var(
+    --primary-gradient-hover,
+    linear-gradient(145deg, #d35400 0%, #b84500 45%, #9a3a00 100%)
+  );
   color: var(--primary-contrast) !important;
   box-shadow: 0 6px 20px rgba(211, 84, 0, 0.35);
   transform: translateY(-1px);
@@ -981,6 +1004,127 @@
 .no-results p {
   margin-bottom: 1.5rem;
   color: var(--muted);
+}
+
+/* ==========================================================================
+   Live Inventory (SalesHub Integration)
+   ========================================================================== */
+
+/* Stock Summary Bar */
+.stock-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.stock-summary-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--bg);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 0.875rem;
+}
+
+.stock-summary-item .stock-count {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.stock-summary-item .stock-size {
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* Financing Badge on Card */
+.inventory-financing-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: #16a34a;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.inventory-financing-badge i {
+  font-size: 0.75rem;
+}
+
+/* Dual CTA Button Layout */
+.inventory-card-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.inventory-finance-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  font-size: 0.8rem;
+  line-height: 1.2;
+  height: auto;
+}
+
+/* API Down Fallback */
+.inventory-fallback {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.inventory-fallback h3 {
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.inventory-fallback p {
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+/* Selected Unit Banner on Quote Form */
+.selected-unit-banner {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--primary);
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.selected-unit-banner .unit-info {
+  flex: 1;
+}
+
+.selected-unit-banner .unit-title {
+  font-weight: 600;
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.selected-unit-banner .unit-price {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.selected-unit-banner .unit-label {
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 /* ==========================================================================
@@ -2381,11 +2525,7 @@
   transform: translate(-50%, -50%);
   width: 80%;
   height: 60%;
-  background: radial-gradient(
-    ellipse at center,
-    rgba(211, 84, 0, 0.08) 0%,
-    transparent 70%
-  );
+  background: radial-gradient(ellipse at center, rgba(211, 84, 0, 0.08) 0%, transparent 70%);
   pointer-events: none;
   z-index: 0;
 }
@@ -2417,10 +2557,8 @@
     /* Outer glow */
     0 8px 32px rgba(0, 0, 0, 0.4),
     0 0 60px rgba(211, 84, 0, 0.08),
-    /* Inner light edge */
-    inset 0 1px 1px rgba(255, 255, 255, 0.1),
-    /* Inner shadow for depth */
-    inset 0 -1px 1px rgba(0, 0, 0, 0.1);
+    /* Inner light edge */ inset 0 1px 1px rgba(255, 255, 255, 0.1),
+    /* Inner shadow for depth */ inset 0 -1px 1px rgba(0, 0, 0, 0.1);
 
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -2485,7 +2623,7 @@
 .step-number {
   font-size: 3.5rem;
   font-weight: 700;
-  background: linear-gradient(145deg, #D35400 0%, #E86A17 50%, #D35400 100%);
+  background: linear-gradient(145deg, #d35400 0%, #e86a17 50%, #d35400 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -2496,7 +2634,8 @@
 }
 
 @keyframes numberGlow {
-  0%, 100% {
+  0%,
+  100% {
     filter: drop-shadow(0 4px 20px rgba(211, 84, 0, 0.5));
   }
   50% {
@@ -3554,7 +3693,9 @@
 
 .lender-logo-large.clickable {
   cursor: pointer;
-  transition: transform 0.3s ease, filter 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
 }
 
 .lender-logo-large.clickable:hover {
@@ -3574,7 +3715,7 @@
 
 .rocksolid-badge,
 .clicklease-badge {
-  background: linear-gradient(135deg, #E63946 0%, #ff6b5b 100%);
+  background: linear-gradient(135deg, #e63946 0%, #ff6b5b 100%);
   color: #fff !important;
   -webkit-text-fill-color: #fff !important;
   box-shadow: 0 4px 15px rgba(230, 57, 70, 0.5);
@@ -3595,7 +3736,7 @@
 .vs-divider span {
   font-size: 1.75rem;
   font-weight: 800;
-  background: linear-gradient(145deg, #D35400 0%, #E86A17 100%);
+  background: linear-gradient(145deg, #d35400 0%, #e86a17 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

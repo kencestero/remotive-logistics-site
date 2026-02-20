@@ -14,6 +14,8 @@ export default async function handler(req, res) {
     trailerType,
     additionalInfo,
     repCode,
+    unitId,
+    unitTitle,
     source,
     sourcePage,
   } = req.body;
@@ -37,6 +39,8 @@ export default async function handler(req, res) {
       trailerType: trailerType || "not-specified",
       additionalInfo: additionalInfo || "",
       repCode,
+      unitId: unitId || null,
+      unitTitle: unitTitle || null,
       source,
       sourcePage,
       leadType: "quote_request",
@@ -45,17 +49,14 @@ export default async function handler(req, res) {
     console.log("Sending to SalesHub:", JSON.stringify(payload, null, 2));
     console.log("API Key present:", !!process.env.SALESHUB_API_KEY);
 
-    const response = await fetch(
-      "https://saleshub.remotivelogistics.com/api/leads/quote-request",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "X-API-Key": process.env.SALESHUB_API_KEY,
-        },
-        body: JSON.stringify(payload),
-      }
-    );
+    const response = await fetch("https://saleshub.remotivelogistics.com/api/leads/quote-request", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "X-API-Key": process.env.SALESHUB_API_KEY,
+      },
+      body: JSON.stringify(payload),
+    });
 
     console.log("SalesHub response status:", response.status);
 
