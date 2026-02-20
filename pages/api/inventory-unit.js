@@ -29,8 +29,9 @@ export default async function handler(req, res) {
       id: unit.id,
       title: unit.title,
       size: unit.size,
+      axle: unit.axle,
       startingPrice: unit.startingPrice,
-      status: unit.status,
+      imageUrl: unit.imageUrl,
     });
   } catch (error) {
     console.error("[inventory-unit] Error:", error.message);

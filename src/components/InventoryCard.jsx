@@ -6,22 +6,29 @@ import { formatPrice } from "@/lib/inventory";
  * Shows image, title, key specs, starting price, financing badge, and two CTAs.
  */
 export default function InventoryCard({ unit }) {
-  const { id, title, size, axleType, package: pkg, startingPrice, image, status } = unit;
+  const {
+    id,
+    title,
+    size,
+    axle,
+    nose,
+    package: pkg,
+    startingPrice,
+    imageUrl,
+    shortDescription,
+  } = unit;
 
-  const axleLabel =
-    axleType === "TA" ? "Tandem Axle" : axleType === "SA" ? "Single Axle" : axleType;
+  const axleLabel = axle === "TA" ? "Tandem Axle" : axle === "SA" ? "Single Axle" : axle;
 
   const quoteUrl = `/get-a-quote?unitId=${encodeURIComponent(id)}&source=inventory`;
 
-  const imageSrc = image || "/assets/img/default-trailer-images/6X12SA.webp";
+  const imageSrc = imageUrl || "/assets/img/default-trailer-images/6X12SA.webp";
 
   return (
     <div className="trailer-card">
       <div className="trailer-card-image">
         <img src={imageSrc} alt={title} loading="lazy" />
-        {status === "AVAILABLE" && (
-          <span className="trailer-status-badge status-in-stock">In Stock</span>
-        )}
+        <span className="trailer-status-badge status-in-stock">In Stock</span>
       </div>
 
       <div className="trailer-card-content">
@@ -30,8 +37,11 @@ export default function InventoryCard({ unit }) {
         <div className="trailer-quick-specs">
           {size && <span className="spec-tag">{size}</span>}
           {axleLabel && <span className="spec-tag">{axleLabel}</span>}
+          {nose && <span className="spec-tag">{nose}</span>}
           {pkg && <span className="spec-tag">{pkg}</span>}
         </div>
+
+        {shortDescription && <p className="trailer-short-desc">{shortDescription}</p>}
 
         <div className="trailer-price-block">
           <span className="price-label">Starting at</span>
