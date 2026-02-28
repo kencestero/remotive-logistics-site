@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { formatPrice, getStatusLabel, getTrailerImage } from "@/lib/inventory";
+import { getStatusLabel, getTrailerImage } from "@/lib/inventory";
 
 /**
- * TrailerCard - Display a trailer in a grid card format
+ * TrailerCard - Display a trailer type in a grid card format (no pricing)
  */
 export default function TrailerCard({ trailer }) {
   const statusLabel = getStatusLabel(trailer.status);
@@ -44,15 +44,9 @@ export default function TrailerCard({ trailer }) {
           )}
         </div>
 
-        {/* Price with label */}
-        <div className="trailer-price-block">
-          <span className="price-label">{trailer.priceLabel || "Starting at"}</span>
-          <span className="trailer-price">{formatPrice(trailer.price)}</span>
-        </div>
-
-        {/* View Details Button */}
+        {/* View Specs Button */}
         <Link href={`/trailers/${trailer.slug}`} className="view-details-btn">
-          VIEW DETAILS
+          VIEW SPECS
         </Link>
       </div>
     </div>

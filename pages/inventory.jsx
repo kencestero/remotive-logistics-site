@@ -64,6 +64,25 @@ export default function Inventory({ totalAvailable, stockBySize, units, isFallba
         </div>
       </section>
 
+      {/* Availability Disclaimer */}
+      {!isFallback && (
+        <section className="inventory-disclaimer-section">
+          <div className="container">
+            <div className="inventory-disclaimer">
+              <i className="fa-solid fa-circle-info"></i>
+              <div>
+                <strong>Important:</strong> All inventory shown is subject to prior sale and
+                availability verification. Listing a unit does not guarantee it is still available
+                &mdash; our team will confirm current status when you request a quote. Actual specs,
+                photos, and final pricing will be provided upon request. Don&apos;t see what
+                you&apos;re looking for? We can custom-build your trailer in{" "}
+                <strong>10&ndash;15 business days</strong> depending on options.
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       <section className="inventory-section gap">
         <div className="container">
           {/* Fallback: API is down */}

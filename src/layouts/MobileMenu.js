@@ -7,6 +7,9 @@ const MobileMenu = () => {
         <Link href="/">Home</Link>
       </li>
       <li>
+        <Link href="/inventory">Inventory</Link>
+      </li>
+      <li>
         <Link href="/trailers">Trailers</Link>
       </li>
       <li>

@@ -3,6 +3,7 @@ import { Fragment, useEffect } from "react";
 import niceSelect from "react-nice-select";
 import VideoPopup from "../components/VideoPopup";
 import ChatBot from "../components/ChatBot";
+import CookieConsent from "../components/CookieConsent";
 import Footer from "./Footer";
 import Header from "./Header";
 const Layout = ({ children, headerExtaClass }) => {
@@ -17,6 +18,7 @@ const Layout = ({ children, headerExtaClass }) => {
       {children}
       <Footer />
       <ChatBot />
+      <CookieConsent />
     </Fragment>
   );
 };

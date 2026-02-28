@@ -71,7 +71,10 @@ const Header = ({ extraClass }) => {
             <nav className="header-nav">
               <ul className="nav-links">
                 <li>
-                  <Link href="/trailers">Inventory</Link>
+                  <Link href="/inventory">Inventory</Link>
+                </li>
+                <li>
+                  <Link href="/trailers">Trailers</Link>
                 </li>
                 <li>
                   <Link href="/get-approved">Get Approved</Link>
@@ -114,7 +117,7 @@ const Header = ({ extraClass }) => {
                   className="saleshub-button-img"
                 />
               </a>
-              <Link href="/contact" className="button button-2">
+              <Link href="/get-a-quote" className="button button-2">
                 Get a Quote
               </Link>
             </div>

@@ -2,11 +2,9 @@ import { useState } from "react";
 import Link from "next/link";
 import Layout from "@/src/layouts/Layout";
 import ImageModal from "@/src/components/ImageModal";
-import FinanceCalculator from "@/src/components/FinanceCalculator";
 import {
   getTrailerBySlug,
   getAllTrailerSlugs,
-  formatPrice,
   getStatusLabel,
   getTrailerImage,
   getUpgrades,
@@ -14,6 +12,7 @@ import {
   getWarranty,
   getBuildTime,
 } from "@/lib/inventory";
+import { fetchPublicInventory } from "@/lib/saleshub-inventory";
 
 export default function TrailerDetail({
   trailer,
@@ -21,6 +20,8 @@ export default function TrailerDetail({
   upgradesDisclaimer,
   warranty,
   buildTime,
+  availableCount,
+  totalAvailable,
 }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalImageIndex, setModalImageIndex] = useState(0);
@@ -32,7 +33,7 @@ export default function TrailerDetail({
           <div className="container">
             <h1>Trailer Not Found</h1>
             <Link href="/trailers" className="button button-2">
-              Back to Trailers
+              Back to Trailer Types
             </Link>
           </div>
         </section>
@@ -63,6 +64,8 @@ export default function TrailerDetail({
     setIsModalOpen(true);
   };
 
+  const quoteUrl = `/get-a-quote?type=${encodeURIComponent(trailer.category)}&trailer=${encodeURIComponent(trailer.name)}`;
+
   return (
     <Layout>
       {/* Breadcrumb */}
@@ -71,7 +74,7 @@ export default function TrailerDetail({
           <nav className="breadcrumb">
             <Link href="/">Home</Link>
             <span>/</span>
-            <Link href="/trailers">Trailers</Link>
+            <Link href="/trailers">Trailer Types</Link>
             <span>/</span>
             <span>{trailer.name}</span>
           </nav>
@@ -131,11 +134,16 @@ export default function TrailerDetail({
                   </p>
                 )}
 
-                {/* Price Block */}
-                <div className="trailer-price-block">
-                  <span className="price-label">{trailer.priceLabel || "Starting at"}</span>
-                  <span className="price-value">{formatPrice(trailer.price)}</span>
-                </div>
+                {/* Live Stock Count Badge */}
+                {availableCount > 0 && (
+                  <Link href={`/inventory`} className="live-stock-badge">
+                    <span className="stock-pulse"></span>
+                    <span>
+                      <strong>{availableCount}</strong> {trailer.size} units currently in stock
+                    </span>
+                    <i className="fa-solid fa-arrow-right"></i>
+                  </Link>
+                )}
 
                 {trailer.description && (
                   <p className="trailer-description">{trailer.description}</p>
@@ -158,27 +166,43 @@ export default function TrailerDetail({
                     <div className="info-badge build-badge">
                       <i className="fa-solid fa-clock" />
                       <div>
-                        <strong>Build Time: {buildTime.standard}</strong>
+                        <strong>Custom Build: {buildTime.standard}</strong>
                         <span>{buildTime.disclaimer}</span>
                       </div>
                     </div>
                   )}
                 </div>
 
-                {/* Finance Calculator */}
-                <FinanceCalculator price={trailer.price} />
-
                 {/* CTA Buttons */}
                 <div className="trailer-cta">
-                  <Link href="/get-approved" className="button button-2">
-                    Get Pre-Approved
+                  <Link href="/inventory" className="button button-2">
+                    <i className="fa-solid fa-boxes-stacked"></i> Check Availability
                   </Link>
-                  <Link
-                    href={`/get-a-quote?type=${encodeURIComponent(trailer.category)}&trailer=${encodeURIComponent(trailer.name)}`}
-                    className="button button-outline"
-                  >
-                    Request a Quote
+                  <Link href={quoteUrl} className="button button-outline">
+                    <i className="fa-solid fa-file-lines"></i> Request a Quote
                   </Link>
+                </div>
+
+                {/* Trust Strip */}
+                <div className="trailer-trust-strip">
+                  <div className="trust-item">
+                    <i className="fa-solid fa-shield-check"></i>
+                    <span>5-Year Warranty</span>
+                  </div>
+                  <div className="trust-item">
+                    <i className="fa-solid fa-hammer"></i>
+                    <span>10-15 Day Builds</span>
+                  </div>
+                  <div className="trust-item">
+                    <i className="fa-solid fa-calculator"></i>
+                    <span>Financing Available</span>
+                  </div>
+                  {totalAvailable > 0 && (
+                    <div className="trust-item">
+                      <i className="fa-solid fa-warehouse"></i>
+                      <span>{totalAvailable}+ In Stock</span>
+                    </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -215,10 +239,25 @@ export default function TrailerDetail({
             </div>
           )}
 
+          {/* Custom Build CTA Section */}
+          <div className="custom-build-cta">
+            <div className="custom-build-content">
+              <h3>Don&apos;t see exactly what you need?</h3>
+              <p>
+                We can custom-build your ideal {trailer.size} trailer in 10&ndash;15 business days.
+                Choose from dozens of upgrades including height increases, electrical packages, A/C,
+                custom colors, and more.
+              </p>
+              <Link href={quoteUrl} className="button button-2">
+                <i className="fa-solid fa-hammer"></i> Request a Custom Build
+              </Link>
+            </div>
+          </div>
+
           {/* Back to Trailers */}
           <div className="back-link">
             <Link href="/trailers">
-              <i className="fa-solid fa-arrow-left" /> Back to All Trailers
+              <i className="fa-solid fa-arrow-left" /> Back to Trailer Types
             </Link>
           </div>
         </div>
@@ -252,6 +291,19 @@ export async function getStaticProps({ params }) {
   const warranty = getWarranty();
   const buildTime = getBuildTime();
 
+  // Fetch live stock count for this trailer's size
+  let availableCount = 0;
+  let totalAvailable = 0;
+  try {
+    const inventoryData = await fetchPublicInventory();
+    if (!inventoryData._fallback && trailer) {
+      totalAvailable = inventoryData.totalAvailable || 0;
+      availableCount = inventoryData.stockBySize?.[trailer.size] || 0;
+    }
+  } catch {
+    // Silently fail — page still works without live count
+  }
+
   return {
     props: {
       trailer,
@@ -259,6 +311,9 @@ export async function getStaticProps({ params }) {
       upgradesDisclaimer,
       warranty,
       buildTime,
+      availableCount,
+      totalAvailable,
     },
+    revalidate: 300,
   };
 }
